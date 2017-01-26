@@ -2,14 +2,14 @@
 	invertX: true,
 	invertY: true,
 	scalarX: 10,
-	 frictionY: .1
+	frictionY: .1
 });
 
 
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 120,
+      "value": 300,
       "density": {
         "enable": true,
         "value_area": 800
@@ -34,7 +34,7 @@ particlesJS("particles-js", {
       }
     },
     "opacity": {
-      "value": 0.5,
+      "value": 0.75,
       "random": false,
       "anim": {
         "enable": false,
