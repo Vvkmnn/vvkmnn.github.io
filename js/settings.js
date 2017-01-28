@@ -1,7 +1,10 @@
  $('#parallax').parallax({
 	invertX: true,
 	invertY: true,
-
+    limitX: 50,
+    limitY: 50,
+    frictionX: 0.5,
+    frictionY: 0.5
 });
 
 
