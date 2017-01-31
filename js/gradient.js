@@ -1,11 +1,5 @@
 
 var colors = new Array(
-  [62,35,255],
-  [60,255,60],
-  [255,35,98],
-  [45,175,230],
-  [255,0,255],
-  [255,128,0],
   [230, 57, 70],
   [241, 250, 238],
   [168, 218, 220],
@@ -19,7 +13,7 @@ var step = 0;
 // next color left
 // current color right
 // next color right
-var colorIndices = [10,9,8,7,6,5,4,0,1,2,3];
+var colorIndices = [0,1,2,3,4,5];
 
 //transition speed
 var gradientSpeed = 0.005;
