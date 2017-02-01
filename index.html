@@ -23,11 +23,11 @@
 	<script src="/assets/js/particles.min.js"></script>
 	<script src="/assets/js/jquery.min.js"></script>
 	<script src="/assets/js/parallax.js"></script>
+	<script src="/assets/js/response.min.js"></script>
 
 	<!-- Behavioral Meta Data -->
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
 	<!-- Core Meta Data -->
 	<!--<meta name="author" content="Matthew Wagerfield">
 	<meta name="description" content="Simple, lightweight Parallax Engine that reacts to the orientation of a smart device">
@@ -77,20 +77,17 @@
 	</script>-->
 </head>
 
-<body class="is-loading">
+<body>
 	<!-- Parallax -->
 	<div id="scene" class="scene">
-		
 		<!-- Gradient -->
-		<div id="gradient" >
+		<div id="gradient">
 			<!-- Particles -->
-			<div id="particles-js" class="layer" data-depth="0.2">
-				<!-- Wrapper -->
-				<div id="wrapper" class="layer" data-depth="0.3">
+			<div id="particles" class="layer" data-depth="0.25">
 					<!-- Main -->
-					<section id="main" class="layer" data-depth="0.4">
+					<section id="main" class="layer" data-depth="0">
 						<header>
-							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+							<span class="avatar" ><img src="images/avatar.jpg" alt="" /></span>
 							<h1>Jane Doe</h1>
 							<p>Senior Psychonautics Engineer</p>
 						</header>
@@ -147,7 +144,6 @@
 								<li><a href="#" class="icon fa-steam"><span class="label">Steam</span></a></li>
 							</ul>
 						</nav>
-					</section>
 				</div>
 			</div>
 		</div>
@@ -188,18 +184,27 @@
 		// window.onscroll = _.debounce(resize, 200);
 
 
-		// ParallaxJS
+		//ParallaxJS
 		var scene = document.getElementById('scene');
-		var parallax = new Parallax(scene);
+		var parallax = new Parallax(scene, {
+			calibrateX: true,
+			calibrateY: true,
+			invertX: true,
+			invertY: true,
+			limitX: 50,
+			limitY: 50,
+		});
+
+
 
 		// ParticlesJS
-		particlesJS("particles-js", {
+		particlesJS("particles", {
 			"particles": {
 				"number": {
 					"value": 100,
 					"density": {
 						"enable": true,
-						"value_area": 800
+						"value_area": 500
 					}
 				},
 				"color": {
@@ -291,7 +296,7 @@
 						"speed": 3
 					},
 					"repulse": {
-						"distance": 200,
+						"distance": 150,
 						"duration": 0.4
 					},
 					"push": {
@@ -305,12 +310,7 @@
 			"retina_detect": true
 		});
 
-		if ('addEventListener' in window) {
-			window.addEventListener('load', function () {
-				document.body.className = document.body.className.replace(/\bis-loading\b/, '');
-			});
-			document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-		}
+
 	</script>
 </body>
 
