@@ -1,5 +1,7 @@
+// Requires Jquery
 
 var colors = new Array(
+  [0, 0, 0],
   [230, 57, 70],
   [241, 250, 238],
   [168, 218, 220],
@@ -13,7 +15,7 @@ var step = 0;
 // next color left
 // current color right
 // next color right
-var colorIndices = [0,1,2,3,4,5];
+var colorIndices = [0,1,2,3,4];
 
 //transition speed
 var gradientSpeed = 0.005;
