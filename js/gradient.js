@@ -1,7 +1,11 @@
 // Requires Jquery
 
 var colors = new Array(
-  [0, 0, 0],
+[1, 22, 39],
+[253, 255, 25],
+[46, 196, 182] ,
+[232, 30, 53,],
+[255, 159, 28],
   [230, 57, 70],
   [241, 250, 238],
   [168, 218, 220],
@@ -18,7 +22,7 @@ var step = 0;
 var colorIndices = [0,1,2,3,4];
 
 //transition speed
-var gradientSpeed = 0.005;
+var gradientSpeed = 0.01;
 
 function updateGradient()
 {
