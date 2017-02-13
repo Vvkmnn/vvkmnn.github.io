@@ -77,17 +77,13 @@ body {}
 }
 
 .header .logo img {
-  height: 50vmin;
+  height: 40vmin;
 }
 
 .header .about {
-  
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+  padding-top: 10px;
   color: black;
-  font-size: 4vmin;
+  font-size: 3vmin;
 }
 
 .header .links {
@@ -106,10 +102,12 @@ body {}
 .links li {
   /* List */
   list-style-type: none;
+
   -moz-animation: nav-icons 0.5s ease-in-out forwards;
   -webkit-animation: nav-icons 0.5s ease-in-out forwards;
   -ms-animation: nav-icons 0.5s ease-in-out forwards;
   animation: nav-icons 0.5s ease-in-out forwards;
+  
   display: inline-block;
   opacity: 0;
   padding: 2vmin;
@@ -120,16 +118,24 @@ body {}
 }
 
 .links nav a:hover:before {
-  color: #f19;
+
+  color:white; 
+  -o-transition:color .5s ease-out;
+  -ms-transition:color .5s ease-out;
+  -moz-transition:color .5s ease-out;
+  -webkit-transition:color .5s ease-out;
+
 }
 
-.links nav a:active {
+/*.links nav a:active {
   font-size: 0.9em;
 }
 
 .links nav a:active:before {
+
+
   color: red;
-}
+}*/
 
 .links nav li:nth-child(1) {
   -moz-animation-delay: 0.5s;
