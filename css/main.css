@@ -77,18 +77,18 @@ body {}
 }
 
 .header .logo img {
-  height: 30vmin;
+  height: 50vmin;
 }
 
 .header .about {
-  padding-top: 5px;
+  padding-top: 25px;
   color: black;
-  font-size: 2.5vmin;
+  font-size: 3vmin;
 }
 
 .header .links {
   display: flex;
-  font-size: 3vmin;
+  font-size: 5vmin;
   pointer-events: all;
 }
 
