@@ -76,17 +76,19 @@ body {}
   flex-basis: auto;
 }
 
-.header .logo img {
+.header img {
   height: 50vmin;
+  
 }
 
 .header .about {
-  padding-top: 25px;
+  padding-top: 20px;
   color: black;
   font-size: 3vmin;
 }
 
 .header .links {
+  
   display: flex;
   font-size: 5vmin;
   pointer-events: all;
