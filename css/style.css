@@ -67,6 +67,8 @@ body {}
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  text-align: left;
+
 }
 
 .header .logo {
@@ -75,29 +77,31 @@ body {}
 }
 
 .header .logo img {
-  height: 30vh;
+  height: 50vmin;
 }
 
 .header .about {
+  
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
   color: black;
-  font-size: 2vw;
+  font-size: 4vmin;
 }
 
 .header .links {
-  max-width: 80%;
   display: flex;
-  font-size: 2vh;
+  font-size: 3.5vmin;
   pointer-events: all;
 }
 
 
 /* Links */
 
-.links {}
+.links {
+
+}
 
 .links li {
   /* List */
@@ -108,7 +112,7 @@ body {}
   animation: nav-icons 0.5s ease-in-out forwards;
   display: inline-block;
   opacity: 0;
-  padding: 1vw;
+  padding: 2vmin;
 }
 
 .links nav a:hover {
