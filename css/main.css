@@ -1,11 +1,14 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300i,400,700');
+
 html {
   overflow: hidden;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-body {}
+body {
+
+}
 
 #particles,
 #gradient {
@@ -49,6 +52,8 @@ body {}
     background-size: cover; 
 }*/
 
+
+
 .overlay {
   position: absolute;
   top: 0;
@@ -62,6 +67,36 @@ body {}
   pointer-events: none;
   text-align: left;
 }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 2vmin;
+}
+
+.header .about h1 {
+  font-weight: 700;
+  font-size: 5vmin;
+
+}
+
+.header .about h2 {
+  font-weight: 700;
+  font-size: 3vmin;
+
+}
+
+.header .about p {
+  font-size: 2vmin;
+}
+
+.header .about i {
+  font-style: italic;
+  font-weight: 300;
+}
+
 
 .header {
   display: flex;
@@ -82,7 +117,8 @@ body {}
 }
 
 .header .about {
-  padding-top: 20px;
+  margin-top: 3vmin;
+  margin-left: -4vmin;
   color: black;
   font-size: 3vmin;
 }
@@ -93,6 +129,8 @@ body {}
   font-size: 5vmin;
   pointer-events: all;
 }
+
+
 
 
 /* Links */
