@@ -65,23 +65,29 @@ body {}
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   pointer-events: none;
   text-align: left;
 }
 
 /*Header */
 
+
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   text-align: left;
+  font-size: 2vmin;
+  pointer-events: none;
+  margin-left: 10vmin;
 }
+
 
 .header .logo {
   display: flex;
   flex-basis: auto;
+    pointer-events: all;
 }
 
 .header .about {
@@ -98,15 +104,6 @@ body {}
 }
 
 /* Header About*/
-
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  text-align: left;
-  font-size: 2vmin;
-  pointer-events: all;
-}
 
 .header .about h1 {
   font-weight: 700;
@@ -165,6 +162,8 @@ b:hover,
 /* Links */
 
 .links {
+  margin-top: 25px;
+  width: 45%;
 
 }
 
