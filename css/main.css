@@ -175,7 +175,7 @@ b:hover,
 
 .links {
 	margin-top: 25px;
-	width: 40%;
+	width: 50%;
 }
 
 .links li {
@@ -323,6 +323,20 @@ b:hover,
 	-webkit-animation-delay: 4.25s;
 	-ms-animation-delay: 4.25s;
 	animation-delay: 4.25s;
+}
+
+.links nav li:nth-child(17) {
+	-moz-animation-delay: 4.5s;
+	-webkit-animation-delay: 4.5s;
+	-ms-animation-delay: 4.5s;
+	animation-delay: 4.5s;
+}
+
+.links nav li:nth-child(18) {
+	-moz-animation-delay: 4.75s;
+	-webkit-animation-delay: 4.75s;
+	-ms-animation-delay: 4.75s;
+	animation-delay: 4.75s;
 }
 
 @-moz-keyframes nav-icons {
