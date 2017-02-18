@@ -6,6 +6,7 @@
 html {
 	overflow: hidden;
 	font-family: 'Roboto', sans-serif;
+	background-color: black;
 }
 
 body {}
@@ -21,7 +22,6 @@ body {}
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 50%;
-	/
 }
 
 #particles {
@@ -30,6 +30,7 @@ body {}
 }
 
 #gradient {
+	opacity: 0.65;
 	z-index: -4;
 }
 
@@ -108,7 +109,7 @@ body {}
 
 .header .links {
 	display: flex;
-	font-size: 5vmin;
+	font-size: 4.5vmin;
 	pointer-events: all;
 }
 
