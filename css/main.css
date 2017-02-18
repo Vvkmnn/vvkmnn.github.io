@@ -9,9 +9,6 @@ html {
 	background-color: black;
 }
 
-body {}
-
-
 /*Fancy*/
 
 #particles,
@@ -109,7 +106,7 @@ body {}
 
 .header .links {
 	display: flex;
-	font-size: 4.5vmin;
+	font-size: 5vmin;
 	pointer-events: all;
 }
 
@@ -146,6 +143,8 @@ b:hover,
 .line3:hover,
 .line4:hover {
 	color: white;
+		transition: color .5s ease-out;
+
 	-o-transition: color .5s ease-out;
 	-ms-transition: color .5s ease-out;
 	-moz-transition: color .5s ease-out;
@@ -175,7 +174,7 @@ b:hover,
 
 .links {
 	margin-top: 25px;
-	width: 50%;
+	width: 60%;
 }
 
 .links li {
@@ -196,6 +195,7 @@ b:hover,
 
 .links nav a:hover:before {
 	color: white;
+	transition: color .5s ease-out;
 	-o-transition: color .5s ease-out;
 	-ms-transition: color .5s ease-out;
 	-moz-transition: color .5s ease-out;
