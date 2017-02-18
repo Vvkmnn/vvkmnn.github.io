@@ -23,6 +23,7 @@ body {}
 }
 
 #particles {
+  transform: scale(1.15);
   z-index: -3;
 }
 
@@ -88,6 +89,10 @@ body {}
   display: flex;
   flex-basis: auto;
     pointer-events: all;
+    user-select: none;
+      -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .header .about {
