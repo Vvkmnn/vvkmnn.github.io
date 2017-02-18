@@ -109,7 +109,7 @@ body {}
 
 .header .links {
 	display: flex;
-	font-size: 4.5vmin;
+	font-size: 3.5vmax;
 	pointer-events: all;
 }
 
