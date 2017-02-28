@@ -426,7 +426,3 @@ b:hover,
   font-weight: normal;
   text-transform: none !important;
 }
-
-.icon>.label {
-  display: none;
-}
