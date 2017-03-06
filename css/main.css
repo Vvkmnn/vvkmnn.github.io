@@ -184,6 +184,12 @@ b:hover,
   -webkit-animation: nav-icons 0.5s ease-in-out forwards;
   -ms-animation: nav-icons 0.5s ease-in-out forwards;
   animation: nav-icons 0.5s ease-in-out forwards;
+
+  -moz-animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  -ms-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+
   display: inline-block;
   opacity: 0;
   padding: 1vmin;
