@@ -345,6 +345,20 @@ b:hover,
   animation-delay: 4.75s;
 }
 
+.links nav li:nth-child(19) {
+  -moz-animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+  -ms-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.links nav li:nth-child(20) {
+  -moz-animation-delay: 5.25s;
+  -webkit-animation-delay: 5.25s;
+  -ms-animation-delay: 5.25s;
+  animation-delay: 5.25s;
+}
+
 @-moz-keyframes nav-icons {
   0% {
     -moz-transform: translate3d(0, 1em, 0);
