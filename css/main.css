@@ -12,7 +12,7 @@ html {
 
 /*Fancy*/
 
-#particles,
+#particles-js,
 #gradient {
   position: absolute;
   width: 100%;
@@ -22,7 +22,7 @@ html {
   background-position: 50% 50%;
 }
 
-#particles {
+#particles-js {
   z-index: -3;
   overflow: hidden;
 }
@@ -56,6 +56,54 @@ html {
     background-size: cover; 
 }*/
 
+/*Type Box*/
+#typed {
+	display: inline-block;
+  font-size:3vmin;
+}
+
+.typed-cursor {
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
 /*Overlay*/
 
@@ -116,17 +164,17 @@ html {
 
 .header .about h1 {
   font-weight: 700;
-  font-size: 5vmin;
+  font-size: 7vmin;
   margin-bottom: -1vmin;
 }
 
 .header .about h2 {
   font-weight: 700;
-  font-size: 3vmin;
+  font-size: 4vmin;
 }
 
 .header .about p {
-  font-size: 2.3vmin;
+  font-size: 3vmin;
 }
 
 .header .about i {
