@@ -57,11 +57,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<!--Scripts-->
-	<!--<script language="JavaScript" type="text/javascript" src="https://use.fontawesome.com/30cfe6789f.js" async></script>-->
-	<script language="JavaScript" type="text/javascript" src="js/jquery.min.js"></script>
-	<script language="JavaScript" type="text/javascript" src="js/particles.min.js"></script>
-	<script language="JavaScript" type="text/javascript" src="js/gradient.js"></script>
+
 	<!-- Tracking -->
 	<!-- Google Tag Manager -->
 	<script>
@@ -84,6 +80,18 @@
 </head>
 
 <body>
+	<!--Dependencies-->
+	<!--<script language="JavaScript" type="text/javascript" src="https://use.fontawesome.com/30cfe6789f.js" async></script>-->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js'></script>
+
+
+	<!-- Settings -->
+	<script language="JavaScript" type="text/javascript" src="js/settings.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/gradient.js"></script>
+
+
 	<!-- More Tracking -->
 	<!-- Google Tag Manager (noscript) -->
 	<noscript>
@@ -91,7 +99,7 @@
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	<!-- Page -->
-	<div id="particles"></div>
+	<div id="particles-js"></div>
 	<div id="gradient"></div>
 	<!--
   <div class="video-container">
@@ -105,93 +113,101 @@
 				<img src="images/vLogoWhite.png"></img>
 			</div>
 			<div class="about">
-				<!--<h1>Vivek Menon</h1>
-        <h2>Pattern Hunter</h2>
-        <p> <i>/ pa·tern huhn-ter/</i> <b>n.</b>: 
-        <span class= "line1"> professional educated guesser </span>
-        <span class="line2"> machine tutor; </span>
-          <span class="line3"> data cruncher;</span> 
-          <span class="line4"> numbers guy. </span>
-          </p>-->
-				<div class="links">
-					<nav>
-						<!--<li>
+				<h1>Vivek Menon</h1>
+				<h2>Pattern Hunter</h2>
+				<p> <i>/ pa·tern huhn-ter/</i> <b>n.</b>:
+
+					<span id="typed">
+							<div id="typed-strings">
+								<p>Educated Guesser.</p>
+								<p>Machine Tutor.</p>
+								<p>Data Cruncher.</p>
+								<p>AI Philospher.</p>
+								<p>Strategic Planner.</p>
+								<p>Numbers Guy.</p>
+								<p>Insight Finder.</p>
+								<p>Statistical Tinkerer.</p>
+							</div>
+							</span>
+
+					<div class="links">
+						<nav>
+							<!--<li>
 							<a href="https://vkmn.xyz" class="icon fa-desktop" target="_blank"></a>
 						</li>-->
-						<!--<li>
+							<!--<li>
 							<a href="tel:4168460630" class="icon fa-phone"></a>
 						</li>-->
-						<li>
-							<a href="assets/VivekMenon_Resume.pdf" class="icon fa-file"></a>
-						</li>
-						<li>
-							<a href="mailto:mail@vvkmnn.xyz" class="icon fa-envelope"></a>
-						</li>
-						<li>
-							<a href="https://m.me/vvkmnn" class="icon fa-commenting" target="_blank"></a>
-						</li>
-						<li>
-							<a href="assets/VivekMenon.vcf" class="icon fa-address-card" target="_blank"></a>
-						</li>
-						<li>
-							<a href="https://github.com/vvkmnn" class="icon fa-github" target="_blank"></a>
-						</li>
-						<!--<li>
+							<li>
+								<a href="assets/VivekMenon_Resume.pdf" class="icon fa-file" target="_blank"></a>
+							</li>
+							<li>
+								<a href="mailto:mail@vvkmnn.xyz" class="icon fa-envelope" target="_blank"></a>
+							</li>
+							<li>
+								<a href="https://m.me/vvkmnn" class="icon fa-commenting" target="_blank"></a>
+							</li>
+							<li>
+								<a href="assets/VivekMenon.vcf" class="icon fa-address-card" target="_blank"></a>
+							</li>
+							<li>
+								<a href="https://github.com/vvkmnn" class="icon fa-github" target="_blank"></a>
+							</li>
+							<!--<li>
 							<a href="https://www.dropbox.com/request/kvsyTj5RzSrJns3HcfQ0" class="icon fa-dropbox" target="_blank"></a>
 						</li>-->
-						<li>
-							<a href="https://www.linkedin.com/in/vvkmnn" class="icon fa-linkedin" target="_blank"></a>
-						</li>
-						<li>
-							<a href="https://www.facebook.com/vvkmnn" class="icon fa-facebook" target="_blank"></a>
-						</li>
-						<li>
-							<a href="https://www.twitter.com/vvkmnn" class="icon fa-twitter" target="_blank"></a>
-						</li>
-						<li>
-							<a href="https://www.instagram.com/myhouselion" class="icon fa-instagram" target="_blank"></a>
-						</li>
-						<li>
-							<a href="https://www.snapchat.com/add/vvkmnn" class="icon fa-snapchat" target="_blank"></a>
-						</li>
-						<!--<li>
+							<li>
+								<a href="https://www.linkedin.com/in/vvkmnn" class="icon fa-linkedin" target="_blank"></a>
+							</li>
+							<li>
+								<a href="https://www.facebook.com/vvkmnn" class="icon fa-facebook" target="_blank"></a>
+							</li>
+							<li>
+								<a href="https://www.twitter.com/vvkmnn" class="icon fa-twitter" target="_blank"></a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/myhouselion" class="icon fa-instagram" target="_blank"></a>
+							</li>
+							<li>
+								<a href="https://www.snapchat.com/add/vvkmnn" class="icon fa-snapchat" target="_blank"></a>
+							</li>
+							<!--<li>
 							<a href="https://www.kickstarter.com/profile/vvkmnn" class="icon fa-kickstarter" target="_blank"></a>
 						</li>-->
-						<li>
-							<a href="https://medium.com/vvkmnn" class="icon fa-medium" target="_blank"></a>
-						</li>
-						<li>
-							<a href="https://bitcoinwisdom.com/markets/quadrigacx/btccad" class="icon fa-btc " target="_blank"></a>
-						</li>
-						<!--<li>
+							<li>
+								<a href="https://medium.com/vvkmnn" class="icon fa-medium" target="_blank"></a>
+							</li>
+							<li>
+								<a href="https://bitcoinwisdom.com/markets/quadrigacx/btccad" class="icon fa-btc " target="_blank"></a>
+							</li>
+							<!--<li>
 							<a href="13bSKKHqDWrLsum5no7i4oFHDJYmuec3Pj" class="icon fa-btc " target="_blank"></a>
 						</li>-->
-						<li>
-							<a href="https://steamcommunity.com/id/virakis/" class="icon fa-steam" target="_blank"></a>
-						</li>
-						</li>
-						<li>
-							<a href="https://www.paypal.me/vvkmnn" class="icon fa-paypal" target="_blank"></a>
-						</li>
-						<li>
-							<a href="https://www.reddit.com/r/HighQualityGifs+bestof+dataisbeautiful+datascience/" class="icon fa-reddit" target="_blank"></a>
-						</li>
-						<li>
-							<a href="https://news.ycombinator.com/favorites?id=vvkmnn" class="icon fa-hacker-news" target="_blank"></a>
-						</li>
-						<li>
-							<a href="https://codepen.io/Vvkmnn/" class="icon fa-codepen" target="_blank"></a>
-						</li>
-						<li>
-							<a href="https://open.spotify.com/user/vvkmnn" class="icon fa-spotify" target="_blank"></a>
-						</li>
-						<li>
-							<a href="https://soundcloud.com/vvkmnn" class="icon fa-soundcloud" target="_blank"></a>
-						</li>
-						<!-- Settings -->
-						<script language="JavaScript" type="text/javascript" src="js/settings.js"></script>
-					</nav>
-				</div>
+							<li>
+								<a href="https://steamcommunity.com/id/virakis/" class="icon fa-steam" target="_blank"></a>
+							</li>
+							</li>
+							<li>
+								<a href="https://www.paypal.me/vvkmnn" class="icon fa-paypal" target="_blank"></a>
+							</li>
+							<li>
+								<a href="https://www.reddit.com/r/HighQualityGifs+bestof+dataisbeautiful+datascience/" class="icon fa-reddit" target="_blank"></a>
+							</li>
+							<li>
+								<a href="https://news.ycombinator.com/favorites?id=vvkmnn" class="icon fa-hacker-news" target="_blank"></a>
+							</li>
+							<li>
+								<a href="https://codepen.io/Vvkmnn/" class="icon fa-codepen" target="_blank"></a>
+							</li>
+							<li>
+								<a href="https://open.spotify.com/user/vvkmnn" class="icon fa-spotify" target="_blank"></a>
+							</li>
+							<li>
+								<a href="https://soundcloud.com/vvkmnn" class="icon fa-soundcloud" target="_blank"></a>
+							</li>
+
+						</nav>
+					</div>
 </body>
 
 </html>
