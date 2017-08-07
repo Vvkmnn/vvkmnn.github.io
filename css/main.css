@@ -247,8 +247,8 @@ b:hover,
   color:white;
   position:absolute;
   bottom:-20px;
-  left:0px;
-  font-size:1.5vmax;
+  left:5px;
+  font-size:1vmax;
   pointer-events: none;
   opacity: 0; 
   visibility: hidden; 
