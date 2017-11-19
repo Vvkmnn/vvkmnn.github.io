@@ -9,6 +9,11 @@ html {
   background-color: black;
 }
 
+.overlay, html, body {
+  height:100%;
+  width: 100%;
+  margin:0;
+}
 
 /*Fancy*/
 
@@ -108,37 +113,16 @@ html {
 /*Overlay*/
 
 .overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  pointer-events: none;
+  flex-flow: row wrap;
+  justify-content: space-around;
   text-align: left;
 }
 
-
-/*Header */
-
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: left;
-  font-size: 2vmin;
-  pointer-events: none;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-}
-
-.header .logo {
-  display: flex;
-  flex-basis: auto;
+.logo {
+  order: 1;
   pointer-events: all;
   user-select: none;
   -moz-user-select: none;
@@ -146,43 +130,53 @@ html {
   -ms-user-select: none;
 }
 
-.header .about {
-  margin-top: 3vmin;
-  margin-left: -4vmin;
+.name {
+  order: 2;
+  color: black;
+  font-size: vmin;
+  align-content: flex-start;
+}
+
+.about {
+  order: 3;
   color: black;
   font-size: 3vmin;
+  margin: auto;
 }
 
-.header .links {
-  display: flex;
+.links {
+  order: 4;
   font-size: 5vmin;
   pointer-events: all;
+  margin: auto;
 }
 
 
-/* Header About*/
+/* About*/
 
-.header .about h1 {
+.about h1 {
   font-weight: 700;
   font-size: 7vmin;
   margin-bottom: -1vmin;
 }
 
-.header .about h2 {
+.about h2 {
   font-weight: 700;
   font-size: 4vmin;
 }
 
-.header .about p {
+.about p {
   font-size: 3vmin;
 }
 
-.header .about i {
+.about i {
   font-style: italic;
   font-weight: 300;
 }
 
-.header .about h1:hover,
+.about:hover,
+.name:hover,
+h1:hover,
 h2:hover,
 i:hover,
 b:hover,
@@ -200,14 +194,14 @@ b:hover,
 }
 
 
-/* Header Image */
+/* Image */
 
-.header img {
+img {
   height: 50vmin;
   pointer-events: all;
 }
 
-.header img:hover {
+img:hover {
   filter: contrast(0) brightness(200%);
   -webkit-transition: 0.5s -webkit-filter linear;
   -moz-transition: .5s -moz-filter linear;
@@ -219,11 +213,6 @@ b:hover,
 
 
 /* Links */
-
-.links {
-  margin-top: 25px;
-  width: 60%;
-}
 
 .links li {
   /* List */
@@ -252,11 +241,11 @@ b:hover,
   pointer-events: none;
   opacity: 0; 
   visibility: hidden; 
+  transition: visibility 0.2s linear, opacity 0.2s linear;
   -webkit-text-stroke-width: 1px;
   -webkit-transition: visibility 0.2s linear, opacity 0.2s linear; 
   -moz-transition: visibility 0.2s linear, opacity 0.2s linear;
   -o-transition: visibility 0.2s linear, opacity 0.2s linear;
-
   }
 
 
