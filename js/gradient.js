@@ -68,4 +68,5 @@ function updateGradient() {
 	}
 }
 
+console.log('gradient loaded!');
 setInterval(updateGradient, 10);

@@ -8,10 +8,12 @@ particlesJS.load('particles-js', 'assets/particles.json', function () {
 // typedJS
 $(window).on('load', (function () {
 	// When the page has loaded
-	$("#typed-strings").fadeIn(100);
+	$("#typed-strings")
+		.fadeIn(100);
 }));
 
 $(function () {
+
 	$("#typed").typed({
 		stringsElement: $('#typed-strings'),
 		// typing speed
@@ -33,5 +35,4 @@ $(function () {
 		// character for cursor
 		cursorChar: "|"
 	});
-
-});
+})
