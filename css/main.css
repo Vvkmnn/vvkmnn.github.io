@@ -7,6 +7,8 @@ html {
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
   background-color: black;
+  pointer-events: none;
+  user-select: none;
 }
 
 html, body {
@@ -140,41 +142,39 @@ html {
   padding-top: 10%;
   grid-area: logo;
   align-self: start;
-  pointer-events: all;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
 }
 
 #name {
   grid-area: name;
+  pointer-events: visible;
   padding-top: 15%;
-  align-self: end;
-  align-self: start;
+  padding-bottom: 15%;
   color: black;
-  font-size: 8vh;
+  font-size: 7vh;
   font-weight: 700;
 }
 
 #about {
   grid-area: about;
+  pointer-events: visible;
   align-self: center;
   color: black;
-  font-size: 3vh;
+  font-size: 2.5vh;
 }
 
 #definition {
   align-content: right;
   font-weight: 666;
-  font-size: 3.15vh;
+  font-size: 3vh;
 }
 
 #links {
+  grid-area:links;
+  pointer-events: visible;
+  width: 70%;
   padding-top: 10%;
   grid-area: links;
-  pointer-events: all;
-  font-size: 5vh;
+  font-size: 4.5vh;
 }
 
 
