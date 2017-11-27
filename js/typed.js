@@ -2,11 +2,11 @@
 
 $(function () {
 
-	console.log('typle loaded!');
-	$("#typed").typed({
+	console.log('type loaded!');
+	$(".typed").typed({
 		stringsElement: $('#typed-strings'),
 		// typing speed
-		typeSpeed: 15,
+		typeSpeed: 10,
 		// time before typing starts
 		startDelay: 0,
 		// backspacing speed
