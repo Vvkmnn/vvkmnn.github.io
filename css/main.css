@@ -128,7 +128,7 @@ html {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-auto-columns: 50% 45%;
+  grid-auto-columns: 40% 55%;
   align-content: space-evenly;
   align-items: center;
   grid-template-areas: "logo name"
@@ -149,11 +149,11 @@ html {
 
 #name {
   grid-area: name;
-  padding-top: 20%;
+  padding-top: 15%;
   align-self: end;
   align-self: start;
   color: black;
-  font-size: 6vw;
+  font-size: 8vh;
   font-weight: 700;
 }
 
@@ -161,19 +161,20 @@ html {
   grid-area: about;
   align-self: center;
   color: black;
-  font-size: 2.5vh;
+  font-size: 3vh;
 }
 
 #definition {
   align-content: right;
   font-weight: 666;
-  font-size: 3.5vh;
+  font-size: 3.15vh;
 }
 
 #links {
+  padding-top: 10%;
   grid-area: links;
   pointer-events: all;
-  font-size: 4vh;
+  font-size: 5vh;
 }
 
 
@@ -209,6 +210,7 @@ p {
 i {
   font-style: italic;
   font-weight: 150;
+  font-size: 0.8em;
 }
 
 br {
