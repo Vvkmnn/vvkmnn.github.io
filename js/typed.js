@@ -1,10 +1,9 @@
 // On Document Load
 
 $(function () {
-
 	console.log('type loaded!');
-	$(".typed").typed({
-		stringsElement: $('#typed-strings'),
+	$("#definition").typed({
+		stringsElement: $('#definitions'),
 		// typing speed
 		typeSpeed: 10,
 		// time before typing starts

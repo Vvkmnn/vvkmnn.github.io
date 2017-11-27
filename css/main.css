@@ -13,6 +13,7 @@ html, body {
   height:100%;
   width: 100%;
   margin: 0;
+  padding: 0;
 }
 
 
@@ -62,8 +63,6 @@ html, body {
     background-size: cover; 
 }*/
 
-/*Type Box*/
-
 .typed-cursor {
 	opacity: 1;
 	-webkit-animation: blink 0.7s infinite;
@@ -107,25 +106,40 @@ html, body {
 	}
 }
 
+/* Font */
+
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
+
 /*Overlay*/
 
 #overlay {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 40% 50%;
-  grid-template-rows: 25% 25% 10%;
-  align-content: flex-start;
-  text-align: left;
+  grid-auto-columns: 50% 45%;
+  align-content: space-evenly;
+  align-items: center;
   grid-template-areas: "logo name"
                        "logo about"
-                       "logo links";
-
-  /* grid-column-gap: 5%; */
+                       "logo links"
 }
 
 #logo {
+  padding-top: 10%;
   grid-area: logo;
+  align-self: start;
   pointer-events: all;
   user-select: none;
   -moz-user-select: none;
@@ -134,53 +148,71 @@ html, body {
 }
 
 #name {
-  grid-area:name;
-  align-self: right;
+  grid-area: name;
+  padding-top: 20%;
+  align-self: end;
+  align-self: start;
   color: black;
-  font-size: 5vmin;
+  font-size: 6vw;
+  font-weight: 700;
 }
 
 #about {
-  grid-area:about;
-  align-self: left;
+  grid-area: about;
+  align-self: center;
   color: black;
-  font-size: 3vmin;
-  text-align: left;
+  font-size: 2.5vh;
 }
 
-.typed {
-
+#definition {
+  align-content: right;
+  font-weight: 666;
+  font-size: 3.5vh;
 }
-
 
 #links {
-  grid-area:links;
-  font-size: 5vmin;
+  grid-area: links;
   pointer-events: all;
-  margin: auto;
+  font-size: 4vh;
 }
 
 
-/* About*/
+/* Font */
 
-.about h1 {
-  font-weight: 700;
-  font-size: 7vmin;
-  margin-bottom: -1vmin;
-}
+h1 {
+  font-weight: 650;
+  float: left;
+  }
 
-.about h2 {
-  font-weight: 700;
-  font-size: 4vmin;
-}
-
-.about p {
-  font-size: 3vmin;
-}
-
-.about i {
+h2 {
   font-style: italic;
   font-weight: 300;
+}
+
+h3 {
+  font-weight: 666;
+}
+
+h4 {
+  line-height: 0%;
+  font-style: italic;
+}
+
+b {
+  font-weight: 700;
+}
+
+p {
+  /* font-weight: 700; */
+}
+
+i {
+  font-style: italic;
+  font-weight: 150;
+}
+
+br {
+  line-height: 50%;
 }
 
 #about:hover,
@@ -206,8 +238,7 @@ b:hover,
 /* Image */
 
 img {
-  height: 50vmin;
-  pointer-events: all;
+  width: 100%;
 }
 
 img:hover {
