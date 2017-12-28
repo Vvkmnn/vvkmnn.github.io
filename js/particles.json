@@ -1,7 +1,7 @@
 {
-    "particles": {
+"particles": {
         "number": {
-            "value": 150,
+            "value": 125,
             "density": {
                 "enable": true,
                 "value_area": 1500
@@ -47,7 +47,7 @@
         },
         "line_linked": {
             "enable": true,
-            "distance": 200,
+            "distance": 225,
             "color": "#000",
             "opacity": 0.5,
             "width": 1
@@ -68,7 +68,7 @@
         }
     },
     "interactivity": {
-        "detect_on": "canvas",
+        "detect_on": "window",
         "events": {
             "onhover": {
                 "enable": true,
