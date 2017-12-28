@@ -36,13 +36,13 @@
 
 	<!-- Meta -->
 	<meta charset="UTF-8">
-	<meta name="description" content="Pattern Hunter: / pa·tern huhn-ter/ n.: Data sciencer; artificial thinker; educated guesser; machine tutor; numbers guy.">
+	<meta name="description" content="Pattern Hunter: / pa·tern huhn-ter/ n.: Data sciencer; AI tinkerer; educated guesser; machine tutor; numbers guy.">
 	<meta property=”og:description” content=”Pattern Hunter: / pa·tern huhn-ter/ n.: data cruncher; educated guesser; machine
 	 tutor; numbers guy.”/>
 
 
 	<!-- Search -->
-	<meta name="keywords" content="Vivek Menon, Canada, Toronto, Data Scientist, Data, Science, Analytics, Deep Learning, Machine Learning, AI, Artifical Intelligence">
+	<meta name="keywords" content="Vivek Menon, Canada, Toronto, Data Scientist, Data, Science, Analytics, Deep Learning, Machine Learning, AI, Artifical Intelligence, Pattern Hunter">
 	<meta name="author" content="Vivek Menon">
 
 
@@ -54,9 +54,15 @@
 	<meta property=”og:site_name” content=”Vivek Menon”/>
 
 	<!--Style -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!--Dependencies-->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js'></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" type="text/css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
 
 	<!-- Tracking -->
 	<!-- Google Tag Manager -->
@@ -79,16 +85,12 @@
 	<!-- End Google Tag Manager -->
 </head>
 
+<!-- Body -->
+
 <body>
-	<!--Dependencies-->
-	<!--<script language="JavaScript" type="text/javascript" src="https://use.fontawesome.com/30cfe6789f.js" async></script>-->
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js'></script>
-
-
-	<!-- Settings -->
-	<script language="JavaScript" type="text/javascript" src="js/settings.js"></script>
+	<!-- Scripts -->
+	<script language="JavaScript" type="text/javascript" src="js/particles.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/strings.js"></script>
 	<script language="JavaScript" type="text/javascript" src="js/gradient.js"></script>
 
 
@@ -98,136 +100,140 @@
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B23LJ8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
+
 	<!-- Page -->
-	<div id="particles-js"></div>
+	<div id="particles"></div>
 	<div id="gradient"></div>
-	<!--
-  <div class="video-container">
-  <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
-      <source src="polina.webm" type="video/webm">
-      <source src="http://www.icutpeople.com/wp-content/themes/icutpeople/assets/video/waynesworld.mp4" type="video/mp4">
-  </video>-->
-	<div class="overlay">
-		<div class="header">
-			<div class="logo">
-				<img src="images/vLogoWhite.png"></img>
-			</div>
-			<div class="about">
-				<h1>Vivek Menon</h1>
-				<br>
-				<b>Pattern Hunter.<br></b><i>/pa·tern huhn-ter/</i> <b>n.</b>:
-				<span id="typed">
 
-							<div id="typed-strings">
-								<p>Educated Guesser.</p>
-								<p>Machine Tutor.</p>
-								<p>Data Cruncher.</p>
-								<p>AI Tinkerer.</p>
-								<p>Strategic Planner.</p>
-								<p>Numbers Guy.</p>
-								<p>Trend Finder.</p>
-								<p>Statistical Tester.</p>
-					</div>
-							</span>
 
-				<div class="links">
-					<nav>
-						<!--<li>
+	<div id="overlay">
+		<div id="logo">
+			<img src="images/vLogoWhite.png"></img>
+		</div>
+		<div id="name">
+			Vivek Menon
+		</div>
+		<div id="about">
+			<b>Pattern Hunter.</b>
+			<br>
+			<i>(/pa · tern huhn - ter/ n.): </i>
+			<br>
+			<br>
+			<span id="definition"></span>
+		</div>
+		<div id="definitions">
+			<p>Educated Guesser.</p>
+			<p>Machine Tutor.</p>
+			<p>Data Cruncher.</p>
+			<p>AI Tinkerer.</p>
+			<p>Bayesian Thinker.</p>
+			<p>Strategic Planner.</p>
+			<p>Numbers Guy.</p>
+			<p>Trend Finder.</p>
+			<p>Factor Regressor.</p>
+			<p>Statistical Tester.</p>
+		</div>
+		<br>
+		<div id="links">
+			<!--<li>
 							<a href="tel:" class="icon fa-phone"></a>
 							<p class="label">nope</p>
 						</li>-->
-						<li>
-							<a href="assets/VivekMenon_Resume.pdf" class="icon fa-file hover" target="_blank"></a>
-							<p class="label">resume</p>
-						</li>
-						<li>
-							<a href="mailto:mail@vvkmnn.xyz" class="icon fa-envelope" target="_blank"></a>
-							<p class="label">email</p>
-						</li>
-						<li>
-							<a href="https://m.me/vvkmnn" class="icon fa-commenting" target="_blank"></a>
-							<p class="label">messenger</p>
-						</li>
-						<li>
-							<a href="assets/VivekMenon.vcf" class="icon fa-address-card" target="_blank"></a>
-							<p class="label">iOS contact</p>
-						</li>
-						<li>
-							<a href="https://github.com/vvkmnn" class="icon fa-github" target="_blank"></a>
-							<p class="label">github</p>
-						</li>
-						<li>
-							<a href="https://angel.co/vvkmnn" class="icon fa-angellist" target="_blank"></a>
-							<p class="label">angellist</p>
-						</li>
-						<li>
-							<a href="https://www.linkedin.com/in/vvkmnn" class="icon fa-linkedin" target="_blank"></a>
-							<p class="label">linkedin</p>
-						</li>
-						<li>
-							<a href="https://www.facebook.com/vvkmnn" class="icon fa-facebook" target="_blank"></a>
-							<p class="label">facebook</p>
-						</li>
-						<li>
-							<a href="https://www.twitter.com/vvkmnn" class="icon fa-twitter" target="_blank"></a>
-							<p class="label">twitter</p>
-						</li>
-						<li>
-							<a href="https://www.instagram.com/myhouselion" class="icon fa-instagram" target="_blank"></a>
-							<p class="label">petstagram</p>
-						</li>
-						<li>
-							<a href="https://www.snapchat.com/add/vvkmnn" class="icon fa-snapchat" target="_blank"></a>
-							<p class="label">snapchat</p>
-						</li>
-						<!--<li>
+			<li>
+				<a href="assets/VivekMenon_Resume.pdf" class="icon fa-file hover" target="_blank"></a>
+				<p class="label">resume</p>
+			</li>
+			<li>
+				<a href="mailto:mail@vvkmnn.xyz" class="icon fa-envelope" target="_blank"></a>
+				<p class="label">email</p>
+			</li>
+			<li>
+				<a href="https://m.me/vvkmnn" class="icon fa-commenting" target="_blank"></a>
+				<p class="label">messenger</p>
+			</li>
+			<!-- <li>
+				<a href="nah" class="icon fa-address-card" target="_blank"></a>
+				<p class="label">iOS contact</p>
+			</li> -->
+			<li>
+				<a href="https://github.com/vvkmnn" class="icon fa-github" target="_blank"></a>
+				<p class="label">github</p>
+			</li>
+			<li>
+				<a href="https://angel.co/vvkmnn" class="icon fa-angellist" target="_blank"></a>
+				<p class="label">angellist</p>
+			</li>
+			<li>
+				<a href="https://www.linkedin.com/in/vvkmnn" class="icon fa-linkedin" target="_blank"></a>
+				<p class="label">linkedin</p>
+			</li>
+			<li>
+				<a href="https://www.facebook.com/vvkmnn" class="icon fa-facebook" target="_blank"></a>
+				<p class="label">facebook</p>
+			</li>
+			<li>
+				<a href="https://www.twitter.com/vvkmnn" class="icon fa-twitter" target="_blank"></a>
+				<p class="label">twitter</p>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/myhouselion" class="icon fa-instagram" target="_blank"></a>
+				<p class="label">petstagram</p>
+			</li>
+			<li>
+				<a href="https://www.snapchat.com/add/vvkmnn" class="icon fa-snapchat" target="_blank"></a>
+				<p class="label">snapchat</p>
+			</li>
+			<!--<li>
 							<a href="https://www.kickstarter.com/profile/vvkmnn" class="icon fa-kickstarter" target="_blank"></a>
 							<p class="label">resume</p>
 						</li>-->
-						<li>
-							<a href="https://medium.com/vvkmnn" class="icon fa-medium" target="_blank"></a>
-							<p class="label">medium</p>
-						</li>
-						<li>
-							<a href="https://github.com/redqueenxyz/sigmaCoin/blob/master/optimizing/balancer.ipynb" class="icon fa-btc " target="_blank"></a>
-							<p class="label">crpyto</p>
-						</li>
-						<!--<li>
+			<li>
+				<a href="https://medium.com/vvkmnn" class="icon fa-medium" target="_blank"></a>
+				<p class="label">medium</p>
+			</li>
+			<li>
+				<a href="https://github.com/redqueenxyz/sigmaCoin/blob/master/optimizing/balancer.ipynb" class="icon fa-btc " target="_blank"></a>
+				<p class="label">crpyto</p>
+			</li>
+			<!--<li>
 							<a href="13bSKKHqDWrLsum5no7i4oFHDJYmuec3Pj" class="icon fa-btc " target="_blank"></a>
 							<p class="label">btc</p>
 						</li>-->
-						<li>
-							<a href="https://steamcommunity.com/id/virakis/" class="icon fa-steam" target="_blank"></a>
-							<p class="label">steam</p>
-						</li>
-						</li>
-						<li>
-							<a href="https://www.paypal.me/vvkmnn" class="icon fa-paypal" target="_blank"></a>
-							<p class="label">paypal</p>
-						</li>
-						<li>
-							<a href="https://www.reddit.com/r/HighQualityGifs+bestof+dataisbeautiful+datascience/" class="icon fa-reddit" target="_blank"></a>
-							<p class="label">reddit</p>
-						</li>
-						<li>
-							<a href="https://news.ycombinator.com/favorites?id=vvkmnn" class="icon fa-hacker-news" target="_blank"></a>
-							<p class="label">news</p>
-						</li>
-						<li>
-							<a href="https://codepen.io/Vvkmnn/" class="icon fa-codepen" target="_blank"></a>
-							<p class="label">codepen</p>
-						</li>
-						<li>
-							<a href="https://open.spotify.com/user/vvkmnn" class="icon fa-spotify" target="_blank"></a>
-							<p class="label">spotify</p>
-						</li>
-						<li>
-							<a href="https://soundcloud.com/vvkmnn" class="icon fa-soundcloud" target="_blank"></a>
-							<p class="label">soundcloud</p>
-						</li>
-
-					</nav>
-				</div>
+			<li>
+				<a href="https://public.tableau.com/profile/vvkmnn#!" class="icon fa-line-chart" target="_blank"></a>
+				<p class="label">tableau</p>
+			</li>
+			<li>
+				<a href="https://steamcommunity.com/id/virakis/" class="icon fa-steam" target="_blank"></a>
+				<p class="label">steam</p>
+			</li>
+			</li>
+			<li>
+				<a href="https://www.paypal.me/vvkmnn" class="icon fa-paypal" target="_blank"></a>
+				<p class="label">paypal</p>
+			</li>
+			<li>
+				<a href="https://www.reddit.com/r/HighQualityGifs+bestof+dataisbeautiful+datascience/" class="icon fa-reddit" target="_blank"></a>
+				<p class="label">reddit</p>
+			</li>
+			<li>
+				<a href="https://news.ycombinator.com/favorites?id=vvkmnn" class="icon fa-hacker-news" target="_blank"></a>
+				<p class="label">news</p>
+			</li>
+			<li>
+				<a href="https://codepen.io/Vvkmnn/" class="icon fa-codepen" target="_blank"></a>
+				<p class="label">codepen</p>
+			</li>
+			<li>
+				<a href="https://open.spotify.com/user/vvkmnn" class="icon fa-spotify" target="_blank"></a>
+				<p class="label">spotify</p>
+			</li>
+			<li>
+				<a href="https://soundcloud.com/vvkmnn" class="icon fa-soundcloud" target="_blank"></a>
+				<p class="label">soundcloud</p>
+			</li>
+		</div>
+	</div>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-// Requires Jquery
+// gradient
 
 // https://apnyc.com/wp-content/uploads/2017/04/ColorChart_for_Web.jpg
 var colors = new Array(
@@ -68,4 +68,5 @@ function updateGradient() {
 	}
 }
 
+console.log("gradient loaded!")
 setInterval(updateGradient, 10);
