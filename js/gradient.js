@@ -2,20 +2,19 @@
 
 // https://apnyc.com/wp-content/uploads/2017/04/ColorChart_for_Web.jpg
 var colors = new Array(
-	[205, 0, 0],
+	[211, 31, 68],
 	[244, 207, 41], // Saffron
 	[229, 114, 94], // Terracotta
 	[219, 187, 48], // Anzac
-	[211, 31, 68],
 	[244, 89, 37],
+	[42, 201, 185], // Old Brick
 	[173, 48, 41], // Tall Poppy
 	[88, 27, 186], // Purple Heart
 	[136, 73, 209], // Amethyst
 	[22, 150, 214],
-	[10, 19, 117], // Dark Blue
-	[147, 20, 52], // Claret
-	[42, 201, 185], // Old Brick
-	[205, 0, 0]
+	// [10, 19, 117], // Dark Blue
+	[147, 20, 52] // Claret
+	// [46, 196, 182], [232, 30, 53], [250, 250, 247], [230, 57, 70], [241, 250, 238], [241, 250, 238], [233, 45, 54], [233, 45, 54], [168, 218, 220], [205, 102, 52], [29, 53, 87]
 );
 
 var step = 0;
@@ -27,7 +26,7 @@ var step = 0;
 var colorIndices = [0, 1, 2, 3, 4];
 
 //transition speed
-var gradientSpeed = 0.005;
+var gradientSpeed = 0.001;
 
 function updateGradient() {
 
@@ -49,7 +48,7 @@ function updateGradient() {
 	var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
 	var color2 = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
 
-	$('#gradient-js').css({
+	$('#gradient').css({
 		background: "-webkit-gradient(linear, left top, right top, from(" + color1 + "), to(" + color2 + "))"
 	}).css({
 		background: "-moz-linear-gradient(left, " + color1 + " 0%, " + color2 + " 100%)"
@@ -69,5 +68,4 @@ function updateGradient() {
 	}
 }
 
-console.log('gradient loaded!');
 setInterval(updateGradient, 10);
