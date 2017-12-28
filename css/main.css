@@ -21,8 +21,8 @@ html, body {
 
 /* Fancy */
 
-#particles,
-#gradient {
+#particles-js,
+#gradient-js {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -31,12 +31,12 @@ html, body {
   background-position: 50% 50%;
 }
 
-#particles {
+#particles-js {
   z-index: -3;
   overflow: hidden;
 }
 
-#gradient {
+#gradient-js {
   z-index: -4;
   overflow: hidden;
 }
