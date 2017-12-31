@@ -126,15 +126,12 @@ html {
 /*Overlay*/
 
 #overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 90%;
   height: 90%;
   padding: 5%;
   display: grid;
   pointer-events: auto;
-  grid-auto-columns: 40% 55%;
+  grid-auto-columns: 50% 50%;
   align-content: space-evenly;
   align-items: center;
   grid-template-areas: "logo name"
@@ -153,7 +150,7 @@ html {
   padding-top: 15%;
   padding-bottom: 15%;
   color: black;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
@@ -161,13 +158,13 @@ html {
   grid-area: about;
   align-self: center;
   color: black;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 #definition {
   align-content: right;
   font-weight: 666;
-  font-size: 2.75rem;
+  font-size: 1.75rem;
 }
 
 #links {
@@ -175,7 +172,7 @@ html {
   width: 70%;
   padding-top: 10%;
   grid-area: links;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 
@@ -280,7 +277,7 @@ img:hover {
   position: absolute;
   bottom: -1.5rem;
   left: 0.5rem;
-  font-size:2vmax;
+  font-size: 1rem;
   pointer-events: none;
   opacity: 0; 
   visibility: hidden; 
