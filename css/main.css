@@ -31,6 +31,8 @@ html, body {
 
 #particles-js {
   z-index: -3;
+  width: 150%;
+  height: 150%;
   overflow: hidden;
 }
 
