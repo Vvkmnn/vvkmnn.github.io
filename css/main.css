@@ -133,9 +133,11 @@ html, body {
   pointer-events: auto;
   grid-auto-columns: 40% 60%;
   align-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   grid-template-areas: "logo name"
                        "logo about"
+                       "logo definition"
                        "logo links"
 }
 
@@ -151,7 +153,7 @@ html, body {
   padding-bottom: 10%;
   white-space: nowrap;
   color: black;
-  font-size: 5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -159,13 +161,16 @@ html, body {
   grid-area: about;
   align-self: center;
   color: black;
-  font-size: 2.35rem;
+  font-size: 1rem;
 }
 
 #definition {
-  align-content: right;
-  font-weight: 666;
-  font-size: 2.65rem;
+  grid-area: definition;
+  font-weight: 600;
+}
+
+#definitions {
+    display: none;
 }
 
 #links {
@@ -173,7 +178,7 @@ html, body {
   width: 70%;
   padding-top: 10%;
   grid-area: links;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 
