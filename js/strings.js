@@ -5,7 +5,7 @@ $(function () {
 	$("#definition").typed({
 		stringsElement: $('#definitions'),
 		// typing speed
-		typeSpeed: 7,
+		typeSpeed: 8,
 		// time before typing starts
 		startDelay: 0,
 		// preserve characters
@@ -15,7 +15,7 @@ $(function () {
 		// shuffle the strings
 		shuffle: true,
 		// time before backspacing
-		backDelay: 1350,
+		backDelay: 1150,
 		// loop
 		loop: true,
 		// false = infinite
@@ -23,6 +23,6 @@ $(function () {
 		// show cursor
 		showCursor: true,
 		// character for cursor
-		cursorChar: "|"
+		cursorChar: "_"
 	});
 })
