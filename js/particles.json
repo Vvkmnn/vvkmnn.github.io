@@ -1,7 +1,7 @@
 {
 "particles": {
         "number": {
-            "value": 100,
+            "value": 115,
             "density": {
                 "enable": true,
                 "value_area": 1750
@@ -29,9 +29,9 @@
             "value": 0.75,
             "random": true,
             "anim": {
-                "enable": false,
+                "enable": true,
                 "speed": 2,
-                "opacity_min": 0.1,
+                "opacity_min": 0.25,
                 "sync": true
             }
         },
@@ -82,7 +82,7 @@
         },
         "modes": {
             "grab": {
-                "distance": 250,
+                "distance": 666,
                 "line_linked": {
                     "opacity": 0.5
                 }
