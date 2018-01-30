@@ -9,7 +9,6 @@ html {
   background-color: white;
   pointer-events: none;
   user-select: none;
-  font-size: calc(30px + 6 * ((100vw - 320px) / 680)); 
 }
 
 html, body {
@@ -113,20 +112,20 @@ html, body {
 
 /* Font */
 
-/* @media screen and (min-width: 100px) { */ 
-/* html { */
-/*    } */ 
-/* } */
-/* @media screen and (min-width: 320px) { */ 
-/*   html { */ 
-/*     font-size: calc(35px + 6 * ((100vw - 320px) / 680)); */ 
-/*   } */ 
-/* } */ 
-/* @media screen and (min-width: 1000px) { */ 
-/*   html { */
-/*     font-size: calc(25px + 6 * ((100vw - 320px) / 680)); */ 
-/*   } */ 
-/* } */ 
+@media screen and (min-width: 100px) { 
+html {
+   } 
+}
+@media screen and (min-width: 320px) { 
+  html { 
+    font-size: calc(35px + 6 * ((100vw - 320px) / 680)); 
+  } 
+} 
+@media screen and (min-width: 1000px) { 
+  html {
+    font-size: calc(25px + 6 * ((100vw - 320px) / 680)); 
+  } 
+} 
 
 /*Overlay*/
 
