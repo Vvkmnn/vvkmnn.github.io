@@ -141,7 +141,8 @@ body {
     "logo name"
     "logo about"
     "logo definition"
-    "logo links";
+    "logo links"
+    "logo blank";
 }
 
 #logo {
@@ -178,10 +179,10 @@ body {
 
 #links {
   grid-area: links;
-  width: 70%;
+  /* width: 80%; */
   padding-top: 10%;
   grid-area: links;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 /* Font */
