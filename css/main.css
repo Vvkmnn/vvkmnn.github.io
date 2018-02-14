@@ -109,19 +109,17 @@ body {
 }
 
 /* Font */
-
-@media screen and (min-width: 100px) {
-  html {
-  }
+html {
+  font-size: 16px;
 }
 @media screen and (min-width: 320px) {
   html {
-    font-size: calc(22px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   }
 }
 @media screen and (min-width: 1000px) {
   html {
-    font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+    font-size: 30px;
   }
 }
 
@@ -142,22 +140,19 @@ body {
     "logo about"
     "logo definition"
     "logo links"
-    "logo blank";
 }
 
+
 #logo {
-  padding-top: 10%;
   grid-area: logo;
   align-self: start;
 }
 
 #name {
   grid-area: name;
-  padding-top: 10%;
-  padding-bottom: 10%;
   white-space: nowrap;
   color: black;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -182,7 +177,7 @@ body {
   /* width: 80%; */
   padding-top: 10%;
   grid-area: links;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 /* Font */
