@@ -556,5 +556,9 @@ img:hover {
 
 .icon:hover {
   color: white;
-  fill: white;
+  transition: color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out;
+  -ms-transition: color 0.5s ease-out;
+  -moz-transition: color 0.5s ease-out;
+  -webkit-transition: color 0.5s ease-out;
 }
