@@ -130,6 +130,7 @@ html {
   height: 90%;
   padding: 5%;
   display: grid;
+  color: white;
   pointer-events: auto;
   grid-auto-columns: 40% 60%;
   align-content: space-evenly;
@@ -151,7 +152,6 @@ html {
 #name {
   grid-area: name;
   white-space: nowrap;
-  color: black;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -159,7 +159,6 @@ html {
 #about {
   grid-area: about;
   align-self: center;
-  color: black;
   font-size: 1.25rem;
 }
 
@@ -231,7 +230,7 @@ b:hover,
 #line3:hover,
 #line3:hover,
 #line4:hover {
-  color: white;
+  color: black;
   transition: color 0.5s ease-out;
   -o-transition: color 0.5s ease-out;
   -ms-transition: color 0.5s ease-out;
@@ -243,10 +242,11 @@ b:hover,
 
 img {
   width: 100%;
+  filter: invert(100%);
 }
 
 img:hover {
-  filter: contrast(0) brightness(200%);
+  filter: invert(0%);
   -webkit-transition: 0.5s -webkit-filter linear;
   -moz-transition: 0.5s -moz-filter linear;
   -moz-transition: 0.5s filter linear;
@@ -276,7 +276,7 @@ img:hover {
 }
 
 #links li .label {
-  color: white;
+  color: black;
   position: absolute;
   bottom: -1.5rem;
   left: 0.5rem;
@@ -293,22 +293,23 @@ img:hover {
 
 #links li:hover .label {
   visibility: visible;
-  fill: white;
   opacity: 1;
 }
 
-#links a:hover {
-  font-size: 1em;
-}
+/* #links a:hover { */
+/*   font-size: 1em; */
+/* } */
+/*  */
 
-#links a:hover:before {
-  color: white;
-  transition: color 0.5s ease-out;
-  -o-transition: color 0.5s ease-out;
-  -ms-transition: color 0.5s ease-out;
-  -moz-transition: color 0.5s ease-out;
-  -webkit-transition: color 0.5s ease-out;
-}
+/* #links a:hover:before { */
+/*   color: white; */
+/*   transition: color 0.5s ease-out; */
+/*   -o-transition: color 0.5s ease-out; */
+/*   -ms-transition: color 0.5s ease-out; */
+/*   -moz-transition: color 0.5s ease-out; */
+/*   -webkit-transition: color 0.5s ease-out; */
+/* } */
+/*  */
 
 /*#links nav a:active {
   font-size: 0.9em;
@@ -539,10 +540,10 @@ img:hover {
 
 .icon {
   text-decoration: none;
+  color: white;
   position: relative;
   top: 0;
   left: 0;
-  color: #000;
 }
 
 .icon:before {
@@ -555,7 +556,7 @@ img:hover {
 }
 
 .icon:hover {
-  color: white;
+    color: black;
   transition: color 0.5s ease-out;
   -o-transition: color 0.5s ease-out;
   -ms-transition: color 0.5s ease-out;
