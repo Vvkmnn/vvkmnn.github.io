@@ -130,7 +130,7 @@ html {
   height: 90%;
   padding: 5%;
   display: grid;
-  color: white;
+  color: black;
   pointer-events: auto;
   grid-auto-columns: 40% 60%;
   align-content: space-evenly;
@@ -181,6 +181,10 @@ html {
 
 /* Font */
 
+a {
+  color: black;
+}
+
 h1 {
   font-weight: 650;
   float: left;
@@ -225,12 +229,13 @@ h1:hover,
 h2:hover,
 i:hover,
 b:hover,
+a:hover,
 #line1:hover,
 #line2:hover,
 #line3:hover,
 #line3:hover,
 #line4:hover {
-  color: black;
+  color: white;
   transition: color 0.5s ease-out;
   -o-transition: color 0.5s ease-out;
   -ms-transition: color 0.5s ease-out;
@@ -242,11 +247,10 @@ b:hover,
 
 img {
   width: 100%;
-  filter: invert(100%);
 }
 
 img:hover {
-  filter: invert(0%);
+  filter: invert(100%);
   -webkit-transition: 0.5s -webkit-filter linear;
   -moz-transition: 0.5s -moz-filter linear;
   -moz-transition: 0.5s filter linear;
@@ -276,7 +280,7 @@ img:hover {
 }
 
 #links li .label {
-  color: black;
+  color: white;
   position: absolute;
   bottom: -1.5rem;
   left: 0.5rem;
@@ -296,20 +300,20 @@ img:hover {
   opacity: 1;
 }
 
-/* #links a:hover { */
-/*   font-size: 1em; */
-/* } */
-/*  */
+#links a {
+  font-size: 1em;
+}
 
-/* #links a:hover:before { */
-/*   color: white; */
-/*   transition: color 0.5s ease-out; */
-/*   -o-transition: color 0.5s ease-out; */
-/*   -ms-transition: color 0.5s ease-out; */
-/*   -moz-transition: color 0.5s ease-out; */
-/*   -webkit-transition: color 0.5s ease-out; */
-/* } */
-/*  */
+
+#links a:hover {
+  color: black;
+  transition: color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out;
+  -ms-transition: color 0.5s ease-out;
+  -moz-transition: color 0.5s ease-out;
+  -webkit-transition: color 0.5s ease-out;
+}
+
 
 /*#links nav a:active {
   font-size: 0.9em;
@@ -540,7 +544,7 @@ img:hover {
 
 .icon {
   text-decoration: none;
-  color: white;
+  color: black;
   position: relative;
   top: 0;
   left: 0;
@@ -556,7 +560,7 @@ img:hover {
 }
 
 .icon:hover {
-    color: black;
+  color: white;
   transition: color 0.5s ease-out;
   -o-transition: color 0.5s ease-out;
   -ms-transition: color 0.5s ease-out;
