@@ -32,7 +32,7 @@ body {
 #particles-js {
     position: absolute;
     z-index: -3;
-    width: 150%;
+    width: 100%;
     overflow: hidden;
 }
 
