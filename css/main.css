@@ -32,7 +32,7 @@ body {
 #particles-js {
     position: absolute;
     z-index: -3;
-    width: 150%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -130,13 +130,11 @@ html {
 #overlay {
     width: 90%;
     height: 90%;
-    padding: 5%;
     display: grid;
     color: black;
     pointer-events: auto;
     grid-auto-columns: 40% 60%;
-    align-content: space-evenly;
-    justify-content: space-around;
+    align-content: space-around;
     align-items: center;
     grid-template-areas: "logo name" "logo about" "logo definition" "logo links"
 }
@@ -163,6 +161,9 @@ html {
 #definition {
     grid-area: definition;
     font-weight: 600;
+    font-size: 1rem;
+    line-height: 100%;
+    max-width: 100%
 }
 
 #definitions {
