@@ -110,7 +110,7 @@ body {
 /* Font */
 
 html {
-    font-size: 16px;
+    font-size: 6px;
 }
 
 @media screen and (min-width: 320px) {
@@ -121,13 +121,15 @@ html {
 
 @media screen and (min-width: 1000px) {
     html {
-        font-size: 30px;
+        font-size: calc(24px + 6 * ((100vw - 320px) / 680));
     }
 }
 
 /*Overlay*/
 
 #overlay {
+    padding-top:5%;
+    padding-bottom:5%;
     width: 90%;
     height: 90%;
     display: grid;
@@ -148,22 +150,26 @@ html {
 #name {
     grid-area: name;
     white-space: nowrap;
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 700;
 }
 
 #about {
     grid-area: about;
     align-self: center;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
+}
+
+#pronounce {
+    grid-area: about;
+    align-self: center;
+    font-size: 1.15rem;
 }
 
 #definition {
     grid-area: definition;
     font-weight: 600;
-    font-size: 1rem;
-    line-height: 100%;
-    max-width: 100%
+    font-size: 1.25rem;
 }
 
 #definitions {
@@ -205,6 +211,11 @@ h3 {
 h4 {
     line-height: 0%;
     font-style: italic;
+}
+
+code {
+    font-family: monospace;
+    white-space: pre;
 }
 
 b {
