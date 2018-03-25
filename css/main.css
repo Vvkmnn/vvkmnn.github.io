@@ -121,7 +121,7 @@ html {
 
 @media screen and (min-width: 1000px) {
     html {
-        font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+        font-size: calc(22px + 6 * ((100vw - 320px) / 680));
     }
 }
 
