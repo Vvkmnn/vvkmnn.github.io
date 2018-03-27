@@ -496,25 +496,25 @@ img:hover {
 }
 
 #links li:nth-child(23) {
-    -moz-animation-delay: 6s;
-    -webkit-animation-delay: 6s;
-    -ms-animation-delay: 6s;
-    animation-delay: 6s;
+    -moz-animation-delay: 6.25s;
+    -webkit-animation-delay: 6.25s;
+    -ms-animation-delay: 6.25s;
+    animation-delay: 6.25s;
 }
 
 #links li:nth-child(24) {
-    -moz-animation-delay: 6s;
-    -webkit-animation-delay: 6s;
-    -ms-animation-delay: 6s;
-    animation-delay: 6s;
+    -moz-animation-delay: 6.5s;
+    -webkit-animation-delay: 6.5s;
+    -ms-animation-delay: 6.5s;
+    animation-delay: 6.5s;
 }
 
 
 #links li:nth-child(25) {
-    -moz-animation-delay: 6s;
-    -webkit-animation-delay: 6s;
-    -ms-animation-delay: 6s;
-    animation-delay: 6s;
+    -moz-animation-delay: 6.75s;
+    -webkit-animation-delay: 6.75s;
+    -ms-animation-delay: 6.75s;
+    animation-delay: 6.75s;
 }
 
 @-moz-keyframes nav-icons {
