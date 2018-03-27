@@ -500,6 +500,22 @@ img:hover {
     -ms-animation-delay: 6s;
     animation-delay: 6s;
 }
+
+#links li:nth-child(24) {
+    -moz-animation-delay: 6s;
+    -webkit-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+
+
+#links li:nth-child(25) {
+    -moz-animation-delay: 6s;
+    -webkit-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+
 @-moz-keyframes nav-icons {
     0% {
         -moz-transform: translate3d(0, 1em, 0);
