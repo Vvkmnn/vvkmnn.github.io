@@ -8,11 +8,10 @@ var colors = new Array(
 [255, 225, 25], // Yellow	 
 [60, 180, 75], //  Green	 
 [210, 245, 60], // Lime	 
-// [0, 130, 200], //  Blue	 
+[0, 130, 200], //  Blue	 
 [145, 30, 180], // Purple	 
 [70, 240, 240], // Cyan	 
 [240, 50, 230], // Magenta	 
-[250, 190, 190], //Pink	 
 [0, 128, 128], //  Teal	 
 [230, 190, 255], //Lavender 
 [170, 110, 40], // Brown	 
@@ -24,17 +23,19 @@ var colors = new Array(
 [0, 0, 128], //    Navy	 
 [128, 128, 128], //Grey	 
 [229, 114, 94], // Terracotta
+[250, 190, 190], //Pink	 
 [219, 187, 48], // Anzac
 [42, 201, 185], // Old Brick
 [173, 48, 41], // Tall Poppy
 [88, 27, 186], // Purple Heart
 [136, 73, 209], // Amethyst
 [22, 150, 214],
-// [10, 19, 117], // Dark Blue
+[10, 19, 117], // Dark Blue
 [147, 20, 52] // Claret
 );
 
 var step = 0;
+
 //color table indices for:
 // current color left
 // next color left
@@ -65,7 +66,7 @@ function updateGradient() {
 	var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
 	var color2 = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
 
-	$('#gradient-js').css({
+        $('#gradient-js').css({
 		background: "-webkit-gradient(linear, left top, right top, from(" + color1 + "), to(" + color2 + "))"
 	}).css({
 		background: "-moz-linear-gradient(left, " + color1 + " 0%, " + color2 + " 100%)"
