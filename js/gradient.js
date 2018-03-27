@@ -2,19 +2,36 @@
 
 // https://apnyc.com/wp-content/uploads/2017/04/ColorChart_for_Web.jpg
 var colors = new Array(
-	[211, 31, 68],
-	[244, 207, 41], // Saffron
-	[229, 114, 94], // Terracotta
-	[219, 187, 48], // Anzac
-	[244, 89, 37],
-	[42, 201, 185], // Old Brick
-	[173, 48, 41], // Tall Poppy
-	[88, 27, 186], // Purple Heart
-	[136, 73, 209], // Amethyst
-	[22, 150, 214],
-	// [10, 19, 117], // Dark Blue
-	[147, 20, 52] // Claret
-	// [46, 196, 182], [232, 30, 53], [250, 250, 247], [230, 57, 70], [241, 250, 238], [241, 250, 238], [233, 45, 54], [233, 45, 54], [168, 218, 220], [205, 102, 52], [29, 53, 87]
+[244, 207, 41], // Saffron
+[230, 25, 75], //  Red      
+[245, 130, 48], // Orange	 
+[255, 225, 25], // Yellow	 
+[60, 180, 75], //  Green	 
+[210, 245, 60], // Lime	 
+// [0, 130, 200], //  Blue	 
+[145, 30, 180], // Purple	 
+[70, 240, 240], // Cyan	 
+[240, 50, 230], // Magenta	 
+[250, 190, 190], //Pink	 
+[0, 128, 128], //  Teal	 
+[230, 190, 255], //Lavender 
+[170, 110, 40], // Brown	 
+[255, 250, 200], //Beige	 
+[128, 0, 0], //    Maroon	 
+[170, 255, 195], //Mint	 
+[128, 128, 0], //  Olive	 
+[255, 215, 180], //Coral	 
+[0, 0, 128], //    Navy	 
+[128, 128, 128], //Grey	 
+[229, 114, 94], // Terracotta
+[219, 187, 48], // Anzac
+[42, 201, 185], // Old Brick
+[173, 48, 41], // Tall Poppy
+[88, 27, 186], // Purple Heart
+[136, 73, 209], // Amethyst
+[22, 150, 214],
+// [10, 19, 117], // Dark Blue
+[147, 20, 52] // Claret
 );
 
 var step = 0;
@@ -23,10 +40,10 @@ var step = 0;
 // next color left
 // current color right
 // next color right
-var colorIndices = [0, 1, 2, 3, 4];
+var colorIndices = [0, 1, 2, 3];
 
 //transition speed
-var gradientSpeed = 0.001;
+var gradientSpeed = 0.007;
 
 function updateGradient() {
 
