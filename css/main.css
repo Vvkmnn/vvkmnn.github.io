@@ -486,6 +486,20 @@ img:hover {
     animation-delay: 5.5s;
 }
 
+
+#links li:nth-child(22) {
+    -moz-animation-delay: 5.75s;
+    -webkit-animation-delay: 5.75s;
+    -ms-animation-delay: 5.75s;
+    animation-delay: 5.75s;
+}
+
+#links li:nth-child(23) {
+    -moz-animation-delay: 6s;
+    -webkit-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
 @-moz-keyframes nav-icons {
     0% {
         -moz-transform: translate3d(0, 1em, 0);
