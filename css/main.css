@@ -39,7 +39,6 @@ body {
     z-index: -4;
     width: 100%;
     height: 100%;
-    rotate(77);
 }
 
 /*.video-container {
@@ -164,6 +163,8 @@ html {
 #pronounce {
     grid-area: about;
     align-self: center;
+    width: auto;
+    height: auto;
     font-size: 1.15rem;
 }
 
@@ -171,6 +172,7 @@ html {
     grid-area: definition;
     font-weight: 600;
     font-size: 1.25rem;
+    transform: rotate(45deg);
 }
 
 #definitions {
