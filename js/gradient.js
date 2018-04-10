@@ -16,9 +16,7 @@ var colors = new Array(
 [230, 190, 255], //Lavender 
 [170, 110, 40], // Brown	 
 [255, 250, 200], //Beige	 
-[128, 0, 0], //    Maroon	 
 [170, 255, 195], //Mint	 
-[128, 128, 0], //  Olive	 
 [255, 215, 180], //Coral	 
 [0, 0, 128], //    Navy	 
 [128, 128, 128], //Grey	 
@@ -27,10 +25,6 @@ var colors = new Array(
 [219, 187, 48], // Anzac
 [42, 201, 185], // Old Brick
 [173, 48, 41], // Tall Poppy
-[88, 27, 186], // Purple Heart
-[136, 73, 209], // Amethyst
-[22, 150, 214],
-[10, 19, 117], // Dark Blue
 [147, 20, 52] // Claret
 );
 
