@@ -144,6 +144,7 @@ html {
 
 #logo {
   grid-area: logo;
+  padding-top: 10%;
   align-self: center;
 }
 
