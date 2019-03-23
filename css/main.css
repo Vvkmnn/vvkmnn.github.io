@@ -135,8 +135,8 @@ html {
     display: grid;
     color: black;
     pointer-events: auto;
-    grid-auto-columns: 40% 60%;
-    align-content: space-around;
+    grid-auto-columns: 30% 70%;
+    align-content: space-between;
     align-items: center;
     grid-template-areas: "logo name" "logo about" "logo definition" "logo links"
 }
@@ -144,20 +144,21 @@ html {
 
 #logo {
     grid-area: logo;
-    align-self: start;
+    align-self: flex-start;
 }
 
 #name {
+    padding-top:10%;
     grid-area: name;
-    white-space: nowrap;
-    font-size: 2.25rem;
-    font-weight: 700;
+    font-size: 1.9rem;
+    font-weight: 800;
+    align-self: center;
 }
 
 #about {
     grid-area: about;
-    align-self: center;
-    font-size: 1.35rem;
+    align-self: flex-end;
+    font-size: 1.2rem;
 }
 
 #pronounce {
@@ -169,22 +170,24 @@ html {
 }
 
 #definition {
+    white-space: pre-wrap;
     grid-area: definition;
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     transform: rotate(45deg);
 }
 
 #definitions {
+    white-space: pre-wrap;
     display: none;
+    pointer-events: all;
 }
 
 #links {
     grid-area: links;
-    /* width: 80%; */
-    padding-top: 10%;
-    grid-area: links;
-    font-size: 1.5rem;
+    padding-bottom: 10%;
+    font-size: 1.45rem;
+    align-content; center
 }
 
 /* Font */

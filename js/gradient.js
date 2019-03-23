@@ -4,21 +4,27 @@
 var colors = new Array(
 [244, 207, 41], // Saffron
 [230, 25, 75], //  Red      
-[245, 130, 48], // Orange	 
-[255, 225, 25], // Yellow	 
-[60, 180, 75], //  Green	 
-[210, 245, 60], // Lime	 
-[0, 130, 200], //  Blue	 
-[145, 30, 180], // Purple	 
-[70, 240, 240], // Cyan	 
-[240, 50, 230], // Magenta	 
 [0, 128, 128], //  Teal	 
 [230, 190, 255], //Lavender 
-[170, 110, 40], // Brown	 
-[255, 250, 200], //Beige	 
+[170, 255, 195], //Mint	 
+[145, 30, 180], // Purple	 
+[70, 240, 240], // Cyan	 
+[42, 201, 185], // Old Brick
+[173, 48, 41], // Tall Poppy
+[245, 130, 48], // Orange	 
+[255, 225, 25], // Yellow	 
+[229, 114, 94], // Terracotta
+[60, 180, 75], //  Green	 
+[70, 240, 240], // Cyan	 
+[0, 128, 128], //  Teal	 
+[230, 190, 255], //Lavender 
 [170, 255, 195], //Mint	 
 [255, 215, 180], //Coral	 
-[0, 0, 128], //    Navy	 
+[255, 225, 25], // Yellow	 
+[229, 114, 94], // Terracotta
+[250, 190, 190], //Pink	 
+[219, 187, 48], // Anzac
+[42, 201, 185], // Old Brick
 [128, 128, 128], //Grey	 
 [229, 114, 94], // Terracotta
 [250, 190, 190], //Pink	 
@@ -26,6 +32,8 @@ var colors = new Array(
 [42, 201, 185], // Old Brick
 [173, 48, 41], // Tall Poppy
 [147, 20, 52] // Claret
+[250, 190, 190], //Pink	 
+[219, 187, 48], // Anzac
 );
 
 var step = 0;
@@ -80,5 +88,5 @@ function updateGradient() {
 	}
 }
 
-console.log("gradient loaded!")
+// console.log("gradient loaded!")
 setInterval(updateGradient, 10);
