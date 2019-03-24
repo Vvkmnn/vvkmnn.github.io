@@ -135,16 +135,16 @@ html {
   display: grid;
   color: black;
   pointer-events: auto;
-  grid-auto-columns: 40% 50%;
   grid-auto-rows: 20% 20% 40%;
-  align-content: center;
+  grid-auto-columns: 30% 70%;
+  grid-gap: 1px;
+  align-content: stretch;
   align-items: center;
   grid-template-areas: "logo name" "logo definition" "logo links";
 }
 
 #logo {
   grid-area: logo;
-  padding-top: 10%;
   align-self: center;
 }
 
@@ -153,7 +153,7 @@ html {
   padding-top: 10%;
   font-size: 1.9rem;
   font-weight: 800;
-  align-self: flex-end;
+  align-self: end;
 }
 
 #about {
@@ -177,6 +177,7 @@ html {
   grid-area: definition;
   font-weight: 400;
   font-size: 1.15rem;
+  align-self: center;
   /* transform: rotate(45deg); */
 }
 
@@ -189,7 +190,7 @@ html {
 #links {
   grid-area: links;
   font-size: 1.45rem;
-  align-self: flex-start;
+  align-self: start;
 }
 
 /* Font */
