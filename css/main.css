@@ -131,7 +131,7 @@ html {
 #overlay {
   padding-top: 5%;
   padding-bottom: 5%;
-  width: 90%;
+  width: 80%;
   height: 80%;
   display: grid;
   color: black;
@@ -159,27 +159,19 @@ html {
 
 #about {
   grid-area: about;
-  align-self: flex-start;
-  font-size: 1.2rem;
-  lign-self: center;
-}
-
-#pronounce {
-  grid-area: about;
+  font-weight: 600;
+  align-self: flex-end;
   align-self: center;
-  align: right;
-  width: auto;
-  height: auto;
-  font-size: 1.15rem;
+  font-size: 0.7rem;
 }
 
 #definition {
   white-space: pre-wrap;
   grid-area: definition;
   font-weight: 400;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
+  align-self: flex-start;
   align-self: center;
-  /* transform: rotate(45deg); */
 }
 
 #definitions {
@@ -190,7 +182,7 @@ html {
 
 #links {
   grid-area: links;
-  font-size: 1.45rem;
+  font-size: 1.7rem;
   align-self: start;
 }
 
