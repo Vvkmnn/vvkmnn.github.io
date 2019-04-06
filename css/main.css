@@ -135,13 +135,14 @@ html {
   height: 90%;
   display: grid;
   color: black;
-  pointer-events: auto;
+  /* pointer-events: auto; */
   grid-auto-rows: 20% 20% 40%;
   grid-auto-columns: 30% 70%;
   /* grid-gap: 1px; */
   align-content: stretch;
   align-items: center;
   grid-template-areas: "logo name" "logo definition" "logo links";
+  pointer-events: all;
 }
 
 #logo {
@@ -177,7 +178,6 @@ html {
 #definitions {
   white-space: pre-wrap;
   display: none;
-  pointer-events: all;
 }
 
 #links {
@@ -241,6 +241,7 @@ br {
 #about:hover,
 #name:hover,
 #links:hover,
+#definition:hover,
 h1:hover,
 h2:hover,
 i:hover,
