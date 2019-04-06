@@ -54,8 +54,8 @@
     },
     "move": {
       "enable": true,
-      "speed": 3,
-      "direction": "top-left",
+      "speed": 2,
+      "direction": "left",
       "random": true,
       "straight": false,
       "out_mode": "bounce",
@@ -88,14 +88,14 @@
         }
       },
       "bubble": {
-        "distance": 400,
+        "distance": 100,
         "size": 40,
         "duration": 2,
         "opacity": 8,
         "speed": 3
       },
       "repulse": {
-        "distance": 300,
+        "distance": 200,
         "duration": 1
       },
       "push": {
