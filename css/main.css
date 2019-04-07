@@ -143,11 +143,22 @@ html {
   align-items: center;
   grid-template-areas: "logo name" "logo definition" "logo links";
   pointer-events: all;
+
 }
 
 #logo {
   grid-area: logo;
   align-self: center;
+
+  -moz-animation: nav-icons 0.70s ease-in-out both;
+  -webkit-animation: nav-icons 0.70s ease-in-out both;
+  -ms-animation: nav-icons 0.70s ease-in-out both;
+  animation: nav-icons 0.70s ease-in-out both;
+
+  -moz-animation-delay: 0.15s;
+  -webkit-animation-delay: 0.15s;
+  -ms-animation-delay: 0.15s;
+  animation-delay: 0.15s;
 }
 
 #name {
@@ -156,6 +167,16 @@ html {
   font-size: 1.9rem;
   font-weight: 800;
   align-self: end;
+
+  -moz-animation: nav-icons 0.7s ease-in-out both;
+  -webkit-animation: nav-icons 0.7s ease-in-out both;
+  -ms-animation: nav-icons 0.7s ease-in-out both;
+  animation: nav-icons 0.7s ease-in-out both;
+
+  -moz-animation-delay: 0.15s;
+  -webkit-animation-delay: 0.15s;
+  -ms-animation-delay: 0.15s;
+  animation-delay: 0.15s;
 }
 
 #about {
@@ -164,6 +185,7 @@ html {
   align-self: flex-end;
   align-self: center;
   font-size: 0.7rem;
+
 }
 
 #definition {
@@ -173,6 +195,16 @@ html {
   font-size: 1.3rem;
   align-self: flex-start;
   align-self: center;
+
+  -moz-animation: nav-icons 0.70s ease-in-out both;
+  -webkit-animation: nav-icons 0.70s ease-in-out both;
+  -ms-animation: nav-icons 0.70s ease-in-out both;
+  animation: nav-icons 0.70s ease-in-out both;
+
+  -moz-animation-delay: 0.15s;
+  -webkit-animation-delay: 0.15s;
+  -ms-animation-delay: 0.15s;
+  animation-delay: 0.15s;
 }
 
 #definitions {
@@ -189,11 +221,11 @@ html {
 /* Font */
 
 a {
-  color: black;
+  color: inherit;
 }
 
 a:active {
-  color: black;
+  color: inherit;
 }
 
 h1 {
@@ -323,12 +355,11 @@ img:hover {
 }
 
 #links a:hover {
-  color: black;
-  transition: color 0.5s ease-out;
-  -o-transition: color 0.5s ease-out;
-  -ms-transition: color 0.5s ease-out;
-  -moz-transition: color 0.5s ease-out;
-  -webkit-transition: color 0.5s ease-out;
+  /* transition: color 0.5s ease-out; */
+  /* -o-transition: color 0.5s ease-out; */
+  /* -ms-transition: color 0.5s ease-out; */
+  /* -moz-transition: color 0.5s ease-out; */
+  /* -webkit-transition: color 0.5s ease-out; */
 }
 
 /*#links nav a:active {

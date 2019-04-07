@@ -5,26 +5,20 @@ var colors = new Array(
   [244, 207, 41], // Saffron
   [230, 25, 75], //  Red
   [0, 128, 128], //  Teal
-  [62, 35, 255],
-  [60, 255, 60],
-  [255, 35, 98],
-  [45, 175, 230],
-  [255, 0, 255],
-  [255, 128, 0],
-  [170, 255, 195], //Mint
-  [255, 215, 180], //Coral
-  [255, 225, 25], // Yellow
-  [229, 114, 94], // Terracotta
-  [250, 190, 190], //Pink
   [219, 187, 48], // Anzac
   [42, 201, 185], // Old Brick
   [128, 128, 128], //Grey
+  [170, 255, 195], //Mint
+  [255, 215, 180], //Coral
   [229, 114, 94], // Terracotta
-  [250, 190, 190], //Pink
-  [219, 187, 48], // Anzac
+  [255, 225, 25], // Yellow
+  [45, 175, 230], // Blue
+  [85,88,218 ], // Powder Blue
+  [95,209,249], // Light Blue
+  [255, 0, 255], // Pink
   [42, 201, 185], // Old Brick
   [173, 48, 41], // Tall Poppy
-  [219, 187, 48] // Anzac
+  [255, 128, 0], // Orange
 );
 
 var step = 0;
@@ -37,7 +31,7 @@ var step = 0;
 var colorIndices = [0, 1, 2, 3];
 
 //transition speed
-var gradientSpeed = 0.0007;
+var gradientSpeed = 0.0027;
 
 function updateGradient() {
   if ($ === undefined) return;
