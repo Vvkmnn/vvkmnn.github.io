@@ -17,6 +17,12 @@ body {
   overflow: hidden;
 }
 
+main {
+  max-width: 38rem;
+  padding: 2rem;
+  margin: auto;
+}
+
 /* Fancy */
 
 #particles-js,
@@ -129,11 +135,8 @@ html {
 /*Overlay*/
 
 #overlay {
-  max-width: 38rem;
-  padding: 2rem;
-  margin: auto;
-  /* padding-top: 5%; */
-  /* padding-bottom: 5%; */
+  padding-top: 5%;
+  padding-bottom: 5%;
   width: 90%;
   height: 90%;
   display: grid;
