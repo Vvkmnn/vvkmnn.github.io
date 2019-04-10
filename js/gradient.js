@@ -85,5 +85,5 @@ function updateGradient() {
   }
 }
 
-// console.log("gradient loaded!")
+console.log("[vSite] gradient loaded!")
 setInterval(updateGradient, 10);

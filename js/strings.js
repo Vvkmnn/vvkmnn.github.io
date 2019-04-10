@@ -1,7 +1,7 @@
 // strings
 
 $(function() {
-  console.log("type loaded!");
+  console.log("[vSite] strings loaded!");
   $("#definition").typed({
     stringsElement: $("#definitions"),
     // typing speed
