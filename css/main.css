@@ -6,7 +6,6 @@
 html {
   font-family: "Roboto", sans-serif;
   background-color: gray;
-  pointer-events: none;
   user-select: none;
 }
 
