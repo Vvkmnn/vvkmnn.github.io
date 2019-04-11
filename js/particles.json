@@ -61,7 +61,7 @@
       "out_mode": "out",
       "bounce": true,
       "attract": {
-        "enable": true,
+        "enable": false,
         "rotateX": 7000,
         "rotateY": 7000
       }
