@@ -8,7 +8,6 @@ var colors = new Array(
   [230, 25, 75], //  Red
   [0, 128, 128], //  Teal
   [219, 187, 48], // Anzac
-  [42, 201, 185], // Old Brick
   [128, 128, 128], //Grey
   [170, 255, 195], //Mint
   [255, 215, 180], //Coral
@@ -17,7 +16,6 @@ var colors = new Array(
   [45, 175, 230], // Blue
   [85,88,218 ], // Powder Blue
   [95,209,249], // Light Blue
-  [255, 0, 255], // Pink
   [42, 201, 185], // Old Brick
   [173, 48, 41], // Tall Poppy
   [255, 128, 0], // Orange
