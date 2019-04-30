@@ -1,7 +1,7 @@
 // gradient
 
 // https://apnyc.com/wp-content/uploads/2017/04/ColorChart_for_Web.jpg
-const colors = new Array(
+var colors = new Array(
   [173, 48, 41], // Tall Poppy
   [255, 128, 0], // Orange
   [244, 207, 41], // Saffron
@@ -21,17 +21,17 @@ const colors = new Array(
   [255, 128, 0] // Orange
 );
 
-const step = 0;
+var step = 0;
 
 //color table indices for:
 // current color left
 // next color left
 // current color right
 // next color right
-const colorIndices = [0, 1, 2, 3];
+var colorIndices = [0, 1, 2, 3];
 
 //transition speed
-const gradientSpeed = 0.007;
+var gradientSpeed = 0.007;
 
 function updateGradient() {
   if ($ === undefined) return;
