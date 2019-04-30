@@ -1,7 +1,7 @@
 // gradient
 
 // https://apnyc.com/wp-content/uploads/2017/04/ColorChart_for_Web.jpg
-var colors = new Array(
+const colors = new Array(
   [173, 48, 41], // Tall Poppy
   [255, 128, 0], // Orange
   [244, 207, 41], // Saffron
@@ -14,24 +14,24 @@ var colors = new Array(
   [229, 114, 94], // Terracotta
   [255, 225, 25], // Yellow
   [45, 175, 230], // Blue
-  [85,88,218 ], // Powder Blue
-  [95,209,249], // Light Blue
+  [85, 88, 218], // Powder Blue
+  [95, 209, 249], // Light Blue
   [42, 201, 185], // Old Brick
   [173, 48, 41], // Tall Poppy
-  [255, 128, 0], // Orange
+  [255, 128, 0] // Orange
 );
 
-var step = 0;
+const step = 0;
 
 //color table indices for:
 // current color left
 // next color left
 // current color right
 // next color right
-var colorIndices = [0, 1, 2, 3];
+const colorIndices = [0, 1, 2, 3];
 
 //transition speed
-var gradientSpeed = 0.003;
+const gradientSpeed = 0.007;
 
 function updateGradient() {
   if ($ === undefined) return;
@@ -83,5 +83,5 @@ function updateGradient() {
   }
 }
 
-console.log("[vSite] gradient loaded!")
+console.log("[vSite] gradient loaded!");
 setInterval(updateGradient, 10);

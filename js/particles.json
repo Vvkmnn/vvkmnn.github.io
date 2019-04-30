@@ -26,12 +26,12 @@
       }
     },
     "opacity": {
-      "value": 0.4,
+      "value": 0.6,
       "random": true,
       "anim": {
         "enable": true,
         "speed": 1,
-        "opacity_min": 0.1,
+        "opacity_min": 0.2,
         "sync": true
       }
     },
@@ -42,7 +42,7 @@
         "enable": true,
         "speed": 13,
         "size_min": 1,
-        "sync":true 
+        "sync": true
       }
     },
     "line_linked": {
