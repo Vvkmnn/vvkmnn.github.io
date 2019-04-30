@@ -360,9 +360,9 @@ img:hover {
   opacity: 1;
 }
 
-#links a {
-  font-size: 1em;
-}
+/* #links a { */
+/*   font-size: 1em; */
+/* } */
 
 #links a:hover {
   /* transition: color 0.5s ease-out; */
