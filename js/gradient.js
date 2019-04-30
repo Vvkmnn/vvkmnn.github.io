@@ -3,22 +3,22 @@
 // https://apnyc.com/wp-content/uploads/2017/04/ColorChart_for_Web.jpg
 var colors = new Array(
   [173, 48, 41], // Tall Poppy
+  [219, 187, 48], // Anzac
   [255, 128, 0], // Orange
+  [45, 175, 230], // Blue
+  [85, 88, 218], // Powder Blue
+  [255, 215, 180], //Coral
+  [170, 255, 195], //Mint
+  [128, 128, 128], //Grey
+  [229, 114, 94], // Terracotta
+  [255, 225, 25], // Yellow
+  [95, 209, 249], // Light Blue
+  [42, 201, 185], // Old Brick
   [244, 207, 41], // Saffron
   [230, 25, 75], //  Red
   [0, 128, 128], //  Teal
-  [219, 187, 48], // Anzac
-  [128, 128, 128], //Grey
-  [170, 255, 195], //Mint
-  [255, 215, 180], //Coral
-  [229, 114, 94], // Terracotta
-  [255, 225, 25], // Yellow
-  [45, 175, 230], // Blue
-  [85, 88, 218], // Powder Blue
-  [95, 209, 249], // Light Blue
-  [42, 201, 185], // Old Brick
-  [173, 48, 41], // Tall Poppy
   [255, 128, 0] // Orange
+  [173, 48, 41], // Tall Poppy
 );
 
 var step = 0;
@@ -31,7 +31,7 @@ var step = 0;
 var colorIndices = [0, 1, 2, 3];
 
 //transition speed
-var gradientSpeed = 0.007;
+var gradientSpeed = 0.004;
 
 function updateGradient() {
   if ($ === undefined) return;
