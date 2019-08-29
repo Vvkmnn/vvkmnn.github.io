@@ -2,6 +2,7 @@
 
 // https://apnyc.com/wp-content/uploads/2017/04/ColorChart_for_Web.jpg
 var colors = new Array(
+  [230, 25, 75], //  Red
   [173, 48, 41], // Tall Poppy
   [219, 187, 48], // Anzac
   [255, 128, 0], // Orange
@@ -15,7 +16,6 @@ var colors = new Array(
   [95, 209, 249], // Light Blue
   [42, 201, 185], // Old Brick
   [244, 207, 41], // Saffron
-  [230, 25, 75], //  Red
   [0, 128, 128], //  Teal
   [255, 128, 0] // Orange
   [173, 48, 41], // Tall Poppy
@@ -31,10 +31,11 @@ var step = 0;
 var colorIndices = [0, 1, 2, 3];
 
 //transition speed
-var gradientSpeed = 0.004;
+var gradientSpeed = 0.005;
+
 
 function updateGradient() {
-  if ($ === undefined) return;
+    if ($ === undefined) return;
 
   var c0_0 = colors[colorIndices[0]];
   var c0_1 = colors[colorIndices[1]];
