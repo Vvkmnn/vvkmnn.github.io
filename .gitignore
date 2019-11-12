@@ -5,6 +5,11 @@
 .LSOverride
 *.icloud
 
+# Specific
+css/font-awesome.css
+css/font-awesome.css.map
+images/vLogoTransparent.png
+
 # Icon must end with two \r
 Icon
 
