@@ -196,7 +196,6 @@ html {
   grid-area: definition;
   font-weight: 400;
   font-size: 1.3rem;
-  align-self: flex-start;
   align-self: center;
   pointer-events: all;
 

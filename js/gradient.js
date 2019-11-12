@@ -11,6 +11,25 @@ var colors = new Array(
   [255, 215, 180], //Coral
   [170, 255, 195], //Mint
   [128, 128, 128], //Grey
+  [219, 187, 48], // Anzac
+  [255, 128, 0], // Orange
+  [45, 175, 230], // Blue
+  [85, 88, 218], // Powder Blue
+  [229, 114, 94], // Terracotta
+  [255, 225, 25], // Yellow
+  [230, 25, 75], //  Red
+  [173, 48, 41], // Tall Poppy
+  [219, 187, 48], // Anzac
+  [255, 128, 0], // Orange
+  [45, 175, 230], // Blue
+  [85, 88, 218], // Powder Blue
+  [255, 215, 180], //Coral
+  [170, 255, 195], //Mint
+  [128, 128, 128], //Grey
+  [229, 114, 94], // Terracotta
+  [255, 215, 180], //Coral
+  [170, 255, 195], //Mint
+  [128, 128, 128], //Grey
   [229, 114, 94], // Terracotta
   [255, 225, 25], // Yellow
   [95, 209, 249], // Light Blue
@@ -19,6 +38,54 @@ var colors = new Array(
   [0, 128, 128], //  Teal
   [255, 128, 0] // Orange
   [173, 48, 41], // Tall Poppy
+  [255, 225, 25], // Yellow
+  [95, 209, 249], // Light Blue
+  [42, 201, 185], // Old Brick
+  [244, 207, 41], // Saffron
+  [0, 128, 128], //  Teal
+  [255, 128, 0] // Orange
+  [173, 48, 41], // Tall Poppy
+  [95, 209, 249], // Light Blue
+  [42, 201, 185], // Old Brick
+  [244, 207, 41], // Saffron
+  [0, 128, 128], //  Teal
+  [255, 128, 0] // Orange
+  [173, 48, 41], // Tall Poppy
+  [230, 25, 75], //  Red
+  [173, 48, 41], // Tall Poppy
+  [219, 187, 48], // Anzac
+  [219, 187, 48], // Anzac
+  [95, 209, 249], // Light Blue
+  [42, 201, 185], // Old Brick
+  [244, 207, 41], // Saffron
+  [0, 128, 128], //  Teal
+  [255, 128, 0] // Orange
+  [173, 48, 41], // Tall Poppy
+  [230, 25, 75], //  Red
+  [173, 48, 41], // Tall Poppy
+  [219, 187, 48], // Anzac
+  [255, 128, 0], // Orange
+  [45, 175, 230], // Blue
+  [85, 88, 218], // Powder Blue
+  [219, 187, 48], // Anzac
+  [255, 128, 0], // Orange
+  [45, 175, 230], // Blue
+  [85, 88, 218], // Powder Blue
+  [255, 128, 0], // Orange
+  [45, 175, 230], // Blue
+  [85, 88, 218], // Powder Blue
+  [255, 215, 180], //Coral
+  [170, 255, 195], //Mint
+  [128, 128, 128], //Grey
+  [229, 114, 94], // Terracotta
+  [255, 225, 25], // Yellow
+  [95, 209, 249], // Light Blue
+  [42, 201, 185], // Old Brick
+  [244, 207, 41], // Saffron
+  [0, 128, 128], //  Teal
+  [255, 128, 0] // Orange
+  [173, 48, 41], // Tall Poppy
+
 );
 
 var step = 0;
