@@ -15,21 +15,23 @@ $(window).on('load', (function () {
 			$("#typed").typed({
 				stringsElement: $('#typed-strings'),
 				// typing speed
-				typeSpeed: 15,
+				typeSpeed: 100,
 				// time before typing starts
-				startDelay: 0,
+				startDelay: 5,
 				// backspacing speed
-				backSpeed: 15,
+				backSpeed: 100,
 				// shuffle the strings
 				shuffle: true,
 				// time before backspacing
-				backDelay: 1350,
+				backDelay: 1300,
+			  // Reuse characters
+			  smartBackspace: true,
 				// loop
 				loop: true,
 				// false = infinite
 				loopCount: false,
 				// show cursor
-				showCursor: true,
+				showCursor: false,
 				// character for cursor
 				cursorChar: "|"
 			});
