@@ -85,8 +85,15 @@ var colors = new Array(
   [0, 128, 128], //  Teal
   [255, 128, 0] // Orange
   [173, 48, 41], // Tall Poppy
-
 );
+
+// Random color, very trippy
+//   colors2 = [
+//   [...Array(3)].map(e=>~~(Math.random()*255)),
+//   [...Array(3)].map(e=>~~(Math.random()*255)),
+//   [...Array(3)].map(e=>~~(Math.random()*255)),
+//   [...Array(3)].map(e=>~~(Math.random()*255))
+// ]
 
 var step = 0;
 
@@ -102,12 +109,20 @@ var gradientSpeed = 0.005;
 
 
 function updateGradient() {
-    if ($ === undefined) return;
+  if ($ === undefined) return;
 
   var c0_0 = colors[colorIndices[0]];
   var c0_1 = colors[colorIndices[1]];
   var c1_0 = colors[colorIndices[2]];
   var c1_1 = colors[colorIndices[3]];
+
+
+  //   console.log(colors2)
+  //   console.log(colorIndices)
+  //   console.log(c0_0)
+  //   console.log(c0_1)
+  //   console.log(c1_0)
+  //   console.log(c1_1)
 
   var istep = 1 - step;
   var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
@@ -123,7 +138,7 @@ function updateGradient() {
   $("#gradient-js")
     .css({
       background:
-        "-webkit-gradient(linear, left top, right top, from(" +
+        "-webkit-linear-gradient(linear, left top, right top, from(" +
         color1 +
         "), to(" +
         color2 +
@@ -151,5 +166,7 @@ function updateGradient() {
   }
 }
 
-console.log("[vSite] gradient loaded!");
+
+
+// console.log("[vSite] gradient loaded!");
 setInterval(updateGradient, 10);
