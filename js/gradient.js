@@ -136,7 +136,7 @@ function randomIndex() {
 var startIndex = randomIndex();
 var colorIndices = [startIndex, (startIndex + 1) % colors.length, startIndex, (startIndex + 1) % colors.length];
 
-var gradientSpeed = 0.005;
+var gradientSpeed = 0.0013;
 
 function updateGradient() {
   var c0_0 = colors[colorIndices[0]];

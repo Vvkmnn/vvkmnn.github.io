@@ -22,6 +22,11 @@ main {
   margin: auto;
 }
 
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
 /* Fancy */
 
 #particles-js,
@@ -140,12 +145,14 @@ html {
   display: grid;
   color: black;
   /* pointer-events: auto; */
-  grid-auto-rows: 20% 20% 40%;
+  grid-auto-rows: 25% 15% 60%;
   grid-auto-columns: 30% 70%;
   /* grid-gap: 1px; */
   align-content: stretch;
   align-items: center;
+  /* grid-template-areas: "logo name" "logo definition" "logo links"; */
   grid-template-areas: "logo name" "logo definition" "logo links";
+  /* grid-template-areas: "logo" "name definition links" */
 }
 
 #logo {
@@ -217,7 +224,7 @@ html {
 
 #links {
   grid-area: links;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   align-self: start;
   pointer-events: all;
 
@@ -272,7 +279,7 @@ p {
 i {
   font-style: italic;
   font-weight: 150;
-  font-size: 0.8em;
+  font-size: 1.1em;
 }
 
 br {
@@ -335,7 +342,7 @@ img:hover {
 
   display: inline-block;
   opacity: 0;
-  padding: 1vmin;
+  padding: 1.7vmin;
 }
 
 #links li .label {

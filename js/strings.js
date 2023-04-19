@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   new Typed(definition, {
     stringsElement: definitions,
-    typeSpeed: 9,
+    typeSpeed: 7,
     startDelay: 0,
     smartBackspace: true,
-    backSpeed: 17,
+    backSpeed: 14,
     shuffle: true,
     backDelay: 900,
     loop: true,
