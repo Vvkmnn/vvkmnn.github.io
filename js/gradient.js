@@ -129,14 +129,11 @@ var colors = new Array(
 
 var step = 0;
 
-function randomIndex() {
-  return Math.floor(Math.random() * colors.length);
-}
+var startIndex = Math.floor(Math.random() * colors.length);
+var colorIndices = [startIndex, (startIndex + 1) % colors.length, (startIndex + 2) % colors.length, (startIndex + 3) % colors.length]
+// console.log(colorIndices)
 
-var startIndex = randomIndex();
-var colorIndices = [startIndex, (startIndex + 1) % colors.length, startIndex, (startIndex + 1) % colors.length];
-
-var gradientSpeed = 0.0013;
+var gradientSpeed = 0.0021;
 
 function updateGradient() {
   var c0_0 = colors[colorIndices[0]];
@@ -169,7 +166,7 @@ function updateGradient() {
   //   colorIndices[3] = (colorIndices[3] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length;
   // }
 
-step += gradientSpeed;
+  step += gradientSpeed;
 
   if (step >= 1) {
     step %= 1;
