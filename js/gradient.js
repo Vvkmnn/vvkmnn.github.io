@@ -186,7 +186,7 @@ function updateGradient() {
       colorIndices[3] = 0;
     }
   }
-  console.log(step)
+  // console.log(step)
 }
 
 // console.log("[vSite] gradient loaded!");

@@ -29,7 +29,7 @@
 
 
 // console.log("[vSite] strings loaded!");
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
   var definition = document.getElementById("definition");
   var definitions = document.getElementById("definitions");
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
     backDelay: 900,
     loop: true,
     loopCount: false,
-    showCursor: false,
-    cursorChar: "_"
+    showCursor: true,
+    cursorChar: "|"
   });
 });
