@@ -1,5 +1,8 @@
 // particles
 
 // console.log('[vSite] particles loaded!');
-particlesJS.load('particles-js', 'js/particles.json', function () {
-});
+
+document.addEventListener("DOMContentLoaded", function () {
+  particlesJS.load('particles-js', 'js/particles.json', function () {
+  })
+})
