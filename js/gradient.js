@@ -190,7 +190,15 @@ step += gradientSpeed;
 }
 
 // console.log("[vSite] gradient loaded!");
-setInterval(updateGradient, 10);
+// setInterval(updateGradient, 10);
+
+
+function animateGradient() {
+  updateGradient();
+  requestAnimationFrame(animateGradient);
+}
+
+animateGradient();
 
 
 
