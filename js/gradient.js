@@ -133,7 +133,7 @@ var startIndex = Math.floor(Math.random() * colors.length);
 var colorIndices = [startIndex, (startIndex + 1) % colors.length, (startIndex + 2) % colors.length, (startIndex + 3) % colors.length]
 // console.log(colorIndices)
 
-var gradientSpeed = 0.0021;
+var gradientSpeed = 0.0033;
 
 function updateGradient() {
   var c0_0 = colors[colorIndices[0]];
@@ -171,19 +171,22 @@ function updateGradient() {
   if (step >= 1) {
     step %= 1;
     colorIndices[0] = colorIndices[1];
+    colorIndices[1] = colorIndices[2];
     colorIndices[2] = colorIndices[3];
-
-    colorIndices[1]++;
     colorIndices[3]++;
 
-    if (colorIndices[1] >= colors.length) {
-      colorIndices[1] = 0;
-    }
+    // if (colorIndices[1] >= colors.length) {
+    //   colorIndices[1] = 0;
+    // }
 
     if (colorIndices[3] >= colors.length) {
+      // colorIndices[0] = 0;
+      // colorIndices[1] = 1;
+      // colorIndices[2] = 2;
       colorIndices[3] = 0;
     }
   }
+  console.log(step)
 }
 
 // console.log("[vSite] gradient loaded!");
