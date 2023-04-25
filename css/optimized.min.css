@@ -1582,6 +1582,6 @@ template {
 }
 @media screen and (min-width: 1000px) {
   html {
-    font-size: calc(28px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(24px + 6 * ((100vw - 320px) / 680));
   }
 }
