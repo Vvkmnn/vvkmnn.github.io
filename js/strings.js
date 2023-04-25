@@ -39,15 +39,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   new Typed(definition, {
     stringsElement: definitions,
-    typeSpeed: 7,
+    typeSpeed: 3,
     startDelay: 0,
     smartBackspace: true,
-    backSpeed: 14,
+    backSpeed: 1,
     shuffle: true,
     backDelay: 900,
     loop: true,
     loopCount: false,
-    showCursor: true,
+    showCursor: false,
     cursorChar: "|"
   });
 });
