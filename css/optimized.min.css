@@ -19,7 +19,7 @@ main {
   margin: auto;
 }
 ul {
-  padding: 0;
+  padding: 1px;
   list-style-type: none;
 }
 #particles-js,
@@ -83,20 +83,27 @@ ul {
   }
 }
 html {
-  /* font-size: 10px; */
-  font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+  font-size: 10px;
+  /* font-size: calc(19px + 6 * ((100vw - 320px) / 680)); */
 }
-/* @media screen and (min-width: 320px) { */
-/*   html { */
-/*     font-size: calc(22px + 6 * ((100vw - 320px) / 680)); */
-/*   } */
-/* } */
-/* @media screen and (min-width: 1000px) { */
-/*   html { */
-/*   } */
-/* } */
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 600px) {
+  html {
+    font-size: calc(22px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: calc(24px + 6 * ((100vw - 320px) / 680));
+  }
+}
 #overlay {
-  padding-top: 5%;
+  padding-top: 3%;
   padding-bottom: 5%;
   width: 90%;
   height: 90%;
@@ -143,6 +150,7 @@ html {
   align-self: flex-end;
   align-self: center;
   font-size: 0.7rem;
+
 }
 #definition {
   white-space: pre-wrap;
@@ -170,9 +178,10 @@ html {
 }
 #links {
   grid-area: links;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   align-self: start;
   pointer-events: all;
+
 }
 a {
   color: inherit;
@@ -1530,6 +1539,10 @@ template {
 
       width: 100%;
 
+
+    /* padding-left: 10%; */
+    /* padding-right: 10%; */
+
   align-content: stretch;
   align-items: center;
   justify-self: center;
@@ -1550,17 +1563,23 @@ template {
   #name {
       grid-area: name;
       justify-self: center;
+
   }
 
   #definition {
       grid-area: definition;
       justify-self: center;
 
+
   }
 
   #links {
       grid-area: links;
-      justify-self: center;
+      padding: 5%;
+      padding-left: 10px;
+      /* padding-right:10% */
+
+      width: 100%;
   }
 
 
