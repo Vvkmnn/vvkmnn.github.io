@@ -117,7 +117,7 @@ ul {
 #name {
   grid-area: name;
   font-size: 1.9rem;
-  font-weight: 800;
+  font-weight: 700;
   align-self: end;
   pointer-events: all;
   -moz-animation: nav-icons 0.7s ease-in-out both;
@@ -538,12 +538,12 @@ sub,
 sup {
   vertical-align: baseline;
 }
-html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
+/* html { */
+/*   font-family: sans-serif; */
+/*   line-height: 1.15; */
+/*   -ms-text-size-adjust: 100%; */
+/*   -webkit-text-size-adjust: 100%; */
+/* } */
 body {
   margin: 0;
 }
@@ -1531,7 +1531,7 @@ template {
   align-content: stretch;
   align-items: center;
   justify-self: center;
-  gap: 10px;
+  /* gap: 10px; */
   grid-template-areas:
     "logo"
     "name"
@@ -1582,6 +1582,6 @@ template {
 }
 @media screen and (min-width: 1000px) {
   html {
-    font-size: calc(23px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(20px + 6 * ((100vw - 320px) / 680));
   }
 }
