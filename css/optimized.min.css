@@ -130,7 +130,6 @@ html {
 }
 #name {
   grid-area: name;
-  padding-top: 5%;
   font-size: 1.9rem;
   font-weight: 800;
   align-self: end;
@@ -1556,7 +1555,7 @@ template {
 
   #logo {
       grid-area: logo;
-      width: 33vh;
+      width: 42vh;
       justify-self: center;
   }
 
