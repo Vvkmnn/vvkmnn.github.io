@@ -1555,7 +1555,7 @@ template {
 
   #logo {
       grid-area: logo;
-      width: 42vh;
+      width: 37vh;
       justify-self: center;
   }
 
