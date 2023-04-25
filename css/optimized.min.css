@@ -1577,11 +1577,11 @@ template {
 
 @media screen and (min-width: 600px) {
   html {
-    font-size: calc(26px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(22px + 6 * ((100vw - 320px) / 680));
   }
 }
 @media screen and (min-width: 1000px) {
   html {
-    font-size: calc(24px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(23px + 6 * ((100vw - 320px) / 680));
   }
 }
