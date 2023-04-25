@@ -1,7 +1,9 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Roboto:300i,400,700");
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:300i,400,700"); */
+
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Helvetica", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
   background-color: gray;
   user-select: none;
 }
@@ -121,7 +123,7 @@ html {
 }
 #name {
   grid-area: name;
-  padding-top: 10%;
+  padding-top: 5%;
   font-size: 1.9rem;
   font-weight: 800;
   align-self: end;
@@ -1518,7 +1520,7 @@ template {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   #overlay {
       display: grid;
   grid-auto-rows: auto;
@@ -1539,7 +1541,7 @@ template {
 
   #logo {
       grid-area: logo;
-      width: 30vh;
+      width: 33vh;
       justify-self: center;
   }
 
