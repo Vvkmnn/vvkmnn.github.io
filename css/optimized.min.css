@@ -96,7 +96,7 @@ ul {
   display: grid;
   color: black;
   grid-auto-rows: 25% 15% 60%;
-  grid-auto-columns: 30% 70%;
+  grid-auto-columns: 42% 58%;
   align-content: stretch;
   align-items: center;
   grid-template-areas: "logo name" "logo definition" "logo links";
@@ -1516,7 +1516,7 @@ template {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   #overlay {
       display: grid;
   grid-auto-rows: auto;
