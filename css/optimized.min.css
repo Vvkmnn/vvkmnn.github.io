@@ -1580,12 +1580,14 @@ template {
   #name {
       grid-area: name;
       justify-self: center;
+      font-size: 1.5rem;
 
   }
 
   #definition {
       grid-area: definition;
       justify-self: center;
+      font-size: 1.3rem;
 
 
   }
