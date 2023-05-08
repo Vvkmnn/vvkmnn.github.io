@@ -105,6 +105,7 @@ ul {
   grid-area: logo;
   align-self: center;
   pointer-events: all;
+
   -moz-animation: nav-icons 0.7s ease-in-out both;
   -webkit-animation: nav-icons 0.7s ease-in-out both;
   -ms-animation: nav-icons 0.7s ease-in-out both;
@@ -116,7 +117,7 @@ ul {
 }
 #name {
   grid-area: name;
-  font-size: 1.9rem;
+  font-size: 2.3rem;
   font-weight: 700;
   align-self: end;
   pointer-events: all;
@@ -1563,6 +1564,7 @@ template {
       padding: 5%;
       padding-left: 10%;
       padding-right: 10%;
+      font-size: 2.1rem;
       /* padding-right:10% */
   }
 
