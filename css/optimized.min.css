@@ -424,18 +424,35 @@ img:hover {
   -ms-animation-delay: 6.5s;
   animation-delay: 6.5s;
 }
-@-moz-keyframes li:nth-child(26) {
+
+#links li:nth-child(26) {
   -moz-animation-delay: 6.75s;
   -webkit-animation-delay: 6.75s;
   -ms-animation-delay: 6.75s;
   animation-delay: 6.75s;
 }
-@-moz-keyframes li:nth-child(27) {
+
+#links li:nth-child(27) {
   -moz-animation-delay: 7s;
   -webkit-animation-delay: 7s;
   -ms-animation-delay: 7s;
   animation-delay: 7s;
 }
+
+#links li:nth-child(28) {
+  -moz-animation-delay: 7.25s;
+  -webkit-animation-delay: 7.25s;
+  -ms-animation-delay: 7.25s;
+  animation-delay: 7.25s;
+}
+
+#links li:nth-child(29) {
+  -moz-animation-delay: 7.5s;
+  -webkit-animation-delay: 7.5s;
+  -ms-animation-delay: 7.5s;
+  animation-delay: 7.5s;
+}
+
 @-moz-keyframes nav-icons {
   0% {
     -moz-transform: translate3d(0, 1em, 0);
@@ -500,22 +517,32 @@ img:hover {
     opacity: 1;
   }
 }
-.icon {
-  text-decoration: none;
+
+.fa-icon {
+  /* text-decoration: none; */
   color: black;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.icon:before {
+  /* position: relative; */
+  /* top: 0; */
+  /* left: 0; */
+
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: FontAwesome;
+
+  /* font-style: normal; */
+  /* font-weight: normal; */
+}
+
+.fa-icon:before {
+  /* -moz-osx-font-smoothing: grayscale; */
+  /* -webkit-font-smoothing: antialiased; */
+
+  /* font-family: FontAwesome; */
   font-style: normal;
   font-weight: normal;
   text-transform: none !important;
 }
-.icon:hover {
+
+.fa-icon:hover {
   color: white;
   transition: color 0.5s ease-out;
   -o-transition: color 0.5s ease-out;
@@ -523,6 +550,7 @@ img:hover {
   -moz-transition: color 0.5s ease-out;
   -webkit-transition: color 0.5s ease-out;
 }
+
 button,
 hr,
 input {
@@ -934,6 +962,7 @@ template {
   -ms-flex-order: 1;
   order: 1;
 }
+
 @media only screen and (min-width: 48em) {
   .container {
     width: 49rem;
@@ -1128,6 +1157,7 @@ template {
     order: 1;
   }
 }
+
 @media only screen and (min-width: 64em) {
   .container {
     width: 65rem;
@@ -1322,6 +1352,7 @@ template {
     order: 1;
   }
 }
+
 @media only screen and (min-width: 75em) {
   .container {
     width: 76rem;
@@ -1564,7 +1595,7 @@ template {
       padding: 5%;
       padding-left: 10%;
       padding-right: 10%;
-      font-size: 2.1rem;
+      font-size: 1.9rem;
       /* padding-right:10% */
   }
 
@@ -1587,3 +1618,4 @@ template {
     font-size: calc(20px + 6 * ((100vw - 320px) / 680));
   }
 }
+
