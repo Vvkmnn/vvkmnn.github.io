@@ -1,9 +1,16 @@
 @charset "UTF-8";
 /* @import url("https://fonts.googleapis.com/css?family=Roboto:300i,400,700"); */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Helvetica", sans-serif;
-  font-size: 1.3em;
+  /* font-size: 1.3em; */
+    font-size: calc(15px + 7 * ((100vw - 320px) / 680));
 /*     font-size: calc(22px + 6 * ((100vw - 320px) / 680)); */
   /* font-family: "Roboto", sans-serif; */
   background-color: gray;
