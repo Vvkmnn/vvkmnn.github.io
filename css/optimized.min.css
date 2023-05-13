@@ -3,7 +3,8 @@
 
 html {
   font-family: "Helvetica", sans-serif;
-  font-size: 10px;
+  font-size: 1.3em;
+/*     font-size: calc(22px + 6 * ((100vw - 320px) / 680)); */
   /* font-family: "Roboto", sans-serif; */
   background-color: gray;
   user-select: none;
@@ -12,7 +13,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: scroll;
 }
 main {
   max-width: 38rem;
@@ -1604,20 +1605,19 @@ template {
 
 }
 
-@media screen and (min-width: 320px) {
-  html {
-    font-size: calc(14px + 6 * ((100vw - 320px) / 680));
-  }
-}
+/* @media screen and (min-width: 320px) { */
+/*   html { */
+/*     font-size: calc(14px + 6 * ((100vw - 320px) / 680)); */
+/*   } */
+/* } */
 
-@media screen and (min-width: 600px) {
-  html {
-    font-size: calc(22px + 6 * ((100vw - 320px) / 680));
-  }
-}
-@media screen and (min-width: 1000px) {
-  html {
-    font-size: calc(20px + 6 * ((100vw - 320px) / 680));
-  }
-}
-
+/* @media screen and (min-width: 600px) { */
+/*   html { */
+/*     font-size: calc(22px + 6 * ((100vw - 320px) / 680)); */
+/*   } */
+/* } */
+/* @media screen and (min-width: 1000px) { */
+/*   html { */
+/*     font-size: calc(20px + 6 * ((100vw - 320px) / 680)); */
+/*   } */
+/* } */
