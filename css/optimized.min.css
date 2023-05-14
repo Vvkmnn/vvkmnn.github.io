@@ -2,9 +2,9 @@
 /* @import url("https://fonts.googleapis.com/css?family=Roboto:300i,400,700"); */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  /* margin: 0; */
+  /* padding: 0; */
+  /* box-sizing: border-box; */
 }
 
 html {
@@ -15,23 +15,29 @@ html {
   /* font-family: "Roboto", sans-serif; */
   background-color: gray;
   user-select: none;
-}
-html,
-body {
+
   height: 100%;
   width: 100%;
-  min-height: 100vh;
-  min-width: 100vw;
-  overflow: auto;
 }
+
+html,
+body {
+  /* height: 100%; */
+  /* width: 100%; */
+  /* min-height: 100vh; */
+  /* min-width: 100vw; */
+  /* overflow: hidden; */
+}
+
 main {
-  max-width: 38rem;
-  padding: 2rem;
-  margin: auto;
+  /* max-width: 38rem; */
+  /* /\* padding: 2rem; *\/ */
+  /* margin: auto; */
 }
+
 ul {
   padding: 1px;
-  list-style-type: none;
+  /* list-style-type: none; */
 }
 #particles-js,
 #gradient-js {
@@ -40,11 +46,10 @@ ul {
 
   width: 100%;
   height: 100%;
-  min-height: 100vh;
-  min-width: 100vw;
+  /* min-height: 100vh; */
+  /* min-width: 100vw; */
 
-  background-size: cover;
-  overflow: auto;
+  /* overflow: hidden; */
 }
 #particles-js {
   z-index: -3;
@@ -52,10 +57,19 @@ ul {
   height: 100%;
   opacity: 0.7;
 }
+
 #gradient-js {
   z-index: -4;
-  width: 100%;
-  height: 100%;
+
+  min-height: 100vh;
+  /* min-width: 100vw; */
+
+  height: 120%;
+  width: 120%;
+
+  background-size: 100%;
+
+  overflow: hidden;
 }
 .typed-cursor {
   display:none;
@@ -100,14 +114,15 @@ ul {
 }
 
 #overlay {
-  padding-top: 3%;
-  padding-bottom: 5%;
+  /* padding-top: 3%; */
+  /* padding-bottom: 5%; */
 
-  padding-left: 3%;
-  padding-right: 3%;
+  /* padding-left: 3%; */
+  /* padding-right: 3%; */
 
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
+
   display: grid;
   color: black;
   grid-auto-rows: 25% 15% 60%;
@@ -115,7 +130,9 @@ ul {
   align-content: stretch;
   align-items: center;
   grid-template-areas: "logo name" "logo definition" "logo links";
+
 }
+
 #logo {
   grid-area: logo;
   align-self: center;
@@ -151,6 +168,7 @@ ul {
   align-self: flex-end;
   align-self: center;
   font-size: 0.7rem;
+  /* overflow: scroll; */
 
 }
 #definition {
@@ -161,8 +179,9 @@ ul {
   align-self: left;
   pointer-events: all;
 
-  height: 10px;
-  padding: 10px;
+  height: 1px;
+  padding-top: 1em;
+  padding-bottom: 1em;
 
   -moz-animation: nav-icons 0.7s ease-in-out both;
   -webkit-animation: nav-icons 0.7s ease-in-out both;
@@ -182,7 +201,6 @@ ul {
   font-size: 1.7rem;
   align-self: start;
   pointer-events: all;
-
 }
 a {
   color: inherit;
@@ -270,6 +288,7 @@ img:hover {
   opacity: 0;
   padding: 1.7vmin;
 }
+
 #links li .label {
   color: white;
   position: absolute;
@@ -569,7 +588,7 @@ img:hover {
 button,
 hr,
 input {
-  overflow: visible;
+  /* overflow: visible; */
 }
 audio,
 canvas,
@@ -720,7 +739,7 @@ legend {
   white-space: normal;
 }
 textarea {
-  overflow: auto;
+  /* overflow: auto; */
 }
 [type="checkbox"],
 [type="radio"] {
@@ -756,8 +775,8 @@ template {
   margin-left: auto;
 }
 .container-fluid {
-  padding-right: 2rem;
-  padding-left: 2rem;
+  /* padding-right: 2rem; */
+  /* padding-left: 2rem; */
 }
 .row {
   box-sizing: border-box;
@@ -818,8 +837,8 @@ template {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  /* padding-right: 0.5rem; */
+  /* padding-left: 0.5rem; */
 }
 .col-xs {
   -webkit-box-flex: 1;
@@ -1012,8 +1031,8 @@ template {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    /* padding-right: 0.5rem; */
+    /* padding-left: 0.5rem; */
   }
   .col-sm {
     -webkit-box-flex: 1;
@@ -1207,8 +1226,8 @@ template {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    /* padding-right: 0.5rem; */
+    /* padding-left: 0.5rem; */
   }
   .col-md {
     -webkit-box-flex: 1;
@@ -1402,8 +1421,8 @@ template {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    /* padding-right: 0.5rem; */
+    /* padding-left: 0.5rem; */
   }
   .col-lg {
     -webkit-box-flex: 1;
@@ -1609,7 +1628,7 @@ template {
 
   #links {
       grid-area: links;
-      padding: 5%;
+      /* padding: 5%; */
       padding-left: 10%;
       padding-right: 10%;
       font-size: 1.4rem;
