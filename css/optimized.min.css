@@ -2,9 +2,9 @@
 /* @import url("https://fonts.googleapis.com/css?family=Roboto:300i,400,700"); */
 
 * {
-  /* margin: 0; */
-  /* padding: 0; */
-  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -16,9 +16,10 @@ html {
   background-color: gray;
   user-select: none;
 
-  height: 100%;
-  width: 100%;
-<<<<<<< HEAD
+  min-height: 100%;
+  min-width: 100%;
+
+  overflow: hidden;
 }
 
 html,
@@ -27,7 +28,6 @@ body {
   /* width: 100%; */
   /* min-height: 100vh; */
   /* min-width: 100vw; */
-  /* overflow: hidden; */
 }
 
 main {
@@ -40,6 +40,7 @@ ul {
   padding: 1px;
   /* list-style-type: none; */
 }
+
 #particles-js,
 #gradient-js {
   position: absolute;
@@ -47,32 +48,32 @@ ul {
 
   width: 100%;
   height: 100%;
-  /* min-height: 100vh; */
-  /* min-width: 100vw; */
 
   background-size: cover;
-  overflow: hidden;
 }
+
 #particles-js {
   z-index: -3;
-  width: 100%;
-  height: 100%;
+
+  /* min-width: 100%; */
+  /* min-height: 100%; */
+
+  /* min-height: 100vh; */ 
+  /* min-width: 100vw; */
+
   opacity: 0.7;
 }
 
 #gradient-js {
   z-index: -4;
 
-  min-height: 100vh;
+  /* min-height: 100vh; */ 
   /* min-width: 100vw; */
 
-  height: 120%;
-  width: 120%;
-
-  background-size: 100%;
-
-  overflow: hidden;
+  /* min-width: 100%; */
+  /* min-height: 100%; */
 }
+
 .typed-cursor {
   display:none;
   font-size: 1.5em;
@@ -116,23 +117,24 @@ ul {
 }
 
 #overlay {
-  /* padding-top: 3%; */
-  /* padding-bottom: 5%; */
+  padding-top: 3%;
+  padding-bottom: 3%;
 
-  /* padding-left: 3%; */
-  /* padding-right: 3%; */
+  padding-left: 3%;
+  padding-right: 3%;
 
   width: 100%;
   height: 100%;
 
   display: grid;
-  color: black;
+  /* color: black; */
   grid-auto-rows: 25% 15% 60%;
-  grid-auto-columns: 42% 58%;
+  grid-auto-columns: 1fr 1fr;
   align-content: stretch;
   align-items: center;
   grid-template-areas: "logo name" "logo definition" "logo links";
 
+  overflow: scroll;
 }
 
 #logo {
@@ -151,30 +153,32 @@ ul {
 }
 #name {
   grid-area: name;
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-weight: 700;
   align-self: end;
   pointer-events: all;
+
   -moz-animation: nav-icons 0.7s ease-in-out both;
   -webkit-animation: nav-icons 0.7s ease-in-out both;
   -ms-animation: nav-icons 0.7s ease-in-out both;
   animation: nav-icons 0.7s ease-in-out both;
+
   -moz-animation-delay: 0.1s;
   -webkit-animation-delay: 0.1s;
   -ms-animation-delay: 0.1s;
   animation-delay: 0.1s;
 }
+
 #about {
   grid-area: about;
   font-weight: 600;
   align-self: flex-end;
   align-self: center;
   font-size: 0.7rem;
-  /* overflow: scroll; */
 }
 
 #definition {
-  white-space: pre-wrap;
+  /* white-space: pre-wrap; */
   grid-area: definition;
   font-weight: 400;
   font-size: 1.3rem;
@@ -182,8 +186,8 @@ ul {
   pointer-events: all;
 
   height: 1px;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 
   -moz-animation: nav-icons 0.7s ease-in-out both;
   -webkit-animation: nav-icons 0.7s ease-in-out both;
@@ -200,9 +204,10 @@ ul {
 }
 #links {
   grid-area: links;
-  font-size: 1.7rem;
+  font-size: 1.3em;
   align-self: start;
   pointer-events: all;
+  overflow: scroll;
 }
 a {
   color: inherit;
@@ -288,24 +293,29 @@ img:hover {
 
   display: inline-block;
   opacity: 0;
-  padding: 1.7vmin;
+  padding: 1.3vh;
+
+  position:relative;
 }
 
 #links li .label {
   color: white;
   position: absolute;
-  bottom: -1.5rem;
-  left: 0.5rem;
+  /* bottom: -1.5rem; */
+  /* left: 0.5rem; */
   font-size: 1rem;
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
+
+
   transition: visibility 0.2s linear, opacity 0.2s linear;
   -webkit-text-stroke-width: 1px;
   -webkit-transition: visibility 0.2s linear, opacity 0.2s linear;
   -moz-transition: visibility 0.2s linear, opacity 0.2s linear;
   -o-transition: visibility 0.2s linear, opacity 0.2s linear;
 }
+
 #links li:hover .label {
   visibility: visible;
   opacity: 1;
@@ -1584,7 +1594,9 @@ template {
   }
 }
 
-@media (max-width: 1200px) {
+/* @media screen and (orientation:portrait) and (max-width: 1000px) { */
+
+@media (max-aspect-ratio: 8/5) {
   #overlay {
       display: grid;
   grid-auto-rows: auto;
@@ -1616,8 +1628,7 @@ template {
   #name {
       grid-area: name;
       justify-self: center;
-      font-size: 1.5rem;
-
+      font-size: 1.4rem;
   }
 
   #definition {
@@ -1631,9 +1642,11 @@ template {
   #links {
       grid-area: links;
       /* padding: 5%; */
-      padding-left: 10%;
-      padding-right: 10%;
-      font-size: 1.4rem;
+      padding-left: 7%;
+      padding-right: 7%;
+      padding-bottom: 7%;
+      padding-top: 7%;
+      font-size: 1.5rem;
       /* padding-right:10% */
   }
 
