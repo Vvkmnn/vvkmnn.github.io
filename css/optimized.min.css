@@ -18,6 +18,7 @@ html {
 
   height: 100%;
   width: 100%;
+<<<<<<< HEAD
 }
 
 html,
@@ -49,7 +50,8 @@ ul {
   /* min-height: 100vh; */
   /* min-width: 100vw; */
 
-  /* overflow: hidden; */
+  background-size: cover;
+  overflow: hidden;
 }
 #particles-js {
   z-index: -3;
@@ -169,8 +171,8 @@ ul {
   align-self: center;
   font-size: 0.7rem;
   /* overflow: scroll; */
-
 }
+
 #definition {
   white-space: pre-wrap;
   grid-area: definition;
