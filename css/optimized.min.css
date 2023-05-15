@@ -9,10 +9,12 @@
 
 html {
   font-family: "Helvetica", sans-serif;
+
   /* font-size: 1.3em; */
-    font-size: calc(17px + 7 * ((1.3em - 320px) / 680));
-/*     font-size: calc(22px + 6 * ((100vw - 320px) / 680)); */
+  /* font-size: calc(17px + 7 * ((1.3em - 320px) / 680)); */
+  /* font-size: calc(22px + 6 * ((100vw - 320px) / 680)); */
   /* font-family: "Roboto", sans-serif; */
+
   background-color: gray;
   user-select: none;
 
@@ -1637,11 +1639,14 @@ template {
       grid-area: name;
       justify-self: center;
       /* font-size: 1.4rem; */
+      font-size: 3rem;
   }
 
   #definition {
       grid-area: definition;
       justify-self: center;
+
+      font-size: 1.5rem;
       /* font-size: 1.3rem; */
   }
 
@@ -1658,19 +1663,14 @@ template {
 
 }
 
-/* @media screen and (min-width: 320px) { */
-/*   html { */
-/*     font-size: calc(14px + 6 * ((100vw - 320px) / 680)); */
-/*   } */
-/* } */
+@media screen and (min-width: 400px) {
+  html {
+    font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+  }
+}
 
-/* @media screen and (min-width: 600px) { */
-/*   html { */
-/*     font-size: calc(22px + 6 * ((100vw - 320px) / 680)); */
-/*   } */
-/* } */
-/* @media screen and (min-width: 1000px) { */
-/*   html { */
-/*     font-size: calc(20px + 6 * ((100vw - 320px) / 680)); */
-/*   } */
-/* } */
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+  }
+}
