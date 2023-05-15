@@ -10,7 +10,7 @@
 html {
   font-family: "Helvetica", sans-serif;
   /* font-size: 1.3em; */
-    font-size: calc(17px + 7 * ((100vw - 320px) / 680));
+    font-size: calc(17px + 7 * ((1.3em - 320px) / 680));
 /*     font-size: calc(22px + 6 * ((100vw - 320px) / 680)); */
   /* font-family: "Roboto", sans-serif; */
   background-color: gray;
@@ -141,7 +141,7 @@ ul {
                        "logo definition" 
                        "logo links";
 
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 #logo {
@@ -160,7 +160,7 @@ ul {
 }
 #name {
   grid-area: name;
-  font-size: 2rem;
+  font-size: 3.3rem;
   font-weight: 700;
   align-self: end;
   pointer-events: all;
@@ -188,7 +188,7 @@ ul {
   /* white-space: pre-wrap; */
   grid-area: definition;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 2rem;
   align-self: left;
   pointer-events: all;
 
@@ -213,11 +213,11 @@ ul {
   /* padding-top: 5%; */
   /* padding-right: 5%; */
   grid-area: links;
-  font-size: 1.4em;
+  font-size: 1.5em;
 
-  align-self: start;
-  pointer-events: all;
-  overflow: scroll;
+  /* align-self: start; */
+  /* pointer-events: all; */
+  /* overflow: scroll; */
 }
 
 a {
@@ -291,6 +291,7 @@ img:hover {
   -o-transition: 0.5s -o-filter linear;
   transition: 0.5s filter linear;
 }
+
 #links li {
   list-style-type: none;
   -moz-animation: nav-icons 0.5s ease-in-out forwards;
@@ -304,7 +305,7 @@ img:hover {
 
   display: inline-block;
   opacity: 0;
-  padding: 1.3vh;
+  padding: 0.3em;
 
   position:relative;
 }
@@ -1635,15 +1636,13 @@ template {
   #name {
       grid-area: name;
       justify-self: center;
-      font-size: 1.4rem;
+      /* font-size: 1.4rem; */
   }
 
   #definition {
       grid-area: definition;
       justify-self: center;
-      font-size: 1.3rem;
-
-
+      /* font-size: 1.3rem; */
   }
 
   #links {
