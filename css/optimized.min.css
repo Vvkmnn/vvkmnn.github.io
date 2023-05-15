@@ -78,12 +78,15 @@ ul {
 
 .typed-cursor {
   display:none;
-  font-size: 1.5em;
-  opacity: 1;
+  /* position: relative; */
+  /* font-size: 1.5em; */
+  /* opacity: 1; */
+
   -webkit-animation: blink 0.7s infinite;
   -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite;
 }
+
 @keyframes blink {
   0% {
     opacity: 1;
@@ -160,9 +163,10 @@ ul {
   -ms-animation-delay: 0.15s;
   animation-delay: 0.15s;
 }
+
 #name {
   grid-area: name;
-  font-size: 3.3rem;
+  font-size: 3.6em;
   font-weight: 700;
   align-self: end;
   pointer-events: all;
@@ -190,7 +194,7 @@ ul {
   /* white-space: pre-wrap; */
   grid-area: definition;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.7rem;
   align-self: left;
   pointer-events: all;
 
@@ -215,7 +219,7 @@ ul {
   /* padding-top: 5%; */
   /* padding-right: 5%; */
   grid-area: links;
-  font-size: 1.5em;
+  font-size: 1.4em;
 
   /* align-self: start; */
   /* pointer-events: all; */
@@ -1657,7 +1661,7 @@ template {
       padding-right: 7%;
       padding-bottom: 7%;
       padding-top: 7%;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       /* padding-right:10% */
   }
 
@@ -1665,12 +1669,18 @@ template {
 
 @media screen and (min-width: 400px) {
   html {
-    font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(11px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 700px) {
+  html {
+    font-size: calc(13px + 6 * ((100vw - 320px) / 680));
   }
 }
 
 @media screen and (min-width: 1000px) {
   html {
-    font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(15px + 6 * ((100vw - 320px) / 680));
   }
 }
