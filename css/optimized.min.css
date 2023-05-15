@@ -1669,18 +1669,18 @@ template {
 
 @media screen and (min-width: 400px) {
   html {
-    font-size: calc(11px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(10px + 6 * ((100vw - 320px) / 680));
   }
 }
 
 @media screen and (min-width: 700px) {
   html {
-    font-size: calc(13px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(11px + 6 * ((100vw - 320px) / 680));
   }
 }
 
 @media screen and (min-width: 1000px) {
   html {
-    font-size: calc(15px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(12px + 6 * ((100vw - 320px) / 680));
   }
 }
