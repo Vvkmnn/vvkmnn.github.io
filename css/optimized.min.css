@@ -10,7 +10,7 @@
 html {
   font-family: "Helvetica", sans-serif;
   /* font-size: 1.3em; */
-    font-size: calc(15px + 7 * ((100vw - 320px) / 680));
+    font-size: calc(17px + 7 * ((100vw - 320px) / 680));
 /*     font-size: calc(22px + 6 * ((100vw - 320px) / 680)); */
   /* font-family: "Roboto", sans-serif; */
   background-color: gray;
@@ -132,11 +132,14 @@ ul {
 
   display: grid;
   /* color: black; */
-  grid-auto-rows: 25% 15% 60%;
-  grid-auto-columns: 1fr 1fr;
+  /* grid-auto-rows: 25% 15% 60%; */
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
   align-content: stretch;
   align-items: center;
-  grid-template-areas: "logo name" "logo definition" "logo links";
+  grid-template-areas: "logo name" 
+                       "logo definition" 
+                       "logo links";
 
   overflow: scroll;
 }
@@ -207,13 +210,16 @@ ul {
   display: none;
 }
 #links {
-  padding-top: 5%;
+  /* padding-top: 5%; */
+  /* padding-right: 5%; */
   grid-area: links;
-  font-size: 1.2em;
+  font-size: 1.4em;
+
   align-self: start;
   pointer-events: all;
   overflow: scroll;
 }
+
 a {
   color: inherit;
 }
