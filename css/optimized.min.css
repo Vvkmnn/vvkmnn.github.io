@@ -33,8 +33,8 @@ body {
 }
 
 main {
-  /* max-width: 38rem; */
-  /* /\* padding: 2rem; *\/ */
+  /* max-width: 38em; */
+  /* /\* padding: 2em; *\/ */
   /* margin: auto; */
 }
 
@@ -187,14 +187,14 @@ ul {
   font-weight: 600;
   align-self: flex-end;
   align-self: center;
-  font-size: 0.7rem;
+  font-size: 0.7em;
 }
 
 #definition {
   /* white-space: pre-wrap; */
   grid-area: definition;
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 1.7em;
   align-self: left;
   pointer-events: all;
 
@@ -211,15 +211,17 @@ ul {
   -ms-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
+
 #definitions {
   white-space: pre-wrap;
   display: none;
 }
+
 #links {
   /* padding-top: 5%; */
   /* padding-right: 5%; */
   grid-area: links;
-  font-size: 1.4em;
+  font-size: 2.2em;
 
   /* align-self: start; */
   /* pointer-events: all; */
@@ -317,11 +319,12 @@ img:hover {
 }
 
 #links li .label {
+  display:none;
   color: white;
   position: absolute;
-  /* bottom: -1.5rem; */
-  /* left: 0.5rem; */
-  font-size: 1rem;
+  /* bottom: -1.5em; */
+  /* left: 0.5em; */
+  font-size: 0.7em;
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
@@ -335,9 +338,11 @@ img:hover {
 }
 
 #links li:hover .label {
+  display: block;
   visibility: visible;
   opacity: 1;
 }
+
 #links li:nth-child(1) {
   -moz-animation-delay: 0.5s;
   -webkit-animation-delay: 0.5s;
@@ -805,8 +810,8 @@ template {
   margin-left: auto;
 }
 .container-fluid {
-  /* padding-right: 2rem; */
-  /* padding-left: 2rem; */
+  /* padding-right: 2em; */
+  /* padding-left: 2em; */
 }
 .row {
   box-sizing: border-box;
@@ -822,8 +827,8 @@ template {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  margin-right: -0.5em;
+  margin-left: -0.5em;
 }
 .row.reverse {
   -webkit-box-orient: horizontal;
@@ -867,8 +872,8 @@ template {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  /* padding-right: 0.5rem; */
-  /* padding-left: 0.5rem; */
+  /* padding-right: 0.5em; */
+  /* padding-left: 0.5em; */
 }
 .col-xs {
   -webkit-box-flex: 1;
@@ -1029,7 +1034,7 @@ template {
 
 @media only screen and (min-width: 48em) {
   .container {
-    width: 49rem;
+    width: 49em;
   }
   .col-sm,
   .col-sm-1,
@@ -1061,8 +1066,8 @@ template {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    /* padding-right: 0.5rem; */
-    /* padding-left: 0.5rem; */
+    /* padding-right: 0.5em; */
+    /* padding-left: 0.5em; */
   }
   .col-sm {
     -webkit-box-flex: 1;
@@ -1224,7 +1229,7 @@ template {
 
 @media only screen and (min-width: 64em) {
   .container {
-    width: 65rem;
+    width: 65em;
   }
   .col-md,
   .col-md-1,
@@ -1256,8 +1261,8 @@ template {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    /* padding-right: 0.5rem; */
-    /* padding-left: 0.5rem; */
+    /* padding-right: 0.5em; */
+    /* padding-left: 0.5em; */
   }
   .col-md {
     -webkit-box-flex: 1;
@@ -1419,7 +1424,7 @@ template {
 
 @media only screen and (min-width: 75em) {
   .container {
-    width: 76rem;
+    width: 76em;
   }
   .col-lg,
   .col-lg-1,
@@ -1451,8 +1456,8 @@ template {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    /* padding-right: 0.5rem; */
-    /* padding-left: 0.5rem; */
+    /* padding-right: 0.5em; */
+    /* padding-left: 0.5em; */
   }
   .col-lg {
     -webkit-box-flex: 1;
@@ -1635,52 +1640,128 @@ template {
 
   #logo {
       grid-area: logo;
-      width: 37vh;
+      width: 33vh;
       justify-self: center;
   }
 
   #name {
       grid-area: name;
       justify-self: center;
-      /* font-size: 1.4rem; */
-      font-size: 3rem;
+      /* font-size: 1.4em; */
+      font-size: 2.3em;
   }
 
   #definition {
       grid-area: definition;
       justify-self: center;
 
-      font-size: 1.5rem;
-      /* font-size: 1.3rem; */
+      font-size: 1.3em;
+      /* font-size: 1.3em; */
   }
 
   #links {
       grid-area: links;
-      /* padding: 5%; */
-      padding-left: 7%;
-      padding-right: 7%;
-      padding-bottom: 7%;
-      padding-top: 7%;
-      font-size: 1.6rem;
+      padding: 5%;
+      /* padding-left: 7%; */
+      /* padding-right: 7%; */
+      /* padding-bottom: 7%; */
+      /* padding-top: 7%; */
+      font-size: 1.5em;
+      overflow: scroll;
       /* padding-right:10% */
   }
 
 }
 
-@media screen and (min-width: 400px) {
-  html {
-    font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+@media screen and (min-height:100px) and (min-width: 500px) {
+
+  #name {
+      font-size: 1em;
   }
+
+  #definition {
+      font-size: 1em;
+  }
+
+  #links {
+      font-size: 1em;
+  }
+
 }
 
-@media screen and (min-width: 700px) {
-  html {
-    font-size: calc(11px + 6 * ((100vw - 320px) / 680));
+
+@media screen and (min-height:300px) and (min-width: 700px) {
+
+  #name {
+      font-size: 2.5em;
   }
+
+  #definition {
+      font-size: 1.8em;
+  }
+
+  #links {
+      font-size: 3em;
+  }
+
 }
 
-@media screen and (min-width: 1000px) {
-  html {
-    font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+
+@media screen and (min-height: 500px) and (min-width: 900px) {
+
+  #name {
+      font-size: 3.7em;
   }
+
+  #definition {
+      font-size: 2.3em;
+  }
+
+  #links {
+      font-size: 2.7em;
+  }
+
 }
+
+
+@media screen and (min-height: 700px) and (min-width: 1100px) {
+
+  #name {
+      font-size: 4.5em;
+  }
+
+  #definition {
+      font-size: 2.7em;
+  }
+
+  #links {
+      font-size: 2.9em;
+  }
+
+}
+
+
+
+/* @media screen and (min-width: 1000px) { */
+/*   html { */
+/*     font-size: calc(12px + 6 * ((100vw - 320px) / 680)); */
+/*   } */
+/* } */
+
+/* @media screen and (min-width: 400px) { */
+/*   html { */
+/*     font-size: calc(10px + 6 * ((100vw - 320px) / 680)); */
+/*   } */
+/* } */
+
+/* @media screen and (min-width: 700px) { */
+/*   html { */
+/*     font-size: calc(12px + 6 * ((100vw - 320px) / 680)); */
+/*   } */
+/* } */
+
+/* @media screen and (min-width: 1000px) { */
+/*   html { */
+/*     font-size: calc(12px + 6 * ((100vw - 320px) / 680)); */
+/*   } */
+/* } */
