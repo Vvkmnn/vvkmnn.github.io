@@ -46,8 +46,8 @@ ul {
   position: absolute;
   background-position: 0% 0%;
 
-  width: 100%;
-  height: 100%;
+  width: 100dvw;
+  height: 100dvh;
 
   background-size: cover;
 }
@@ -123,8 +123,12 @@ ul {
   padding-left: 3%;
   padding-right: 3%;
 
+  height: 90dvh;
   width: 100%;
-  height: 100%;
+
+
+    /* padding-left: 10%; */
+    /* padding-right: 10%; */
 
   display: grid;
   /* color: black; */
@@ -203,8 +207,9 @@ ul {
   display: none;
 }
 #links {
+  padding-top: 5%;
   grid-area: links;
-  font-size: 1.3em;
+  font-size: 1.2em;
   align-self: start;
   pointer-events: all;
   overflow: scroll;
@@ -1596,19 +1601,13 @@ template {
 
 /* @media screen and (orientation:portrait) and (max-width: 1000px) { */
 
-@media (max-aspect-ratio: 8/5) {
-}
+@media (max-aspect-ratio: 6/5) {
 
   #overlay {
       display: grid;
   grid-auto-rows: auto;
   grid-auto-columns: 100%;
 
-      width: 100%;
-
-
-    /* padding-left: 10%; */
-    /* padding-right: 10%; */
 
   align-content: stretch;
   align-items: center;
@@ -1652,11 +1651,6 @@ template {
       /* padding-right:10% */
   }
 
-
-#particles-js,
-#gradient-js {
-  width: 120%;
-  height: 120%;
 }
 
 /* @media screen and (min-width: 320px) { */
