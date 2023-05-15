@@ -1597,6 +1597,8 @@ template {
 /* @media screen and (orientation:portrait) and (max-width: 1000px) { */
 
 @media (max-aspect-ratio: 8/5) {
+}
+
   #overlay {
       display: grid;
   grid-auto-rows: auto;
@@ -1651,6 +1653,10 @@ template {
   }
 
 
+#particles-js,
+#gradient-js {
+  width: 120%;
+  height: 120%;
 }
 
 /* @media screen and (min-width: 320px) { */
