@@ -15,7 +15,7 @@ html {
   /* font-size: calc(22px + 6 * ((100vw - 320px) / 680)); */
   /* font-family: "Roboto", sans-serif; */
 
-  background-color: gray;
+  background-color: black;
   user-select: none;
 
   min-height: 100%;
