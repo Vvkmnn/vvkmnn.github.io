@@ -202,6 +202,7 @@ ul {
   height: 1px;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  padding-left: 0.3em;
 
   -moz-animation: nav-icons 0.7s ease-in-out both;
   -webkit-animation: nav-icons 0.7s ease-in-out both;
@@ -1729,9 +1730,9 @@ template {
   }
 
   @media (min-width: 900px) {
-    #name {font-size: 3em;}
-    #definition {font-size: 1.5em;}
-    #links {font-size: 2em;}
+    #name {font-size: 2.7em;}
+    #definition {font-size: 1.4em;}
+    #links {font-size: 1.7em;}
   }
 
   @media (min-height:800px) and (min-width: 800px) {
