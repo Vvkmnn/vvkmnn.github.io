@@ -1725,26 +1725,26 @@ template {
 
   @media (min-width: 700px) {
     #name {font-size: 3em;}
-    #definition {font-size: 2em;}
+    #definition {font-size: 1.4em;}
     #links {font-size: 1.7em;}
   }
 
   @media (min-width: 900px) {
     #name {font-size: 2.7em;}
     #definition {font-size: 1.4em;}
-    #links {font-size: 1.7em;}
+    #links {font-size: 1.5em;}
   }
 
   @media (min-height:700px) and (min-width: 700px) {
     #name {font-size: 4em;}
-    #definition {font-size: 2.3em;}
-    #links {font-size: 2.4em;}
+    #definition {font-size: 2.1em;}
+    #links {font-size: 2.2em;}
   }
 
   @media (min-height:900px) and (min-width: 900px) {
     #name {font-size: 5em;}
-    #definition {font-size: 2.5em;}
-    #links {font-size: 2.7em;}
+    #definition {font-size: 2.3em;}
+    #links {font-size: 2.4em;}
   }
 
   @media (min-height:1000px) and (min-width: 1100px) {
