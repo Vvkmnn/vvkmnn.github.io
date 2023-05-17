@@ -1676,6 +1676,7 @@ template {
 }
 
 @media (orientation:portrait) {
+
   @media (min-height: 100px) {
     #name {font-size: 1em;}
     #definition {font-size: 1em;}
@@ -1708,6 +1709,7 @@ template {
 }
 
 @media (orientation:landscape) {
+
   @media (min-width: 0px) {
     #name {font-size: 0.5em;}
     #definition {font-size: 0.25em;}
@@ -1726,7 +1728,7 @@ template {
     #links {font-size: 1.7em;}
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 900px) {
     #name {font-size: 3em;}
     #definition {font-size: 1.5em;}
     #links {font-size: 2em;}
@@ -1743,5 +1745,12 @@ template {
     #definition {font-size: 2.5em;}
     #links {font-size: 2.7em;}
   }
+
+  @media (min-height:1000px) and (min-width: 1100px) {
+    #name {font-size: 5em;}
+    #definition {font-size: 2.6em;}
+    #links {font-size: 3em;}
+  }
+
 }
 
