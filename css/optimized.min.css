@@ -1735,22 +1735,22 @@ template {
     #links {font-size: 1.7em;}
   }
 
-  @media (min-height:800px) and (min-width: 800px) {
-    #name {font-size: 3em;}
+  @media (min-height:700px) and (min-width: 700px) {
+    #name {font-size: 4em;}
     #definition {font-size: 2.3em;}
     #links {font-size: 2.4em;}
   }
 
   @media (min-height:900px) and (min-width: 900px) {
-    #name {font-size: 3.3em;}
+    #name {font-size: 5em;}
     #definition {font-size: 2.5em;}
     #links {font-size: 2.7em;}
   }
 
   @media (min-height:1000px) and (min-width: 1100px) {
-    #name {font-size: 5em;}
-    #definition {font-size: 2.6em;}
-    #links {font-size: 3em;}
+    #name {font-size: 7em;}
+    #definition {font-size: 3em;}
+    #links {font-size: 3.1em;}
   }
 
 }
