@@ -1736,9 +1736,9 @@ template {
   }
 
   @media (min-height:700px) and (min-width: 700px) {
-    #name {font-size: 4em;}
-    #definition {font-size: 2.1em;}
-    #links {font-size: 2.2em;}
+    #name {font-size: 3em;}
+    #definition {font-size: 1.9em;}
+    #links {font-size: 2em;}
   }
 
   /* @media (min-height:900px) and (min-width: 900px) { */
