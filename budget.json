@@ -1,26 +1,63 @@
 [
   {
-    "path": "/",
     "resourceSizes": [
       {
-        "resourceType": "document",
-        "budget": 8
+        "resourceType": "total",
+        "budget": 318.7
       },
       {
-        "resourceType": "script",
-        "budget": 573
+        "resourceType": "font",
+        "budget": 241
       },
       {
         "resourceType": "stylesheet",
-        "budget": 6
+        "budget": 39.3
+      },
+      {
+        "resourceType": "script",
+        "budget": 24.8
+      },
+      {
+        "resourceType": "document",
+        "budget": 7.2
       },
       {
         "resourceType": "image",
-        "budget": 6
+        "budget": 5.1
       },
       {
         "resourceType": "other",
+        "budget": 1.2
+      }
+    ],
+    "resourceCounts": [
+      {
+        "resourceType": "total",
+        "budget": 11
+      },
+      {
+        "resourceType": "font",
         "budget": 2
+      },
+      {
+        "resourceType": "stylesheet",
+        "budget": 2
+      },
+      {
+        "resourceType": "script",
+        "budget": 4
+      },
+      {
+        "resourceType": "document",
+        "budget": 1
+      },
+      {
+        "resourceType": "image",
+        "budget": 1
+      },
+      {
+        "resourceType": "other",
+        "budget": 1
       }
     ]
   }
