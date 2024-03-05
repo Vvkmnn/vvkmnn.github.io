@@ -1743,7 +1743,7 @@ template {
 }
 
 @media (orientation: landscape) {
-  @media (max-width: 700px) and (max-height: 500px),
+  @media (max-width: 800px) and (max-height: 500px),
     @media (max-height: 400px) {
     #definition {
       display: none;
