@@ -2045,7 +2045,7 @@ template {
 
     @media (min-width: 700px) {
         #name {
-            font-size: 3.3em;
+            font-size: 3.1em;
         }
 
         #definition {
@@ -2053,7 +2053,7 @@ template {
         }
 
         #links {
-            font-size: 1.8em;
+            font-size: 1.6em;
         }
     }
 
