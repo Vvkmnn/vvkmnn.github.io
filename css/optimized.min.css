@@ -61,7 +61,7 @@ ul {
   /* min-width: 100%; */
   /* min-height: 100%; */
 
-  /* min-height: 100vh; */ 
+  /* min-height: 100vh; */
   /* min-width: 100vw; */
 
   opacity: 0.7;
@@ -70,7 +70,7 @@ ul {
 #gradient-js {
   z-index: -4;
 
-  /* min-height: 100vh; */ 
+  /* min-height: 100vh; */
   /* min-width: 100vw; */
 
   /* min-width: 100%; */
@@ -78,7 +78,7 @@ ul {
 }
 
 .typed-cursor {
-  display:none;
+  display: none;
   /* position: relative; */
   /* font-size: 1.5em; */
   /* opacity: 1; */
@@ -132,9 +132,8 @@ ul {
   height: 100dvh;
   /* width: 100%; */
 
-
-    /* padding-left: 10%; */
-    /* padding-right: 10%; */
+  /* padding-left: 10%; */
+  /* padding-right: 10%; */
 
   display: grid;
   /* color: black; */
@@ -143,9 +142,10 @@ ul {
   grid-auto-columns: 1fr;
   align-content: stretch;
   align-items: center;
-  grid-template-areas: "logo name" 
-                       "logo definition" 
-                       "logo links";
+  grid-template-areas:
+    "logo name"
+    "logo definition"
+    "logo links";
 
   /* overflow: scroll; */
 }
@@ -317,11 +317,11 @@ img:hover {
   opacity: 0;
   padding: 0.3em;
 
-  position:relative;
+  position: relative;
 }
 
 #links li .label {
-  display:none;
+  display: none;
   color: white;
   position: absolute;
   /* bottom: -1.5em; */
@@ -331,12 +331,19 @@ img:hover {
   opacity: 0;
   visibility: hidden;
 
-
-  transition: visibility 0.2s linear, opacity 0.2s linear;
+  transition:
+    visibility 0.2s linear,
+    opacity 0.2s linear;
   -webkit-text-stroke-width: 1px;
-  -webkit-transition: visibility 0.2s linear, opacity 0.2s linear;
-  -moz-transition: visibility 0.2s linear, opacity 0.2s linear;
-  -o-transition: visibility 0.2s linear, opacity 0.2s linear;
+  -webkit-transition:
+    visibility 0.2s linear,
+    opacity 0.2s linear;
+  -moz-transition:
+    visibility 0.2s linear,
+    opacity 0.2s linear;
+  -o-transition:
+    visibility 0.2s linear,
+    opacity 0.2s linear;
 }
 
 #links li:hover .label {
@@ -1622,123 +1629,185 @@ template {
 /* @media screen and (orientation:portrait) and (max-width: 1000px) { */
 
 /* @media (max-aspect-ratio: 1) { */
-@media (orientation:portrait) {
-
+@media (orientation: portrait) {
   #overlay {
-      display: grid;
-  grid-auto-rows: auto;
-  grid-auto-columns: 100%;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-columns: 100%;
 
-
-  align-content: stretch;
-  align-items: center;
-  justify-self: center;
-  /* gap: 10px; */
-  grid-template-areas:
-    "logo"
-    "name"
-    "definition"
-    "links";
+    align-content: stretch;
+    align-items: center;
+    justify-self: center;
+    /* gap: 10px; */
+    grid-template-areas:
+      "logo"
+      "name"
+      "definition"
+      "links";
   }
 
   #logo {
-      grid-area: logo;
-      width: 33vh;
-      justify-self: center;
+    grid-area: logo;
+    width: 33vh;
+    justify-self: center;
   }
 
   #name {
-      grid-area: name;
-      justify-self: center;
-      /* font-size: 1.4em; */
-      font-size: 2.3em;
+    grid-area: name;
+    justify-self: center;
+    /* font-size: 1.4em; */
+    font-size: 2.3em;
   }
 
   #definition {
-      grid-area: definition;
-      justify-self: center;
+    grid-area: definition;
+    justify-self: center;
 
-      font-size: 1.3em;
-      /* font-size: 1.3em; */
+    font-size: 1.3em;
+    /* font-size: 1.3em; */
   }
 
   #links {
-      grid-area: links;
-      padding: 5%;
-      /* padding-left: 7%; */
-      /* padding-right: 7%; */
-      /* padding-bottom: 7%; */
-      /* padding-top: 7%; */
-      font-size: 1.5em;
-      overflow: scroll;
-      /* padding-right:10% */
+    grid-area: links;
+    padding: 5%;
+    /* padding-left: 7%; */
+    /* padding-right: 7%; */
+    /* padding-bottom: 7%; */
+    /* padding-top: 7%; */
+    font-size: 1.5em;
+    overflow: scroll;
+    /* padding-right:10% */
   }
-
 }
 
-@media (orientation:portrait) {
-
+@media (orientation: portrait) {
   @media (min-height: 100px) {
-    #name {font-size: 1em;}
-    #definition {font-size: 1em;}
-    #links {font-size: 1em;}
+    #name {
+      font-size: 1em;
+    }
+    #definition {
+      font-size: 1em;
+    }
+    #links {
+      font-size: 1em;
+    }
   }
 
   @media (min-height: 400px) {
-    #name {font-size: 2em;}
-    #definition {font-size: 1.5em;}
-    #links {font-size: 1.2em;}
+    #name {
+      font-size: 2em;
+    }
+    #definition {
+      font-size: 1.5em;
+    }
+    #links {
+      font-size: 1.2em;
+    }
   }
 
   @media (min-height: 700px) {
-    #name {font-size: 3em;}
-    #definition {font-size: 1.7em;}
-    #links {font-size: 1.9em;}
+    #name {
+      font-size: 3em;
+    }
+    #definition {
+      font-size: 1.7em;
+    }
+    #links {
+      font-size: 1.9em;
+    }
   }
 
   @media (min-height: 1000px) {
-    #name {font-size: 3.6em;}
-    #definition {font-size: 1.9em;}
-    #links {font-size: 2.3em;}
+    #name {
+      font-size: 3.6em;
+    }
+    #definition {
+      font-size: 1.9em;
+    }
+    #links {
+      font-size: 2.3em;
+    }
   }
 
   @media (min-height: 1200px) {
-    #name {font-size: 5.2em;}
-    #definition {font-size: 2.5em;}
-    #links {font-size: 2.7em;}
+    #name {
+      font-size: 5.2em;
+    }
+    #definition {
+      font-size: 2.5em;
+    }
+    #links {
+      font-size: 2.7em;
+    }
   }
 }
 
-@media (orientation:landscape) {
+@media (orientation: landscape) {
+  @media (max-width: 700px) and (max-height: 500px),
+    @media (max-height: 400px) {
+    #definition {
+      display: none;
+    }
+  }
 
   @media (min-width: 0px) {
-    #name {font-size: 0.5em;}
-    #definition {font-size: 0.25em;}
-    #links {font-size: 0.5em;}
+    #name {
+      font-size: 0.5em;
+    }
+    #definition {
+      font-size: 0.25em;
+    }
+    #links {
+      font-size: 0.5em;
+    }
   }
 
   @media (min-width: 300px) {
-    #name {font-size: 2em;}
-    #definition {font-size: 1.5em;}
-    #links {font-size: 1.2em;}
+    #name {
+      font-size: 2.3em;
+    }
+    #definition {
+      font-size: 1.7em;
+    }
+    #links {
+      font-size: 1.6em;
+    }
   }
 
   @media (min-width: 700px) {
-    #name {font-size: 3em;}
-    #definition {font-size: 1.4em;}
-    #links {font-size: 1.7em;}
+    #name {
+      font-size: 3.5em;
+    }
+    #definition {
+      font-size: 1.9em;
+    }
+    5 #links {
+      font-size: 2.5em;
+    }
   }
 
   @media (min-width: 900px) {
-    #name {font-size: 2.7em;}
-    #definition {font-size: 1.4em;}
-    #links {font-size: 1.5em;}
+    #name {
+      font-size: 2.9em;
+    }
+    #definition {
+      font-size: 1.8em;
+    }
+    #links {
+      font-size: 1.5em;
+    }
   }
 
-  @media (min-height:700px) and (min-width: 700px) {
-    #name {font-size: 3em;}
-    #definition {font-size: 1.9em;}
-    #links {font-size: 2em;}
+  @media (min-height: 700px) and (min-width: 700px) {
+    #name {
+      font-size: 4em;
+    }
+    #definition {
+      font-size: 2.1em;
+    }
+    #links {
+      font-size: 2em;
+    }
   }
 
   /* @media (min-height:900px) and (min-width: 900px) { */
@@ -1752,6 +1821,4 @@ template {
   /*   #definition {font-size: 3em;} */
   /*   #links {font-size: 3.1em;} */
   /* } */
-
 }
-
