@@ -149,7 +149,11 @@ ul {
   -webkit-animation: 0.7s ease-in-out 0.15s both nav-icons;
   animation: 0.7s ease-in-out 0.15s both nav-icons;
   -ms-animation-delay: 0.15s;
+
+  /* NOTE temp height adjuster */
+  /* width: 40vh; */
 }
+
 #name {
   grid-area: name;
   font-size: 3.6em;
@@ -1600,13 +1604,13 @@ template {
   }
   @media (min-width: 1100px) {
     #name {
-      font-size: 5.71em;
+      font-size: 5.25em;
     }
     #definition {
-      font-size: 2.5em;
+      font-size: 2.2em;
     }
     #links {
-      font-size: 3.14em;
+      font-size: 3em;
     }
   }
 }
