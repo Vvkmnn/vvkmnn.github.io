@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ribbon Background Test | Vivek Menon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: transparent;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    #ribbon-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+      color: #333;
+      max-width: 600px;
+      margin: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+
+  </style>
+</head>
+<body>
+  <canvas id="ribbon-canvas"></canvas>
+
+  <div class="content">
+    <h1>Ribbon Background Test</h1>
+    <p>
+      Testing the animated ribbon effect: flowing lines that draw themselves in,
+      evolve, and gracefully fade out - like watching an invisible artist sketch.
+    </p>
+    <p>
+      The ribbons use simplex noise for organic movement and progressive opacity
+      gradients for that hand-drawn feel.
+    </p>
+  </div>
+
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="js/3d-ribbon.js"></script>
+</body>
+</html>

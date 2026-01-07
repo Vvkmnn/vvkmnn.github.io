@@ -356,3 +356,6 @@ pyrightconfig.json
 # *.xhtml
 
 # End of https://www.toptal.com/developers/gitignore/api/node,python,web
+
+### Claude Code ###
+.claude/
