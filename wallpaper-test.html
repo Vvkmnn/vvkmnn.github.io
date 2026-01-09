@@ -48,20 +48,99 @@
       opacity: 0.8;
     }
 
+    #controls {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+    }
+
+    #controls h3 {
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .approach-btn {
+      padding: 0.5rem 1rem;
+      border: 1px solid #ddd;
+      background: white;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+      text-align: left;
+    }
+
+    .approach-btn:hover {
+      background: #f5f5f5;
+      border-color: #999;
+    }
+
+    .approach-btn.active {
+      background: #1a1a1a;
+      color: white;
+      border-color: #1a1a1a;
+    }
+
+    .approach-btn strong {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .approach-btn span {
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+
+    .approach-btn.active span {
+      opacity: 0.9;
+    }
+
   </style>
 </head>
 <body>
   <canvas id="ribbon-canvas"></canvas>
 
+  <div id="controls">
+    <h3>Compare Approaches</h3>
+    <div class="button-group">
+      <button class="approach-btn" data-approach="2d">
+        <strong>2D</strong>
+        <span>Canvas ribbon (40 lines, filled)</span>
+      </button>
+      <button class="approach-btn active" data-approach="3d-lines">
+        <strong>3D-Lines</strong>
+        <span>WebGL lines with fills (8 lines)</span>
+      </button>
+      <button class="approach-btn" data-approach="3d-texture">
+        <strong>3D-Texture</strong>
+        <span>Single mesh, striped texture</span>
+      </button>
+    </div>
+  </div>
+
   <div class="content">
-    <h1>Ribbon Background Test</h1>
+    <h1>3D Ribbon Background</h1>
     <p>
-      Testing the animated ribbon effect: flowing lines that draw themselves in,
-      evolve, and gracefully fade out - like watching an invisible artist sketch.
+      Three different approaches to animated ribbon backgrounds. Use the controls
+      to switch between implementations and compare visual quality and performance.
     </p>
     <p>
-      The ribbons use simplex noise for organic movement and progressive opacity
-      gradients for that hand-drawn feel.
+      All versions feature complex curves (torus knots, trefoils, Lissajous patterns)
+      with smooth morphing animations and continuous rotation.
     </p>
   </div>
 
@@ -74,6 +153,72 @@
     }
   }
   </script>
-  <script type="module" src="js/3d-ribbon.js"></script>
+
+  <script type="module">
+    // Approach scripts mapping
+    const APPROACHES = {
+      '2d': 'js/ribbon.js',
+      '3d-lines': 'js/3d-ribbon-fixed.js',
+      '3d-texture': 'js/3d-ribbon-texture.js'
+    };
+
+    let currentApproach = '3d-lines';
+    let currentScript = null;
+
+    /**
+     * Load a specific approach script using dynamic import
+     */
+    async function loadApproach(approach) {
+      if (approach === currentApproach && window.ribbonManager) return;
+
+      // Dispose current ribbon manager if exists
+      if (window.ribbonManager) {
+        // Cancel animation frame if running
+        if (window.ribbonManager.animationId) {
+          cancelAnimationFrame(window.ribbonManager.animationId);
+        }
+        if (window.ribbonManager.ribbon?.dispose) {
+          window.ribbonManager.ribbon.dispose();
+        }
+        if (window.ribbonManager.renderer) {
+          window.ribbonManager.renderer.dispose();
+          window.ribbonManager.renderer.forceContextLoss();
+        }
+        window.ribbonManager = null;
+      }
+
+      // Recreate the canvas to allow switching between WebGL and 2D contexts
+      const oldCanvas = document.getElementById('ribbon-canvas');
+      const newCanvas = document.createElement('canvas');
+      newCanvas.id = 'ribbon-canvas';
+      oldCanvas.replaceWith(newCanvas);
+
+      // Use dynamic import for ES modules (works reliably)
+      try {
+        await import('./' + APPROACHES[approach] + '?t=' + Date.now());
+        console.log('Loaded approach:', approach, 'ribbonManager:', !!window.ribbonManager);
+      } catch (e) {
+        console.error('Failed to load approach:', approach, e);
+      }
+
+      // Update current approach
+      currentApproach = approach;
+
+      // Update button states
+      document.querySelectorAll('.approach-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.approach === approach);
+      });
+    }
+
+    // Setup button listeners
+    document.querySelectorAll('.approach-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        loadApproach(btn.dataset.approach);
+      });
+    });
+
+    // Load initial approach
+    loadApproach('3d-lines');
+  </script>
 </body>
 </html>
