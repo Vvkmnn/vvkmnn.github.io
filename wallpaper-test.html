@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ribbon Background Test | Vivek Menon</title>
+  <title>Ribbon Background | Vivek Menon</title>
   <style>
     * {
       margin: 0;
@@ -14,8 +14,12 @@
     html, body {
       height: 100%;
       overflow: hidden;
-      background: transparent;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8f7f4;
+      transition: background 0.3s ease;
+    }
+
+    html.dark {
+      background: #121212;
     }
 
     #ribbon-canvas {
@@ -24,128 +28,96 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
+      z-index: 0;
     }
 
-    .content {
-      position: relative;
-      z-index: 1;
-      padding: 2rem;
-      color: #333;
-      max-width: 600px;
-      margin: 2rem;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    p {
-      line-height: 1.6;
-      margin-bottom: 1rem;
-      opacity: 0.8;
-    }
-
-    #controls {
+    /* Theme toggle button */
+    #theme-toggle {
       position: fixed;
       top: 20px;
-      right: 20px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      z-index: 100;
-    }
-
-    #controls h3 {
-      font-size: 0.875rem;
-      margin-bottom: 0.75rem;
-      color: #666;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .button-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .approach-btn {
-      padding: 0.5rem 1rem;
-      border: 1px solid #ddd;
-      background: white;
-      border-radius: 4px;
+      left: 20px;
+      width: 36px;
+      height: 36px;
+      border: none;
+      background: transparent;
       cursor: pointer;
-      font-size: 0.875rem;
-      transition: all 0.2s;
-      text-align: left;
+      z-index: 100;
+      padding: 0;
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
     }
 
-    .approach-btn:hover {
-      background: #f5f5f5;
-      border-color: #999;
+    #theme-toggle:hover {
+      opacity: 1;
     }
 
-    .approach-btn.active {
-      background: #1a1a1a;
-      color: white;
-      border-color: #1a1a1a;
+    #theme-toggle svg {
+      width: 24px;
+      height: 24px;
+      fill: #333;
+      stroke: #333;
+      transition: fill 0.3s ease, stroke 0.3s ease;
     }
 
-    .approach-btn strong {
+    html.dark #theme-toggle svg {
+      fill: #ffffff;
+      stroke: #ffffff;
+    }
+
+    /* Sun icon visible in light mode */
+    #theme-toggle .sun-icon {
       display: block;
-      margin-bottom: 0.25rem;
+    }
+    #theme-toggle .moon-icon {
+      display: none;
     }
 
-    .approach-btn span {
-      font-size: 0.75rem;
-      opacity: 0.7;
+    /* Moon icon visible in dark mode */
+    html.dark #theme-toggle .sun-icon {
+      display: none;
+    }
+    html.dark #theme-toggle .moon-icon {
+      display: block;
     }
 
-    .approach-btn.active span {
-      opacity: 0.9;
+    /* Mouse light effect */
+    #mouse-light {
+      position: fixed;
+      pointer-events: none;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      mix-blend-mode: soft-light;
     }
 
+    #mouse-light.active {
+      opacity: 0.5;
+    }
   </style>
 </head>
 <body>
   <canvas id="ribbon-canvas"></canvas>
 
-  <!-- Controls hidden - focusing on 3D-Lines only
-  <div id="controls">
-    <h3>Compare Approaches</h3>
-    <div class="button-group">
-      <button class="approach-btn" data-approach="2d">
-        <strong>2D</strong>
-        <span>Canvas ribbon (40 lines, filled)</span>
-      </button>
-      <button class="approach-btn active" data-approach="3d-lines">
-        <strong>3D-Lines</strong>
-        <span>WebGL lines with fills (8 lines)</span>
-      </button>
-      <button class="approach-btn" data-approach="3d-texture">
-        <strong>3D-Texture</strong>
-        <span>Single mesh, striped texture</span>
-      </button>
-    </div>
-  </div>
-  -->
+  <!-- Mouse light effect -->
+  <div id="mouse-light"></div>
 
-  <div class="content">
-    <h1>3D Ribbon Background</h1>
-    <p>
-      Three different approaches to animated ribbon backgrounds. Use the controls
-      to switch between implementations and compare visual quality and performance.
-    </p>
-    <p>
-      All versions feature complex curves (torus knots, trefoils, Lissajous patterns)
-      with smooth morphing animations and continuous rotation.
-    </p>
-  </div>
-
+  <!-- Theme toggle -->
+  <button id="theme-toggle" aria-label="Toggle dark mode">
+    <!-- Sun icon (shown in light mode) -->
+    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"/>
+      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+      <style>path{stroke:currentColor;stroke-width:2;stroke-linecap:round;fill:none}</style>
+    </svg>
+    <!-- Moon icon (shown in dark mode) -->
+    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
 
   <script type="importmap">
   {
@@ -157,30 +129,56 @@
   </script>
 
   <script type="module">
-    // Approach scripts mapping
-    const APPROACHES = {
-      '2d': 'js/ribbon.js',
-      '3d-lines': 'js/3d-ribbon.js',
-      '3d-texture': 'js/3d-ribbon-texture.js'
-    };
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    const mouseLight = document.getElementById('mouse-light');
 
-    let currentApproach = '3d-lines';
-    let currentScript = null;
+    // Check for saved preference or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    /**
-     * Load a specific approach script using dynamic import
-     */
-    async function loadApproach(approach) {
-      if (approach === currentApproach && window.ribbonManager) return;
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      html.classList.add('dark');
+    }
 
-      // Dispose current ribbon manager if exists
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+      // Trigger color scheme change event for ribbon
+      const event = new MediaQueryListEvent('change', { matches: isDark });
+      window.dispatchEvent(new CustomEvent('themechange', { detail: { isDark } }));
+    });
+
+    // Mouse light effect
+    let lightColor = 'rgba(100, 180, 255, 0.4)';  // Default blue
+
+    document.addEventListener('mousemove', (e) => {
+      mouseLight.style.left = e.clientX + 'px';
+      mouseLight.style.top = e.clientY + 'px';
+    });
+
+    // Update light color when ripple is active
+    window.addEventListener('ripplestart', (e) => {
+      if (e.detail && e.detail.color) {
+        const c = e.detail.color;
+        lightColor = `rgba(${Math.round(c.r*255)}, ${Math.round(c.g*255)}, ${Math.round(c.b*255)}, 0.5)`;
+        mouseLight.style.background = `radial-gradient(circle, ${lightColor} 0%, transparent 70%)`;
+        mouseLight.classList.add('active');
+      }
+    });
+
+    window.addEventListener('rippleend', () => {
+      mouseLight.classList.remove('active');
+    });
+
+    // Load 3D ribbon
+    async function loadRibbon() {
       if (window.ribbonManager) {
-        // Cancel animation frame if running
         if (window.ribbonManager.animationId) {
           cancelAnimationFrame(window.ribbonManager.animationId);
-        }
-        if (window.ribbonManager.ribbon?.dispose) {
-          window.ribbonManager.ribbon.dispose();
         }
         if (window.ribbonManager.renderer) {
           window.ribbonManager.renderer.dispose();
@@ -189,38 +187,19 @@
         window.ribbonManager = null;
       }
 
-      // Recreate the canvas to allow switching between WebGL and 2D contexts
       const oldCanvas = document.getElementById('ribbon-canvas');
       const newCanvas = document.createElement('canvas');
       newCanvas.id = 'ribbon-canvas';
       oldCanvas.replaceWith(newCanvas);
 
-      // Use dynamic import for ES modules (works reliably)
       try {
-        await import('./' + APPROACHES[approach] + '?t=' + Date.now());
-        console.log('Loaded approach:', approach, 'ribbonManager:', !!window.ribbonManager);
+        await import('./js/3d-ribbon.js?t=' + Date.now());
       } catch (e) {
-        console.error('Failed to load approach:', approach, e);
+        console.error('Failed to load ribbon:', e);
       }
-
-      // Update current approach
-      currentApproach = approach;
-
-      // Update button states
-      document.querySelectorAll('.approach-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.approach === approach);
-      });
     }
 
-    // Setup button listeners
-    document.querySelectorAll('.approach-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        loadApproach(btn.dataset.approach);
-      });
-    });
-
-    // Load initial approach
-    loadApproach('3d-lines');
+    loadRibbon();
   </script>
 </body>
 </html>
