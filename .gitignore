@@ -359,3 +359,6 @@ pyrightconfig.json
 
 ### Claude Code ###
 .claude/
+
+# Project documentation (private)
+CLAUDE.md
