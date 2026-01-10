@@ -64,7 +64,7 @@ legend {
   background: 0 0;
 }
 html {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
   background-color: #000;
   user-select: none;
   min-height: 100%;
@@ -79,21 +79,38 @@ html {
 ul {
   padding: 1px;
 }
-#gradient-js,
-#particles-js {
-  position: absolute;
-  background-position: 0 0;
-  width: 100dvw;
-  height: 100dvh;
-  background-size: cover;
+#ribbon-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
-#particles-js {
-  z-index: -3;
+#theme-toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 13px solid transparent;
+  border-top: 13px solid #121212;
+  border-right: 13px solid #121212;
+  background: transparent;
+  cursor: pointer;
+  z-index: 100;
+  padding: 0;
   opacity: 0.7;
+  transition: opacity 0.2s ease, border-color 0.5s ease;
 }
-#gradient-js {
-  z-index: -4;
-}
+#theme-toggle:hover { opacity: 1; }
+html { background: #f8f7f4; color: #121212; transition: background 0.3s ease, color 0.3s ease; }
+html.dark { background: #121212; color: #f8f7f4; }
+html.dark #theme-toggle { border-top-color: #f8f7f4; border-right-color: #f8f7f4; }
+html.dark, html.dark .fa-icon, html.dark #name, html.dark #definition, html.dark a, html.dark .label, html.dark #overlay * { color: #f8f7f4 !important; }
+html.dark #logo img { filter: invert(1) brightness(0.97) sepia(0.02); }
+#logo img { transition: filter 0.5s ease; aspect-ratio: 1/1; }
+.fa-icon, #name, #definition, a, .label { transition: color 0.5s ease; }
 .typed-cursor {
   display: none;
   -webkit-animation: 0.7s infinite blink;
@@ -215,36 +232,6 @@ i {
 br {
   line-height: 50%;
 }
-#about:hover,
-#definition:hover,
-#definitions:hover,
-#line1:hover,
-#line2:hover,
-#line3:hover,
-#line4:hover,
-#links:hover,
-#name:hover,
-.fa-icon:hover,
-a:hover,
-b:hover,
-h1:hover,
-h2:hover,
-i:hover {
-  color: #fff;
-  transition: color 0.5s ease-out;
-  -o-transition: color 0.5s ease-out;
-  -ms-transition: color 0.5s ease-out;
-  -moz-transition: color 0.5s ease-out;
-  -webkit-transition: color 0.5s ease-out;
-}
-img:hover {
-  filter: invert(100%);
-  -webkit-transition: -webkit-filter 0.5s linear;
-  -moz-transition: filter 0.5s linear;
-  -ms-transition: -ms-filter 0.5s linear;
-  -o-transition: -o-filter 0.5s linear;
-  transition: filter 0.5s linear;
-}
 #links li {
   list-style-type: none;
   -moz-animation: 0.5s ease-in-out 0.75s forwards nav-icons;
@@ -257,7 +244,7 @@ img:hover {
 }
 #links li .label {
   display: none;
-  color: #fff;
+  color: #121212;
   position: absolute;
   top: -0.8em;
   font-size: 0.7em;
@@ -515,7 +502,7 @@ img:hover {
   }
 }
 .fa-icon {
-  color: #000;
+  color: #121212;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -613,7 +600,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;

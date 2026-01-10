@@ -117,23 +117,30 @@ SCpfgQg=
     }
     </script>
 
-    <!-- Preload -->
+    <!-- Preload & Performance -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link href="/css/optimized.min.css" as="style">
     <link rel="preload" href="/css/icons.min.css" as="style">
     <link rel="preload" href="/js/optimized.min.js" as="script">
+    <link rel="modulepreload" href="/js/3d-ribbon.min.js">
 
     <!-- Style  -->
     <link rel="stylesheet" href="/css/optimized.min.css">
     <link rel="stylesheet" href="/css/icons.min.css">
 
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- CSP -->
 <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; 
-             img-src 'self' data:; 
-             font-src 'self' data:; 
-             style-src 'self' 'unsafe-inline'; 
-             script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; 
+    content="default-src 'self';
+             img-src 'self' data:;
+             font-src 'self' data: https://fonts.gstatic.com;
+             style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+             script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com https://cdn.jsdelivr.net;
              connect-src 'self' https://www.google-analytics.com;">
 
     <!-- JS -->
@@ -143,14 +150,33 @@ SCpfgQg=
 
 <body oncontextmenu="return false">
     <!-- Fancy -->
-    <div id="particles-js"></div>
-    <div id="gradient-js"></div>
+    <canvas id="ribbon-js"></canvas>
+
+    <!-- Toggle -->
+    <button id="theme-toggle" aria-label="Toggle dark mode"></button>
 
     <!-- Scripts -->
-
-    <script defer src="/js/gradient.js"></script>
     <script defer src="/js/strings.js"></script>
-    <script defer src="/js/particle.js"></script>
+    <script>
+        // Theme detection FIRST - before any modules load
+        // Priority: saved > system preference > time-based (7am-7pm light, 7pm-7am dark)
+        const saved=localStorage.getItem('theme');
+        const prefersDark=matchMedia('(prefers-color-scheme:dark)').matches;
+        const hour=new Date().getHours();
+        const timeBasedDark=hour<7||hour>=19;
+        const isDark=saved==='dark'||(saved===null&&(prefersDark||(!prefersDark&&timeBasedDark)));
+        if(isDark)document.documentElement.classList.add('dark');
+        window.initialTheme=isDark?'dark':'light';
+    </script>
+    <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+    <script type="module">import('./js/3d-ribbon.min.js?v=1');</script>
+    <script>
+        // Toggle handler after DOM ready
+        document.addEventListener('DOMContentLoaded',()=>{
+            const toggle=document.getElementById('theme-toggle'),html=document.documentElement;
+            if(toggle)toggle.onclick=()=>{html.classList.toggle('dark');const dark=html.classList.contains('dark');localStorage.setItem('theme',dark?'dark':'light');dispatchEvent(new CustomEvent('themechange',{detail:{isDark:dark}}));};
+        });
+    </script>
 
     <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js ";></script> -->
@@ -175,7 +201,7 @@ SCpfgQg=
 
     <div id="overlay">
         <div id="logo">
-            <img src="images/vLogoWhite.webp" alt="logo">
+            <img id="logo-img" src="images/cropped_vLogoTransparent.webp" alt="logo">
             <!-- <img src="images/cropped_vLogoTransparent.webp" -->
         </div>
 
@@ -199,123 +225,47 @@ SCpfgQg=
                 target="_blank">Deep Learning</a> Specialist </p>
         <p><a href="https://github.com/Vvkmnn?utf8=%E2%9C%93&amp;tab=repositories&amp;q=DL&amp;type=&amp;language="
                 target="_blank">Machine Learning</a> Specialist </p>
-        <p><a href="https://github.com/Vvkmnn?utf8=%E2%9C%93&amp;tab=repositories&amp;q=DL&amp;type=&amp;language="
-                target="_blank">Machine
-                Learning</a>
-            Specialist
-        </p>
-        <p><a href="https://github.com/Vvkmnn?utf8=%E2%9C%93&amp;tab=repositories&amp;q=AI&amp;type=&amp;language="
-                target="_blank">Artificial
-                Intelligence</a>
-            Specialist
-        </p>
-        <p><a href="https://github.com/Vvkmnn?utf8=%E2%9C%93&amp;tab=repositories&amp;q=AI&amp;type=&amp;language="
-                target="_blank">AI</a>
-            Tinkerer
-        </p>
-        <p><a href="https://github.com/Vvkmnn?utf8=%E2%9C%93&amp;tab=repositories&amp;q=AI&amp;type=&amp;language="
-                target="_blank">AI</a>
-            Builder
-        </p>
-        <p><a href="https://github.com/Vvkmnn" target="_blank">Software</a>
-            Developer
-        </p>
-        <p><a href="https://github.com/Vvkmnn" target="_blank">Frontend</a>
-            Developer
-        </p>
-        <p><a href="https://github.com/Vvkmnn" target="_blank">Backend</a>
-            Developer
-        </p>
-        <p><a href="https://github.com/Vvkmnn" target="_blank">Full-Stack</a>
-            Developer
-        </p>
-        <p><a href="https://github.com/Vvkmnn" target="_blank">Functional</a>
-            Developer
-        </p>
-        <p><a href="https://github.com/Vvkmnn" target="_blank">Serverless</a>
-            Developer
-        </p>
-        <p><a href="https://github.com/Vvkmnn?utf8=%E2%9C%93&amp;tab=repositories&amp;q=&amp;type=&amp;language=python"
-                target="_blank">Python</a>
-            Developer
-        </p>
-        <p><a href="https://github.com/Vvkmnn?utf8=%E2%9C%93&amp;tab=repositories&amp;q=&amp;type=&amp;language=python"
-                target="_blank">Python</a>
-            Wrangler
-        </p>
-        <p><a href="https://github.com/Vvkmnn?utf8=%E2%9C%93&amp;tab=repositories&amp;q=&amp;type=&amp;language=python"
-                target="_blank">R</a>
-            Developer
-        </p>
-        <p><a href="https://github.com/Vvkmnn?utf8=%E2%9C%93&amp;tab=repositories&amp;q=&amp;type=&amp;language=javascript"
-                target="_blank">JavaScript</a>
-            Developer
-        </p>
-        <p><a href="https://github.com/Vvkmnn?utf8=%E2%9C%93&amp;tab=repositories&amp;q=&amp;type=&amp;language=typescript"
-                target="_blank">TypeScript</a>
-            Developer
-        </p>
-        <p><a href="https://github.com/Vvkmnn?utf8=%E2%9C%93&amp;tab=repositories&amp;q=vyper&amp;type=&amp;language="
-                target="_blank">Vyper</a>
-            Developer
-        </p>
-        <p><a href="https://github.com/Vvkmnn/books" target="_blank">Julia</a>
-            Developer
-        </p>
-        <p>SQL Architect
-        </p>
-        <p>noSQL Architect
-        </p>
-        <p>Cloud Architect
-        </p>
-        <p><a href="https://github.com/Vvkmnn/nanoCoin" target="_blank">Haskell</a>
-            Tinkerer
-        </p>
-        <p>Block Chainer
-        </p>
-        <p>Node Hoster
-        </p>
-        <p><a href="https://en.wikipedia.org/wiki/Daemon_(computing)" target="_blank">Daemon</a>
-            Summoner
-        </p>
-        <p>K8 Manager
-        </p>
-        <p><a href="https://etherscan.io/address/0x6924d483665d89c9deb1b059d365af05bcab7f85" target="_blank">Crypto</a>
-            Trader
-        </p>
-        <p><a href="https://github.com/redqueenxyz/sigmaCoin">Cryptocurrency</a>
-            Analyzer
-        </p>
-        <p><a href="https://github.com/redqueenxyz/sigmaCoin">Cryptocurrency
-                Researcher</a>
-        </p>
-        <p>Ethereum Developer
-        </p>
-        <p>Solidity Developer
-        </p>
-        <p><a href="https://github.com/ethereum/vyper" target="_blank">Vyper</a>
-            <a href="https://github.com/Vvkmnn/vim-vyper" target="_blank">Developer</a>
-        </p>
-        <p><a href="https://docs.llamaindex.ai/en/stable/index.html" target="_blank">Llama</a>
-            Petter
-        </p>
-        <p><a href="https://deepmind.google/technologies/gemini/#introduction" target="_blank">Gemini</a>
-            Gazer
-        </p>
-        <p><a href="https://platform.openai.com/playground" target="_blank">ChatGPT</a>
-            Prompter
-        </p>
-        <p>Face <a href="https://huggingface.co" target="_blank">Hugger</a>
-        </p>
-        <p>Senior Data Scientist
-        </p>
-        <p>Data Visualizer
-        </p>
-        <p>Tinkerer
-        </p>
-        <p>Director </p>
+        <p><a href="https://github.com/Vvkmnn?tab=repositories&q=DL" target="_blank">Machine Learning</a> Specialist</p>
+        <p><a href="https://github.com/Vvkmnn?tab=repositories&q=AI" target="_blank">Artificial Intelligence</a> Specialist</p>
+        <p><a href="https://github.com/Vvkmnn?tab=repositories&q=AI" target="_blank">AI</a> Tinkerer</p>
+        <p><a href="https://github.com/Vvkmnn?tab=repositories&q=AI" target="_blank">AI</a> Builder</p>
+        <p><a href="https://github.com/Vvkmnn" target="_blank">Software</a> Developer</p>
+        <p><a href="https://github.com/Vvkmnn" target="_blank">Frontend</a> Developer</p>
+        <p><a href="https://github.com/Vvkmnn" target="_blank">Backend</a> Developer</p>
+        <p><a href="https://github.com/Vvkmnn" target="_blank">Full-Stack</a> Developer</p>
+        <p><a href="https://github.com/Vvkmnn" target="_blank">Functional</a> Developer</p>
+        <p><a href="https://github.com/Vvkmnn" target="_blank">Serverless</a> Developer</p>
+        <p><a href="https://github.com/Vvkmnn?tab=repositories&language=python" target="_blank">Python</a> Developer</p>
+        <p><a href="https://github.com/Vvkmnn?tab=repositories&language=python" target="_blank">Python</a> Wrangler</p>
+        <p><a href="https://github.com/Vvkmnn?tab=repositories&language=r" target="_blank">R</a> Developer</p>
+        <p><a href="https://github.com/Vvkmnn?tab=repositories&language=javascript" target="_blank">JavaScript</a> Developer</p>
+        <p><a href="https://github.com/Vvkmnn?tab=repositories&language=typescript" target="_blank">TypeScript</a> Developer</p>
+        <p><a href="https://github.com/Vvkmnn?tab=repositories&q=vyper" target="_blank">Vyper</a> Developer</p>
+        <p><a href="https://github.com/Vvkmnn/books" target="_blank">Julia</a> Developer</p>
+        <p><a href="https://github.com/Vvkmnn?tab=repositories&q=sql" target="_blank">SQL</a> Architect</p>
+        <p><a href="https://github.com/Vvkmnn/books" target="_blank">noSQL</a> Architect</p>
+        <p><a href="https://github.com/Vvkmnn/introDocker" target="_blank">Cloud</a> Architect</p>
+        <p><a href="https://github.com/Vvkmnn/nanoCoin" target="_blank">Haskell</a> Tinkerer</p>
+        <p><a href="https://github.com/Vvkmnn/introSolidity" target="_blank">Block</a> Chainer</p>
+        <p>Node Hoster</p>
+        <p><a href="https://en.wikipedia.org/wiki/Daemon_(computing)" target="_blank">Daemon</a> Summoner</p>
+        <p>K8 Manager</p>
+        <p><a href="https://etherscan.io/address/0x6924d483665d89c9deb1b059d365af05bcab7f85" target="_blank">Crypto</a> Trader</p>
+        <p><a href="https://github.com/redqueenxyz/sigmaCoin" target="_blank">Cryptocurrency</a> Analyzer</p>
+        <p><a href="https://github.com/redqueenxyz/sigmaCoin" target="_blank">Cryptocurrency</a> Researcher</p>
+        <p><a href="https://github.com/Vvkmnn/introSolidity" target="_blank">Ethereum</a> Developer</p>
+        <p>Solidity Developer</p>
+        <p><a href="https://github.com/ethereum/vyper" target="_blank">Vyper</a> <a href="https://github.com/Vvkmnn/vim-vyper" target="_blank">Developer</a></p>
+        <p><a href="https://docs.llamaindex.ai/en/stable/index.html" target="_blank">Llama</a> Petter</p>
+        <p><a href="https://deepmind.google/technologies/gemini/#introduction" target="_blank">Gemini</a> Gazer</p>
+        <p><a href="https://platform.openai.com/playground" target="_blank">ChatGPT</a> Prompter</p>
+        <p>Face <a href="https://huggingface.co" target="_blank">Hugger</a></p>
+        <p>Senior Data Scientist</p>
+        <p>Data Visualizer</p>
+        <p>Tinkerer</p>
+        <p><a href="https://www.linkedin.com/in/vvkmnn" target="_blank">Director</a></p>
         <p>Manager </p>
-        <p>Senior Director </p>
+        <p><a href="https://www.linkedin.com/in/vvkmnn" target="_blank">Senior Director</a></p>
         <p>Product Manager </p>
         <p>Chart Painter </p>
         <p>Chart Maker </p>
@@ -356,13 +306,13 @@ SCpfgQg=
         <p>Trend Finder </p>
         <p>&#9996; </p>
         <p>CDO </p>
-        <p>Interm CTO </p>
-        <p>Remote CTO </p>
-        <p><a target="_blank">CTO</a> </p>
-        <p><a target="_blank">Chief Technical Officer</a> </p>
-        <p><a target="_blank">Technical Founder</a> </p>
-        <p><a target="_blank">Co-Founder</a> </p>
-        <p><a target="_blank">Founder</a> </p>
+        <p><a href="https://www.linkedin.com/in/vvkmnn" target="_blank">Interim CTO</a></p>
+        <p><a href="https://www.linkedin.com/in/vvkmnn" target="_blank">Remote CTO</a></p>
+        <p><a href="https://www.linkedin.com/in/vvkmnn" target="_blank">CTO</a></p>
+        <p><a href="https://www.linkedin.com/in/vvkmnn" target="_blank">Chief Technical Officer</a></p>
+        <p><a href="https://www.linkedin.com/in/vvkmnn" target="_blank">Technical Founder</a></p>
+        <p><a href="https://www.linkedin.com/in/vvkmnn" target="_blank">Co-Founder</a></p>
+        <p><a href="https://www.linkedin.com/in/vvkmnn" target="_blank">Founder</a></p>
         <p><a href="https://github.com/Vvkmnn/dotfiles" target="_blank">Dotfiler</a> </p>
         <p><a href="https://github.com/Vvkmnn/dotfiles/tree/master/.config/nvim" target="_blank">Vimmer</a> </p>
         <p><a href="https://neovim.io/" target="_blank"></a>(neo)Vimmer </p>
@@ -410,10 +360,8 @@ SCpfgQg=
         </p>
         <p>Options Trader
         </p>
-        <p>Functional Programmer
-        </p>
-        <p>Lambda Calculator
-        </p>
+        <p><a href="https://github.com/Vvkmnn/books" target="_blank">Functional</a> Programmer</p>
+        <p><a href="https://en.wikipedia.org/wiki/Lambda_calculus" target="_blank">Lambda</a> Calculator</p>
         <p>λ Calculator
         </p>
         <p>Probability Specialist
@@ -435,6 +383,16 @@ SCpfgQg=
             Tamer </p>
         <p><a href="https://openai.com/blog/evolution-strategies/" target="_blank">Evolutionary AI</a>
             Specialist </p>
+        <p><a href="https://github.com/Vvkmnn?tab=repositories&q=claude" target="_blank">Claude</a> Coder</p>
+        <p><a href="https://www.google.com/search?q=claude+historian" target="_blank">Claude</a> Historian</p>
+        <p><a href="https://github.com/Vvkmnn/claude-praetorian-mcp" target="_blank">Claude</a> Praetorian</p>
+        <p><a href="https://github.com/Vvkmnn/awesome-ai-eval" target="_blank">AI</a> Evaluator</p>
+        <p><a href="https://github.com/Vvkmnn/awesome-ai-eval" target="_blank">Prompt</a> Engineer</p>
+        <p><a href="https://github.com/Vvkmnn" target="_blank">MLOps</a> Engineer</p>
+        <p><a href="https://github.com/Vvkmnn" target="_blank">RAG</a> Architect</p>
+        <p><a href="https://github.com/Vvkmnn" target="_blank">LangChain</a> Linguist</p>
+        <p><a href="https://github.com/Vvkmnn/dalai" target="_blank">Alpaca</a> Herder</p>
+        <p><a href="https://github.com/Vvkmnn/introDocker" target="_blank">Docker</a> Composer</p>
     </div>
 
     <div id="links">
