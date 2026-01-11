@@ -361,6 +361,19 @@ js/strings.js
 css/optimized.css
 archive/
 
+# Build config (private - not needed for GitHub Pages)
+package.json
+package-lock.json
+yarn.lock
+
+# Sensitive/config files (not needed for site)
+*.vcf
+*.map
+budget.json
+js/manifest.json
+js/particles.json
+js/particle.json
+
 ### Claude Code (private - documentation also synced via iCloud)
 .claude/
 CLAUDE.md
