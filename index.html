@@ -169,7 +169,7 @@ SCpfgQg=
         const hour=new Date().getHours();
         const timeBasedDark=hour<7||hour>=19;
         const isDark=saved==='dark'||(saved===null&&(prefersDark||(!prefersDark&&timeBasedDark)));
-        if(isDark)document.documentElement.classList.add('dark');
+        document.documentElement.classList.add(isDark?'dark':'light');
         window.initialTheme=isDark?'dark':'light';
         // Re-enable transitions after first paint
         requestAnimationFrame(()=>requestAnimationFrame(()=>document.documentElement.classList.remove('no-transitions')));
@@ -180,7 +180,7 @@ SCpfgQg=
         // Toggle handler after DOM ready
         document.addEventListener('DOMContentLoaded',()=>{
             const toggle=document.getElementById('theme-toggle'),html=document.documentElement;
-            if(toggle)toggle.onclick=()=>{html.classList.toggle('dark');const dark=html.classList.contains('dark');localStorage.setItem('theme',dark?'dark':'light');dispatchEvent(new CustomEvent('themechange',{detail:{isDark:dark}}));};
+            if(toggle)toggle.onclick=()=>{html.classList.toggle('dark');html.classList.toggle('light');const dark=html.classList.contains('dark');localStorage.setItem('theme',dark?'dark':'light');dispatchEvent(new CustomEvent('themechange',{detail:{isDark:dark}}));};
         });
     </script>
 
