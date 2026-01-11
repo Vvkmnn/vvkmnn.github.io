@@ -355,11 +355,16 @@ pyrightconfig.json
 # *.wat
 # *.xhtml
 
-# End of https://www.toptal.com/developers/gitignore/api/node,python,web
+# Source files (private - synced via iCloud)
+js/3d-ribbon.js
+js/strings.js
+css/optimized.css
+archive/
 
-### Claude Code ###
+### Claude Code (private - documentation also synced via iCloud)
 .claude/
-
-# Project documentation (private)
 CLAUDE.md
 TITLES.md
+
+# End of https://www.toptal.com/developers/gitignore/api/node,python,web
+

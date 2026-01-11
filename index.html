@@ -158,6 +158,8 @@ SCpfgQg=
     <!-- Scripts -->
     <script defer src="/js/strings.min.js"></script>
     <script>
+        // Prevent transition flash on initial load
+        document.documentElement.classList.add('no-transitions');
         // Theme detection FIRST - before any modules load
         // Priority: saved > system preference > time-based (7am-7pm light, 7pm-7am dark)
         const saved=localStorage.getItem('theme');
@@ -167,6 +169,8 @@ SCpfgQg=
         const isDark=saved==='dark'||(saved===null&&(prefersDark||(!prefersDark&&timeBasedDark)));
         if(isDark)document.documentElement.classList.add('dark');
         window.initialTheme=isDark?'dark':'light';
+        // Re-enable transitions after first paint
+        requestAnimationFrame(()=>requestAnimationFrame(()=>document.documentElement.classList.remove('no-transitions')));
     </script>
     <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
     <script type="module">import('./js/3d-ribbon.min.js?v=5');</script>
