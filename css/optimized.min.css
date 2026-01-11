@@ -64,7 +64,7 @@ legend {
   background: 0 0;
 }
 html {
-  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
   background-color: #000;
   user-select: none;
   min-height: 100%;
@@ -100,11 +100,11 @@ ul {
   cursor: pointer;
   z-index: 100;
   padding: 0;
-  opacity: 0.7;
-  transition: opacity 0.2s ease, border-color 0.5s ease;
+  opacity: 1;
+  transition: border-color 0.5s ease;
 }
 #theme-toggle::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -13px;
   right: -13px;
@@ -112,14 +112,44 @@ ul {
   height: 50px;
   background: transparent;
 }
-#theme-toggle:hover { opacity: 1; }
-html { background: #f8f7f4; color: #121212; transition: background 0.3s ease, color 0.3s ease; }
-html.dark { background: #121212; color: #f8f7f4; }
-html.dark #theme-toggle { border-top-color: #f8f7f4; border-right-color: #f8f7f4; }
-html.dark, html.dark .fa-icon, html.dark #name, html.dark #definition, html.dark a, html.dark .label, html.dark #overlay * { color: #f8f7f4 !important; }
-html.dark #logo img { filter: invert(1) brightness(0.97) sepia(0.02); }
-#logo img { transition: filter 0.5s ease; aspect-ratio: 1/1; }
-.fa-icon, #name, #definition, a, .label { transition: color 0.5s ease; }
+html {
+  background: #f8f7f4;
+  color: #121212;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+html.dark {
+  background: #121212;
+  color: #f8f7f4;
+}
+html.dark #theme-toggle {
+  border-top-color: #f8f7f4;
+  border-right-color: #f8f7f4;
+}
+html.dark,
+html.dark .fa-icon,
+html.dark #name,
+html.dark #definition,
+html.dark a,
+html.dark .label,
+html.dark #overlay * {
+  color: #f8f7f4 !important;
+}
+html.dark #logo img {
+  filter: invert(1) brightness(0.97) sepia(0.02);
+}
+#logo img {
+  transition: filter 0.5s ease;
+  aspect-ratio: 1/1;
+}
+.fa-icon,
+#name,
+#definition,
+a,
+.label {
+  transition: color 0.5s ease;
+}
 .typed-cursor {
   display: none;
   -webkit-animation: 0.7s infinite blink;
@@ -162,8 +192,8 @@ html.dark #logo img { filter: invert(1) brightness(0.97) sepia(0.02); }
   padding: 3%;
   height: 100dvh;
   display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
   grid-auto-rows: 1fr;
-  grid-auto-columns: 1fr;
   align-content: stretch;
   align-items: center;
   grid-template-areas: "logo name" "logo definition" "logo links";
@@ -203,10 +233,16 @@ html.dark #logo img { filter: invert(1) brightness(0.97) sepia(0.02); }
   font-size: 1.7em;
   align-self: left;
   pointer-events: all;
-  height: 1px;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   padding-left: 0.3em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80vw;
+  line-height: 1.4;
+  min-height: 1.4em;
+  box-sizing: content-box;
   -moz-animation: 0.7s ease-in-out 0.2s both nav-icons;
   -webkit-animation: 0.7s ease-in-out 0.2s both nav-icons;
   -ms-animation: nav-icons 0.7s ease-in-out both;
@@ -220,6 +256,18 @@ html.dark #logo img { filter: invert(1) brightness(0.97) sepia(0.02); }
 #links {
   grid-area: links;
   font-size: 2.2em;
+}
+#links ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1.4em, 1fr));
+  gap: 0.6em;
+  justify-items: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0.3em;
+  max-width: 100%;
+  overflow: visible;
 }
 h1 {
   font-weight: 650;
@@ -243,6 +291,8 @@ br {
 }
 #links li {
   list-style-type: none;
+  position: relative;
+  z-index: 10;
   -moz-animation: 0.5s ease-in-out 0.75s forwards nav-icons;
   -webkit-animation: 0.5s ease-in-out 0.75s forwards nav-icons;
   -ms-animation: nav-icons 0.5s ease-in-out forwards;
@@ -255,11 +305,14 @@ br {
   display: none;
   color: #121212;
   position: absolute;
-  top: -0.8em;
-  font-size: 0.7em;
+  bottom: -0.6em;
+  left: 20%;
+  transform: translateX(-50%);
+  font-size: 0.5em;
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
+  white-space: nowrap;
 }
 #links li:hover .label {
   display: block;
@@ -609,7 +662,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
@@ -1502,6 +1555,9 @@ template {
     padding: 5%;
     font-size: 1.5em;
     overflow: scroll;
+    width: 90vw;
+    max-width: 90vw;
+    justify-self: center;
   }
   @media (min-height: 100px) {
     #definition,
@@ -1529,7 +1585,7 @@ template {
       font-size: 1.7em;
     }
     #links {
-      font-size: 1.9em;
+      font-size: 1.5em;
     }
   }
   @media (min-height: 1000px) {
@@ -1540,7 +1596,7 @@ template {
       font-size: 1.9em;
     }
     #links {
-      font-size: 2.3em;
+      font-size: 1.8em;
     }
   }
   @media (min-height: 1200px) {
@@ -1551,8 +1607,48 @@ template {
       font-size: 2.5em;
     }
     #links {
-      font-size: 2.7em;
+      font-size: 2.1em;
     }
+  }
+}
+/* Landscape phones - optimized layout */
+@media (orientation: landscape) and (max-height: 500px) {
+  #overlay {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "logo name" "logo definition" "logo links";
+    gap: 0.1em 1.5em;
+    padding: 3% 4%;
+    align-items: center;
+    align-content: center;
+  }
+  #logo {
+    width: 90vh;
+    max-width: 240px;
+    align-self: center;
+  }
+  #name {
+    font-size: 1.6em;
+    align-self: end;
+    margin-bottom: 0;
+    padding-bottom: 0.2em;
+  }
+  #definition {
+    font-size: 0.85em;
+    align-self: start;
+    margin-top: 0;
+    padding-top: 0.1em;
+    padding-bottom: 0.3em;
+  }
+  #links {
+    font-size: 1.5em;
+    align-self: start;
+    padding: 0;
+    max-height: 50vh;
+    overflow: hidden;
+  }
+  #links ul {
+    gap: 0.5em;
   }
 }
 @media (orientation: landscape) {
@@ -1599,14 +1695,37 @@ template {
     }
   }
   @media (min-width: 1100px) {
+    #overlay {
+      align-content: center;
+      grid-auto-rows: auto;
+    }
+    #logo {
+      width: clamp(200px, 25vw, 350px);
+    }
     #name {
-      font-size: 5.25em;
+      font-size: clamp(2.5em, 4vw, 4em);
+      align-self: end;
+      padding-bottom: 0.3em;
     }
     #definition {
-      font-size: 2.2em;
+      font-size: clamp(1.2em, 2vw, 1.8em);
+      padding-top: 0;
+      padding-bottom: 0.5em;
+      padding-left: 0;
+      align-self: start;
     }
     #links {
-      font-size: 3em;
+      font-size: clamp(1.5em, 2.5vw, 2.2em);
+      align-self: start;
+      padding-left: 0;
+    }
+    #links ul {
+      max-width: clamp(350px, 45vw, 650px);
+      gap: clamp(0.4em, 1vw, 0.7em);
+      justify-items: start;
+      justify-content: start;
+      padding: 0;
+      margin: 0;
     }
   }
 }
