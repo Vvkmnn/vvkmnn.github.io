@@ -120,13 +120,13 @@ SCpfgQg=
     <!-- Preload & Performance -->
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link href="/css/optimized.min.css" as="style">
+    <link rel="preload" href="/css/optimized.min.css?v=2" as="style">
     <link rel="preload" href="/css/icons.min.css" as="style">
-    <link rel="preload" href="/js/optimized.min.js" as="script">
+    <link rel="preload" href="/js/optimized.min.js?v=2" as="script">
     <link rel="modulepreload" href="/js/3d-ribbon.min.js">
 
     <!-- Style  -->
-    <link rel="stylesheet" href="/css/optimized.min.css">
+    <link rel="stylesheet" href="/css/optimized.min.css?v=2">
     <link rel="stylesheet" href="/css/icons.min.css">
 
     <!-- Google Fonts - Inter -->
@@ -144,7 +144,7 @@ SCpfgQg=
              connect-src 'self' https://www.google-analytics.com;">
 
     <!-- JS -->
-    <script src="/js/optimized.min.js"></script>
+    <script defer src="/js/optimized.min.js?v=2"></script>
 
 </head>
 
@@ -156,7 +156,7 @@ SCpfgQg=
     <button id="theme-toggle" aria-label="Toggle dark mode"></button>
 
     <!-- Scripts -->
-    <script defer src="/js/strings.js"></script>
+    <script defer src="/js/strings.min.js"></script>
     <script>
         // Theme detection FIRST - before any modules load
         // Priority: saved > system preference > time-based (7am-7pm light, 7pm-7am dark)
@@ -220,7 +220,7 @@ SCpfgQg=
         <p>✌️</p>
         <p>Pattern Hunter</p>
         <p>¯\_(ツ)_/¯</p>
-        <p>🙃 🤖 🔥 🔥 🔥 😆 </p>
+        <!-- <p>🙃 🤖 🔥 🔥 🔥 😆 </p> -->
         <p><a href="https://github.com/Vvkmnn?utf8=%E2%9C%93&amp;tab=repositories&amp;q=DL&amp;type=&amp;language="
                 target="_blank">Deep Learning</a> Specialist </p>
         <p><a href="https://github.com/Vvkmnn?utf8=%E2%9C%93&amp;tab=repositories&amp;q=DL&amp;type=&amp;language="
