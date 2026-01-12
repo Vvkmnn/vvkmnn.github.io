@@ -356,12 +356,12 @@ pyrightconfig.json
 # *.xhtml
 
 # Source files (private - synced via iCloud)
-js/3d-ribbon.js
-js/strings.js
-css/optimized.css
+src/
+backup/
 archive/
 
 # Build config (private - not needed for GitHub Pages)
+scripts/
 package.json
 package-lock.json
 yarn.lock
