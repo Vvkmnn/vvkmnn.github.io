@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("definition"),t=document.getElementById("definitions");new Typed(e,{stringsElement:t,typeSpeed:3,startDelay:0,smartBackspace:!1,backSpeed:1,shuffle:!0,backDelay:900,loop:!0,loopCount:!1,showCursor:!1,cursorChar:"|"})});
