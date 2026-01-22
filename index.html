@@ -120,15 +120,15 @@ SCpfgQg=
     <!-- Preload & Performance -->
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <!--#1--><link rel="preload" href="/css/3df76.css" as="style">
-    <!--#2--><link rel="preload" href="/css/9acfc.css" as="style">
+    <!--#1--><link rel="preload" href="/css/20899.css" as="style">
+    <!--#2--><link rel="preload" href="/css/87ee2.css" as="style">
     <link rel="preload" href="/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-    <!--#3--><link rel="preload" href="/js/db676.js" as="script">
+    <!--#3--><link rel="preload" href="/js/424dc.js" as="script">
 
     <!-- Style  -->
-    <!--#1--><link rel="stylesheet" href="/css/3df76.css">
-    <!--#2--><link rel="stylesheet" href="/css/9acfc.css">
+    <!--#1--><link rel="stylesheet" href="/css/20899.css">
+    <!--#2--><link rel="stylesheet" href="/css/87ee2.css">
 
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -146,7 +146,7 @@ SCpfgQg=
              connect-src 'self' https://www.google-analytics.com;">
 
     <!-- JS -->
-    <!--#3--><script defer src="/js/db676.js"></script>
+    <!--#3--><script defer src="/js/424dc.js"></script>
 
 </head>
 
@@ -158,7 +158,7 @@ SCpfgQg=
     <button id="theme-toggle" aria-label="Toggle dark mode"></button>
 
     <!-- Scripts -->
-    <!--#4--><script defer src="/js/2c5f9.js"></script>
+    <!--#4--><script defer src="/js/f82bd.js"></script>
     <script>
         // Prevent transition flash on initial load
         document.documentElement.classList.add('no-transitions');
@@ -178,12 +178,12 @@ SCpfgQg=
     <!--#5--><script>
   // Load 3D immediately - guarantees background on first run
   try {
-    import('./js/140dc.js');
+    import('./js/90b2c.js');
   } catch (e) {
     // Fallback for browsers without dynamic import
     var s = document.createElement('script');
     s.type = 'module';
-    s.src='/js/140dc.js';
+    s.src='/js/90b2c.js';
     document.body.appendChild(s);
   }
 </script>
@@ -217,11 +217,7 @@ SCpfgQg=
 
 
     <div id="overlay">
-        <div id="logo">
-            <img id="logo-img" src="images/cropped_vLogoTransparent.webp" alt="logo">
-            <!-- <img src="images/cropped_vLogoTransparent.webp" -->
-        </div>
-
+        <div class="content">
         <div id="name">
             Vivek
             Menon
@@ -229,10 +225,9 @@ SCpfgQg=
 
         <!-- id="about">Pattern Hunter<br> <i>( /pa · tern huhn - ter/ )</i>:</span> -->
 
-        <div id="definition" />
-    </div>
+        <div id="definition"></div>
 
-    <div id="definitions">
+        <div id="definitions">
 
         <p>✌️</p>
         <p>Pattern Hunter</p>
@@ -608,8 +603,13 @@ SCpfgQg=
             </li>
         </ul>
     </div>
+        </div><!-- .content -->
 
-    </div>
+        <div id="logo">
+            <img id="logo-img" src="images/vLogo-cropped.svg" alt="logo">
+        </div>
+
+    </div><!-- #overlay -->
 </body>
 
 </html>
