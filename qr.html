@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vivek Menon - QR Code</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        .no-transitions,.no-transitions *{transition:none!important}
+        html{min-height:100%;font-family:Inter,Helvetica,Arial,sans-serif}
+        html{background:#f8f7f4;color:#121212;transition:background .3s ease,color .3s ease}
+        @media(prefers-color-scheme:dark){html:not(.light){background:#121212;color:#f8f7f4}}
+        html.dark{background:#121212;color:#f8f7f4}
+        html.dark #theme-toggle{border-top-color:#f8f7f4;border-right-color:#f8f7f4}
+        body{min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;padding:2rem}
+        #theme-toggle{position:fixed;top:0;right:0;width:0;height:0;border:13px solid transparent;border-top:13px solid #121212;border-right:13px solid #121212;background:0 0;cursor:pointer;z-index:100;padding:0;opacity:1;transition:border-color .5s ease}
+        #theme-toggle::before{content:"";position:absolute;top:-13px;right:-13px;width:50px;height:50px;background:0 0}
+        .qr-container{max-width:min(80vw,500px);aspect-ratio:1/1}
+        .qr-container img{width:100%;height:100%;object-fit:contain;border-radius:8px}
+        #qr-light{display:block}
+        #qr-dark{display:none}
+        html.dark #qr-light{display:none}
+        html.dark #qr-dark{display:block}
+        @media(prefers-color-scheme:dark){html:not(.light) #qr-light{display:none}html:not(.light) #qr-dark{display:block}}
+        .back-link{font-size:1.1rem;font-weight:400;text-decoration:none;color:#121212}
+        html.dark .back-link{color:#f8f7f4}
+        @media(prefers-color-scheme:dark){html:not(.light) .back-link{color:#f8f7f4}}
+    </style>
+    <script>
+        document.documentElement.classList.add('no-transitions');
+        const saved=localStorage.getItem('theme');
+        const prefersDark=matchMedia('(prefers-color-scheme:dark)').matches;
+        const hour=new Date().getHours();
+        const timeBasedDark=hour<7||hour>=19;
+        const isDark=saved==='dark'||(saved===null&&(prefersDark||(!prefersDark&&timeBasedDark)));
+        document.documentElement.classList.add(isDark?'dark':'light');
+        requestAnimationFrame(()=>requestAnimationFrame(()=>document.documentElement.classList.remove('no-transitions')));
+    </script>
+</head>
+<body>
+    <button id="theme-toggle" aria-label="Toggle dark mode"></button>
+    <div class="qr-container">
+        <img id="qr-light" src="assets/qr.png" alt="QR code for vvkmnn.xyz">
+        <img id="qr-dark" src="assets/qr-dark.png" alt="QR code for vvkmnn.xyz">
+    </div>
+    <a class="back-link" href="/">vvkmnn.xyz</a>
+    <script>
+        (function(){
+            const toggle=document.getElementById('theme-toggle'),html=document.documentElement;
+            if(toggle)toggle.onclick=()=>{html.classList.toggle('dark');html.classList.toggle('light');const dark=html.classList.contains('dark');localStorage.setItem('theme',dark?'dark':'light')};
+        })();
+    </script>
+</body>
+</html>
